@@ -1,483 +1,387 @@
 # Projet Capstone — AI for Business (PSTB)
-## Pérennis — Une plateforme d'IA et un conseil M&A pour la transmission des entreprises européennes
+## Pérennis — Plateforme d'agents d'IA et conseil M&A pour la transmission d'entreprises en Europe
 
 **Spécialisation :** AI for Business — Stratégie, Finance & M&A
-**Étudiant :** Abdul Gueny Djeirkhanov
-**Cohorte :** FR_AI_BIZ · Campus France
-**Nature du projet :** création d'entreprise réelle (le fondateur est à la fois commanditaire et consultant IA)
-
-> Ce dossier est présenté sous la forme d'un dossier de fondateur / consultant IA, tel
-> qu'il pourrait être remis à un comité d'investissement. Il valide les blocs BC01
-> (Définition du projet) et BC04 (Pilotage du projet) du RNCP 40247.
->
-> *Remarque : ce n'est pas seulement un exercice d'examen. Pérennis est un projet
-> entrepreneurial que je compte réellement lancer ; les délais et les moyens présentés
-> sont donc réalistes, à l'échelle d'un véritable institut de conseil.*
+**Étudiant :** Abdul Gueny Djeirkhanov · **Cohorte :** FR_AI_BIZ · Campus France
+**Nature :** création d'entreprise réelle (le fondateur est commanditaire et consultant IA)
+**Référentiel :** valide les blocs **BC01** (Définition du projet) et **BC04** (Pilotage du projet) du RNCP 40247
 
 ---
 
-## Résumé exécutif (Executive Summary)
+## Résumé exécutif
 
-L'Europe fait face à une **crise silencieuse de la transmission d'entreprises**. Des
-centaines de milliers de PME rentables risquent de disparaître non pas parce qu'elles
-échouent, mais parce que leurs dirigeants vieillissent **sans successeur** — les enfants
-sont partis (Canada, États-Unis), ne veulent pas reprendre, ou n'existent pas. En France,
-**près de 500 000 dirigeants** partiront à la retraite dans les prochaines années, mettant
-en jeu **plus de 3 millions d'emplois** *(DGE, 2025)*. Une entreprise sur deux ne trouve
-pas de repreneur.
+L'Europe fait face à une **crise silencieuse de la transmission d'entreprises** : des
+centaines de milliers de PME rentables risquent de disparaître, non par échec, mais parce
+que leurs dirigeants vieillissent **sans successeur**. En France, près de **500 000
+dirigeants** partiront à la retraite (plus de **3 M d'emplois** en jeu) et **une entreprise
+sur deux ne trouve pas de repreneur**. Le marché est déséquilibré : **3× plus de vendeurs
+que d'acheteurs** — le facteur rare est **l'acheteur solvable et de confiance**.
 
-Le déséquilibre est structurel : **les vendeurs sont environ trois fois plus nombreux que
-les acheteurs**. Le facteur rare n'est donc pas l'entreprise à vendre — c'est **l'acheteur
-solvable et de confiance**.
+**Pérennis** relie les deux rives : une **plateforme d'agents d'IA** détecte, valorise et
+apparie les entreprises à céder (avec un **guichet de conformité** KYC/AML/sanctions et
+l'humain dans la boucle), et un **réseau propriétaire d'acheteurs** de la CEI et du
+Moyen-Orient — mon avantage (réseau, langue russe). S'y ajoute un accompagnement A→Z et un
+**management de transition**.
 
-**Pérennis** répond à ces deux problèmes à la fois :
-1. Une **plateforme à base d'agents d'IA** qui détecte, qualifie et valorise les
-   entreprises à céder, puis les met en correspondance avec des acheteurs — tout en
-   appliquant un **guichet de conformité** (KYC/AML/sanctions) et en gardant l'humain dans
-   la boucle.
-2. Un **réseau propriétaire d'acheteurs** issus des ex-républiques de l'URSS et du
-   Moyen-Orient, disposant de capitaux et cherchant une économie stable où investir —
-   auxquels je parle leur langue (russe) et dont je comprends la culture d'affaires.
-3. Un **accompagnement de A à Z** de la transaction et un **management de transition**
-   (dirigeant interim) qui permet à l'acheteur de percevoir des bénéfices dès le premier
-   jour sans devoir gérer seul une entreprise qu'il ne connaît pas encore.
-
-**Impact visé :** un sourcing assisté par IA **3,7× plus productif** (coût par cible
-qualifiée −65 %), un cycle de transaction ramené de **plus de 12 mois à moins de 6**, et,
-à maturité (~**50 M€/an** de volume accompagné), un chiffre d'affaires d'environ
-**2,5 M€** pour un résultat net de l'ordre de **1,9 M€** — le tout dans un cadre
-strictement conforme (RGPD, LCB-FT, sanctions, contrôle des IDE, EU AI Act).
+**Impact :** sourcing **3,7× plus productif** (coût/cible −65 %), cycle ramené de > 12 mois
+à < 6, et, à maturité (~50 M€/an de volume), ~**1,9 M€** de résultat net — dans un cadre
+strictement conforme (RGPD, LCB-FT, sanctions, filtrage des IDE, EU AI Act).
 
 ---
 
 # PARTIE 1 — Veille stratégique IA et analyse sectorielle
 
-## 1.1 Dispositif de veille
+## 1.1 Dispositif de veille IA
 
-- **Sources sectorielles :** BPCE L'Observatoire, Bpifrance Le Lab, Direction générale des
-  Entreprises (DGE), CRA (Cédants et Repreneurs d'Affaires), Banque de France, KfW
-  (Allemagne), Institut Sapiens.
-- **Veille réglementaire :** règlement européen sur le filtrage des IDE (EU FDI Screening),
-  directives LCB-FT / KYC, EU AI Act, CNIL / RGPD.
-- **Veille technologique :** usages de l'IA en M&A (deal sourcing, due diligence),
-  plateformes de deal origination.
-- **Outils :** WebSearch / veille documentaire, rapports institutionnels, baromètres publics.
+**Méthodologie et sources :**
+- **Rapports sectoriels :** BPCE L'Observatoire, Bpifrance Le Lab, DGE, CRA, Banque de
+  France, KfW, Institut Sapiens, McKinsey/BCG (adoption IA).
+- **Presse & experts :** publications M&A, deal sourcing, IA en finance.
+- **Veille réglementaire :** EU AI Act, CNIL/RGPD, LCB-FT, **règlement UE de filtrage des IDE**.
+- **Outils :** Perplexity/WebSearch, Feedly, Notion, alertes, newsletters spécialisées.
+- **Couverture (exigée) :** concurrence (plateformes de deal sourcing), réglementation,
+  technologies (agents IA, MCP), tendances sectorielles, et **RSE/éthique** (impact social
+  de la transmission : préservation des emplois et du savoir-faire ; lutte anti-blanchiment).
 
-## 1.2 Panorama sectoriel — la vague de transmission
+**Conclusions :** l'IA générative est devenue **un standard** du M&A (voir 1.2) ; la
+contrainte n'est plus technologique mais organisationnelle (données, conformité, confiance).
+Le besoin de transmission est massif et durable, mais le marché est inefficace — ce qui
+justifie une solution qui **augmente** la capacité d'un cabinet et **apporte les acheteurs
+rares**.
 
-**En France :**
-- **~500 000 dirigeants** de TPE-PME partiront à la retraite dans les prochaines années ;
-  **> 3 millions d'emplois** concernés *(DGE, 2025)*.
-- Potentiel de **~370 000 entreprises à céder d'ici 2030** (≈ 310 000 TPE, 58 000 PME,
-  1 200 ETI) *(enquête CCI France / CMA / CRA + estimations Bpifrance, 2024-2025)*.
-- **Une entreprise sur deux ne trouve pas de repreneur.** Au rythme actuel, seules
-  ~130 000 seraient effectivement transmises sur cinq ans : le **potentiel est ~3× la
-  réalité observée** *(Bpifrance Le Lab / Institut Sapiens, 2025)*.
-- **42 % des cessions échouent faute de repreneur** (jusqu'à **57 %** en zones rurales)
-  *(Banque de France, 2024)*.
-- **41 % des négociations échouent sur le prix** ; **55 % des repreneurs** mettent
-  **plus d'un an** à identifier une cible solide *(Observatoire CRA, 2024)*.
-- Le marché est sous-estimé : au moins **75 000 opérations/an** *(BPCE L'Observatoire)*.
+## 1.2 Panorama sectoriel — 5 cas d'usage IA
 
-**En Europe :**
-- **Allemagne :** **545 000** propriétaires de Mittelstand prévoient de transmettre d'ici
-  fin 2029 ; **569 000** envisagent purement de **fermer** *(KfW)*.
-- **~114 000 entreprises/an** en Europe ferment **non par échec, mais faute de successeur.**
-- **Les acheteurs sont ~3 fois moins nombreux que les vendeurs.**
-- **Suisse :** ~168 000 PME changeront de mains d'ici 2030.
+| # | Acteur | Problème | Solution IA | Résultat mesurable | Leçon pour Pérennis |
+|---|---|---|---|---|---|
+| 1 | **Cyndx** (deal origination) | trouver des cibles avant qu'elles soient sur le marché | algorithme « Projected to Raise » (NLP + base mondiale) | prédit le besoin de capital avec **~86 % de précision** | → notre agent **Radar** (sourcing prédictif) |
+| 2 | **Sourcescrub** | sourcer des PME détenues par leur fondateur | agrégation de signaux (conférences, presse, listes) | pipelines propriétaires pour fonds PE | → sourcer **au-delà des registres** |
+| 3 | **Marché M&A (2025)** | efficacité des deals | intégration de la GenAI dans les workflows | **86 %** des responsables l'ont intégrée, **65 %** dans la dernière année | l'approche IA est **dé-risquée**, déjà adoptée |
+| 4 | **Cabinets de due diligence** (ex. EthosData) | DD lente, risques manqués | IA qui lit les contrats et signale les anomalies | DD plus rapide, moins d'oublis | → notre agent **Due Diligence** |
+| 5 | **RegTech KYC/AML** (ComplyAdvantage, Sanction Scanner) | criblage manuel long et risqué | screening automatisé sanctions & PEP | conformité à l'échelle | → notre agent **Conformité** |
 
-## 1.3 Tendance technologique — l'IA transforme déjà le M&A
+## 1.3 Leviers de performance (AI Traffic Light)
 
-- **86 % des responsables de transactions** ont déjà intégré l'IA générative dans leurs
-  processus M&A ; **65 %** au cours de la seule dernière année *(enquête 2025)*.
-- L'IA intervient à chaque étape : **origination** (NLP qui détecte les propriétaires
-  prêts à vendre), **due diligence** (lecture de contrats, détection d'anomalies),
-  **valorisation**, **intégration**. Des plateformes comme **Cyndx** ou **Sourcescrub**
-  scorent les cibles ; l'algorithme « Projected to Raise » de Cyndx atteint **~86 %** de
-  précision.
-
-> **Conclusion de la veille :** ce n'est pas une niche mais un **enjeu structurel** de
-> l'économie européenne pour la décennie. Le marché est vaste mais inefficace (trois fois
-> plus de vendeurs que d'acheteurs, une cession sur deux qui échoue, un an de recherche).
-> Les plateformes IA existantes sont conçues pour le marché anglo-saxon et **ne traitent
-> ni le pont Europe ↔ Est ni la barrière linguistique (russe / arabe)** : c'est
-> précisément l'espace de Pérennis.
-
-## 1.4 Leviers de performance (cadre AI Traffic Light)
-
-Pérennis se positionne en **Innovation** (un modèle inédit : marché transfrontalier de la
-transmission, adossé à l'IA, reliant vendeurs européens et acheteurs de l'Est) **et en
-Augmentation** (l'IA démultiplie une petite équipe : elle source et qualifie bien plus de
-cibles qu'un cabinet traditionnel). Ce n'est **pas** une automatisation intégrale : les
-décisions et les relations restent humaines.
+Positionnement : **Innovation** (marché transfrontalier inédit adossé à l'IA) **+
+Augmentation** (l'IA démultiplie une petite équipe). Leviers visés : **efficacité
+opérationnelle**, **scalabilité**, **qualité** (données ancrées), **conformité** (guichet
+automatisé). Ce n'est pas une automatisation intégrale : décisions et relations restent
+humaines.
 
 ---
 
 # PARTIE 2 — Analyse du besoin et idéation
 
-## 2.0 Le commanditaire
+## 2.0 La commande du commanditaire
 
-Le commanditaire est **le fondateur lui-même** : je construis un cabinet de conseil M&A
-adossé à une plateforme d'IA. Ma **mission** consiste à concevoir la solution
-technologique et le modèle d'affaires d'un institut capable de transformer un avantage
-personnel (réseau à l'Est, langue russe) en un avantage concurrentiel durable et
-institutionnel.
+- **Commanditaire :** le comité de fondation de Pérennis (moi, fondateur, mandatant le
+  consultant IA que je suis également).
+- **Mission (une phrase) :** *« Concevoir et prototyper une solution d'IA qui détecte les
+  PME européennes à céder sans successeur et les met en relation, en toute conformité, avec
+  des acheteurs vérifiés de la CEI et du Moyen-Orient. »*
+- **Contraintes :** budget d'amorçage modeste ; conformité stricte (RGPD, LCB-FT,
+  sanctions, IDE) ; confidentialité M&A ; humain dans la boucle ; outils no-code/standard.
+- **Livrables attendus :** un prototype fonctionnel, un business case, un plan de pilotage.
 
-**Mon avantage concurrentiel (fossé) :** relations et réputation dans les ex-républiques
-de l'URSS, maîtrise du russe, liens avec des chefs d'entreprise du Moyen-Orient cherchant
-à sécuriser leurs capitaux dans une économie stable de l'UE. Je suis le **pont** entre les
-cédants européens et ces repreneurs.
+## 2.1 Analyse du besoin
 
-## 2.1 Analyse du besoin (marché à deux faces)
+- **Organisation cible :** cabinet M&A boutique + plateforme, opérant sur le marché européen
+  de la cession-transmission (France d'abord).
+- **Pain point mesurable :** > 12 mois de recherche, 42 % de cessions échouées faute
+  d'acheteur, 3× plus de vendeurs que d'acheteurs.
+- **Parties prenantes & attentes :** cédants (prix, discrétion, continuité) · repreneurs
+  (cibles vérifiées, langue, gestion à distance) · régulateur (conformité) · équipe interne.
+- **Hiérarchisation des besoins (priorité) :** 1) apporter des **acheteurs solvables** ;
+  2) **conformité** irréprochable ; 3) **sourcing** efficace ; 4) accompagnement A→Z ;
+  5) management de transition.
+- **Conformité du besoin :** traite des données personnelles (dirigeants, acheteurs) →
+  base légale RGPD requise ; usage à **risque limité** au sens de l'EU AI Act (voir 4.4).
 
-Le marché est **bilatéral** : il y a deux besoins à satisfaire simultanément.
+*(Brief client d'une page — Annexe A.)*
 
-- **Côté vendeur (cédant) :** trouver un repreneur sérieux et solvable, dans la
-  confidentialité, à un juste prix, en préservant les emplois et le savoir-faire.
-- **Côté acheteur (repreneur) :** accéder à des cibles vérifiées sur un marché qu'il ne
-  connaît pas, être accompagné dans sa langue, franchir la barrière de confiance, et
-  pouvoir gérer à distance grâce à un management de transition.
-- **Parties prenantes :** cédants, repreneurs, notaires, avocats d'affaires,
-  experts-comptables, banques, et l'équipe interne de Pérennis.
+## 2.2 Session d'idéation
 
-## 2.2 Personas
+**Persona 1 — Cédant :** Jean-Pierre Rousseau, 64 ans, PME de mécanique de précision
+(8 M€ CA, 45 salariés). *« Personne à qui transmettre ; je ne connais pas la valeur ; je
+veux la discrétion. »*
+**Persona 2 — Repreneur :** Timur A., 45 ans, Almaty/Dubaï, 3–10 M€ à investir. *« Je ne
+connais pas le marché ; à qui faire confiance ; comment gérer à distance ? »*
+**Persona 3 — Interne :** Léa, 29 ans, analyste M&A (sourcing).
+**User journey (avant → après) :** de « > 12 mois, échec 42 % » à « acheteur vérifié,
+cycle < 6 mois, teaser anonyme, conformité intégrée, transition assurée ».
 
-**Persona 1 — Le cédant.**
-> **Jean-Pierre Rousseau, 64 ans**, fondateur-dirigeant d'une PME de composants métalliques
-> de précision (Auvergne-Rhône-Alpes). CA ≈ 8 M€, 45 salariés, EBITDA ≈ 1,2 M€.
-> - *Objectifs :* partir à la retraite d'ici 2-3 ans (le prix de vente = son patrimoine),
->   préserver ses salariés et son savoir-faire.
-> - *Frustrations :* « Ma fille est médecin au Canada, mon fils ne veut pas de l'usine. Je
->   n'ai personne. Je ne sais pas ce que vaut mon entreprise, et je ne veux surtout pas
->   que la nouvelle s'ébruite. »
-> - *Attentes :* un acheteur solvable, une discrétion totale, un juste prix, la continuité.
+**3 idées & sélection (critères 1–5) :**
 
-**Persona 2 — Le repreneur.**
-> **Timur A., 45 ans**, entrepreneur basé à Almaty (Kazakhstan), activités à Dubaï.
-> Capital à placer : 3–10 M€.
-> - *Objectifs :* placer son capital dans une **économie stable de l'UE**, obtenir un actif
->   tangible et rentable, un revenu régulier, une diversification.
-> - *Frustrations :* « Je ne connais pas le marché français, la langue, la culture
->   d'affaires. À qui faire confiance ? Comment gérer une usine à distance ? »
-> - *Attentes :* un partenaire parlant sa langue (RU/AR), des cibles vérifiées, un
->   accompagnement complet et **un management de transition**.
-
-**Persona 3 — L'utilisateur interne.**
-> **Léa, 29 ans**, analyste M&A chez Pérennis. Aujourd'hui elle passe des heures dans les
-> registres (Pappers, Infogreffe) ; avec Pérennis, l'agent **Radar** fait le gros du
-> sourcing et elle se concentre sur les relations et les transactions.
-
-## 2.3 Parcours utilisateur (avant → après)
-
-| Étape | Aujourd'hui | Avec Pérennis |
-|---|---|---|
-| Estimer la valeur (vendeur) | ne sait pas, doute | agent Valorisation → fourchette |
-| Trouver un repreneur | > 12 mois, échec dans 42 % | acheteur vérifié apporté par le réseau |
-| Confidentialité | risque de fuite | teaser anonyme, accès sous NDA |
-| Trouver une cible (acheteur) | ne connaît pas le marché | agent Matching selon ses critères |
-| Confiance / langue | barrière RU/AR | partenaire dans sa langue |
-| Vérification | crainte de fraude | agents Due Diligence + KYC/AML |
-| Gestion post-reprise | ne sait pas gérer à distance | manager de transition |
-| Cycle | > 12 mois | < 6 mois (objectif) |
-
-## 2.4 Idéation et choix de la solution
-
-| Critère (1–5) | Pérennis (hybride) | SaaS de sourcing | Conciergerie buy-side |
+| Critère | Pérennis (hybride) | SaaS de sourcing | Conciergerie buy-side |
 |---|---|---|---|
-| Impact sur le problème | 5 | 3 | 4 |
-| Exploite mon fossé (réseau/langue/transition) | 5 | 1 | 5 |
+| Impact | 5 | 3 | 4 |
+| Exploite mon fossé | 5 | 1 | 5 |
 | Différenciation | 5 | 2 | 4 |
 | Effet démo | 5 | 3 | 4 |
 | Faisabilité | 3 | 4 | 4 |
-| Coût de lancement (bas = mieux) | 3 | 4 | 4 |
-| **Total** | **26** ✅ | 17 | 25 |
+| Coût | 3 | 4 | 4 |
+| **Total** | **26 ✅** | 17 | 25 |
 
-**Décision :** la solution **hybride Pérennis** est retenue — seule à exploiter pleinement
-mon avantage (réseau + langue + management de transition) et à créer un « effet plateforme ».
-Pour rester réaliste, je **phase le lancement** : l'idée 3 (conciergerie buy-side) devient
-le **MVP** (2-3 acheteurs de mon réseau + sourcing IA), avant d'ajouter la base sell-side,
-puis la ligne de management de transition (voir Partie 5).
+**Décision :** l'hybride Pérennis (seul à exploiter le fossé et l'effet plateforme),
+**lancé par phases** — MVP conciergerie buy-side d'abord.
+
+## 2.3 Définition de la solution retenue
+
+- **Nom & pitch :** *Pérennis — « Assurer la pérennité des entreprises qui ont fait l'Europe. »*
+- **Description :** plateforme d'agents d'IA (sourcing, valorisation, matching, conformité,
+  communication, due diligence, transition) + conseil M&A humain.
+- **Utilisateurs & bénéfices :** cédants (vendre vite, bien, discrètement) · repreneurs
+  (entrer sur le marché UE en confiance) · équipe (démultipliée par l'IA).
+- **Type d'IA mobilisée :** **agents d'IA** (orchestrés par n8n) + **IA générative** (Claude,
+  multilingue, analyse documentaire) + **automatisation** ; scoring à base de règles.
+- **Données nécessaires & disponibilité :** registres publics (Pappers, Infogreffe, BODACC,
+  INSEE — **disponibles via API**), CRM acheteurs (interne), listes sanctions/PEP
+  (OpenSanctions — **ouvertes**), documents de deal (fournis, sous NDA).
 
 ---
 
 # PARTIE 3 — Benchmark des outils IA / No-Code
 
-## 3.1 Comparatif par couche
+## 3.1 Benchmark comparatif
 
-| Couche | Retenu | Alternatives / verdict |
-|---|---|---|
-| Interface / CRM | **Base44** (prototype UI rapide) | Lovable/Bubble (réserve) ; Salesforce (trop lourd) |
-| Orchestration des agents | **n8n** (auto-hébergeable dans l'UE → RGPD) | Zapier/Make (trop limité) ; code sur mesure (plus tard) |
-| Moteur (LLM) | **Claude (Sonnet/Opus)** — multilingue RU/AR/FR/EN, analyse de documents | GPT-5.x (option) ; modèles ouverts (données sensibles) |
-| Données entreprises FR | **Pappers, Infogreffe, BODACC, INSEE SIRENE** | Orbis / Bureau van Dijk (échelle UE, payant) |
-| Conformité | **OpenSanctions** (UN/OFAC/EU/UK + PEP) | ComplyAdvantage / Sanction Scanner (au pilote) |
-| CRM / e-mail / data room | **HubSpot ou Airtable · Gmail/Outlook · Drive/Notion/VDR** | — |
+| Outil | Catégorie | Fonctionnalités clés | Performance | Interopérabilité | Coûts | Limites |
+|---|---|---|---|---|---|---|
+| **Base44** | App no-code | app depuis un prompt, UI, CRM | rapide | API/webhooks, MCP | freemium | moins de contrôle logique |
+| **n8n** | Automatisation / agents | workflows, AI Agent, auto-hébergé UE | fiable | **connecte Claude, Pappers, Airtable…** (natif) | open-source / cloud | courbe d'apprentissage |
+| **Claude** | LLM | multilingue RU/AR/FR/EN, documents | qualité élevée | API, **MCP**, appelable par n8n | à l'usage (tokens) | coût au volume |
+| **Pappers** | Données entreprises | dirigeants, âge, finances | temps réel | **API REST** (branchée à n8n) | 100 crédits gratuits puis packs | finances parfois partielles |
+| **OpenSanctions** | Conformité | sanctions & PEP (UN/OFAC/EU/UK) | à jour | API / données ouvertes | gratuit/pro | nécessite interprétation |
 
-## 3.2 Choix du stack et justification
+*Interopérabilité — exemple concret :* dans n8n, un nœud HTTP interroge **Pappers**, le
+résultat est scoré, puis envoyé à **Claude** pour rédiger un mémo, et écrit dans **Airtable**
+— tout est relié via API/**MCP**, sans vendor lock-in.
 
-> **Base44** (interface) + **n8n** (orchestration, auto-hébergée dans l'UE) + **Claude**
-> (moteur) + **Pappers/Infogreffe/BODACC** (données FR, puis Orbis pour l'UE) +
-> **OpenSanctions** (conformité) — le tout relié par des **connecteurs MCP**.
+## 3.2 Stack retenue & architecture
 
-- **No-code + modèles standard** = rapidité, coût maîtrisé, dans le budget d'une jeune structure.
-- **MCP (Model Context Protocol) = portabilité, sans vendor lock-in** : on peut remplacer le
-  LLM ou une source de données sans réécrire le système, et **héberger les données dans
-  l'UE** → risque RGPD réduit.
-- **Coûts phasés :** au démarrage, offres gratuites/économiques (Pappers, OpenSanctions,
-  Airtable) ; Orbis et VDR professionnel seulement à l'échelle.
+> **Base44** (interface) + **n8n** (orchestration, UE) + **Claude** (moteur) +
+> **Pappers/Infogreffe** (données) + **OpenSanctions** (conformité), reliés par **MCP**.
 
----
-
-# PARTIE 4 — Cadrage et Business Case
-
-## 4.1 Périmètre
-
-- **Dans le périmètre :** sourcing, qualification, valorisation, matching, accompagnement
-  A→Z, management de transition ; **validation humaine à chaque étape clé**.
-- **Hors périmètre :** clôture automatisée sans humain ; signature juridique (notaire /
-  avocat) ; détention de fonds (assurée par un tiers séquestre).
-
-## 4.2 Modèle de revenus (3 sources)
-
-1. **Honoraires de succès (success fee)** — % du montant de la transaction (barème dégressif
-   type Lehman) ; pour des opérations de 2 à 10 M€, en moyenne ≈ **4 %**.
-2. **Honoraires de mandat (retainer)** — ≈ **4 000 €/mois** par mandat actif.
-3. **Management de transition** — contribution nette ≈ **50 000 €/an** par mandat.
-
-## 4.3 ROI n°1 — l'efficacité de l'IA
-
-| Indicateur | Manuel (cabinet classique) | Avec les agents Pérennis |
-|---|---|---|
-| Cibles qualifiées / analyste / mois | ~40 | ~150 |
-| Temps par cible | ~3–4 h | ~30–40 min (l'IA prépare, l'humain valide) |
-| Coût par cible qualifiée | ≈ 125 € | ≈ 40 € |
-
-> **Débit ×3,7 ; coût par cible −65 %.** C'est le cœur de la proposition « AI for Business » :
-> une petite équipe génère un pipeline qualifié bien plus large → plus de transactions
-> conclues à effectif constant = **scalabilité**.
-
-## 4.4 ROI n°2 — l'économie de l'entreprise
-
-**Régime cible (année 2-3, volume ~50 M€/an) :**
-
-| Poste | Montant |
-|---|---|
-| Success fees (50 M€ × 4 %) | 2 000 000 € |
-| Retainers (6 mandats × 4 000 € × 12) | 288 000 € |
-| Management de transition (~4 × 50 000 €) | 200 000 € |
-| **Produits** | **≈ 2 490 000 €** |
-| Équipe (fondateur + 3) | 350 000 € |
-| Technologies / données | 60 000 € |
-| Conformité / juridique externe | 60 000 € |
-| Développement commercial / déplacements | 80 000 € |
-| Bureau / administration | 50 000 € |
-| **Charges** | **≈ 600 000 €** |
-| **Résultat net** | **≈ 1 890 000 € (marge ~76 %)** |
-
-**Année 1 (montée en charge — honnêtement) :** volume ~15 M€ → produits ~750 000 € ;
-charges ~450 000 € ; investissement de lancement ~120 000 € (plateforme, structure
-juridique, cadre de conformité, premiers abonnements). **Amortissement dans l'année.**
-
-> **Honnêteté (leçon ROI) :** les honoraires de succès sont irréguliers (les deals se
-> concluent en 6-12 mois). Les retainers et le management de transition lissent la
-> trésorerie. Les chiffres sont des hypothèses prudentes, à valider au pilote via les KPI.
-
-## 4.5 KPI et porte de décision
-
-| KPI | Objectif |
-|---|---|
-| Cibles qualifiées / mois | ≥ 150 |
-| Coût par cible qualifiée | −65 % |
-| Mandats actifs | ≥ 6 |
-| Cycle moyen d'une transaction | < 6 mois |
-| Volume accompagné | → 50 M€/an |
-| Mandats de transition réussis | ≥ 80 % de cédants/repreneurs satisfaits |
-| **Incidents de conformité (KYC/AML/sanctions)** | **0 (KPI critique)** |
-
-**Porte de décision :** passage à la Phase 2 (plateforme complète) **uniquement si**
-pipeline ≥ 100 cibles qualifiées/mois, ≥ 1 transaction conclue, cycle < 6 mois, et
-**zéro incident de conformité**.
+```mermaid
+flowchart LR
+  subgraph Sources["Données (via MCP/API)"]
+    P[Pappers / Infogreffe]
+    O[OpenSanctions]
+    C[CRM acheteurs]
+  end
+  R[Agent Radar] --> Q[Agent Qualif & Valo]
+  Q --> M[Agent Matching]
+  M --> OUT[Agent Communication]
+  OUT --> DD[Agent Due Diligence]
+  DD --> K[Guichet Conformité KYC/AML]
+  K --> T[Agent Transition]
+  P --> R
+  P --> Q
+  C --> M
+  O --> K
+  N[(Orchestrateur n8n)] -.pilote.- R & Q & M & OUT & DD & K & T
+  H{{Humain valide chaque étape}} -.-> K
+```
 
 ---
 
-# PARTIE 5 — Pilotage, gouvernance et conformité
+# PARTIE 4 — Cadrage du projet et Business Case
 
-## 5.1 Feuille de route réaliste (délais d'un véritable institut)
+## 4.1 Note de cadrage
 
-| Phase | Horizon | Contenu |
-|---|---|---|
-| **0 — Fondations** | Mois 0–6 | structure juridique (SAS), marque, site FR/EN/RU/AR, cadre de conformité, réseau de partenaires, MVP de la plateforme, 2-3 acheteurs |
-| **1 — MVP buy-side** | Mois 6–15 | sourcing IA sur mandats acheteurs ; cycle complet ; **première transaction : mois 9-15** |
-| **2 — Plateforme bilatérale** | Mois 15–30 | base sell-side + matching, croissance de l'équipe, adhésion CNCFA |
-| **3 — Échelle + transition** | Mois 30–48 | Orbis (UE), réseau de managers de transition, nouveaux marchés |
+- **Périmètre — inclus :** sourcing, valorisation, matching, conformité, accompagnement
+  A→Z, management de transition. **Exclu :** clôture automatisée, signature juridique
+  (notaire), détention de fonds (séquestre).
+- **Objectifs SMART :**
+  - Livrer un **agent Radar fonctionnel** (n8n + Pappers) — *fait* ✅.
+  - Atteindre **≥ 150 cibles qualifiées/mois** par analyste d'ici la fin du MVP (mois 6).
+  - Signer **2–3 mandats acheteurs** en Phase 1 (mois 6–15).
+  - **1ʳᵉ transaction** conclue au **mois 9–15**.
+  - **0 incident de conformité** dès le premier jour.
+- **Parties prenantes :** sponsor (fondateur), utilisateurs (analystes, cédants, repreneurs),
+  équipe projet, partenaires (notaires, avocats, banques).
+- **Contraintes :** techniques (quotas API), budgétaires (amorçage), humaines (petite
+  équipe), temporelles (cycles longs).
+- **Risques & atténuation :** voir tableau 4.4 et Partie 5.
 
-> Grande ambition, **rythme réaliste** : les cycles M&A sont longs et la confiance se
-> construit dans la durée. Nous ne promettons pas de miracle en 90 jours.
+## 4.2 Business Plan IA
 
-## 5.2 Attributs d'un véritable institut
+**Coûts (régime cible, annuel) :** équipe ~350 k€ · **coûts IA/outils ~60 k€** · conformité
+externe ~60 k€ · BD/déplacements ~80 k€ · admin ~50 k€ → **~600 k€**.
 
-- **Forme juridique :** SAS (souple pour partenaires et croissance) ; holding à l'échelle.
-- **Base des honoraires :** **mandat de cession/recherche écrit**.
-- **Statut & éthique :** le conseil en M&A n'est pas une profession réglementée en France
-  (contrairement à l'agent immobilier), mais nous adhérons à la **CNCFA** (charte
-  déontologique) et **ne détenons pas les fonds** de la transaction (séquestre notaire/avocat).
-  Si une activité de détention de fonds ou de conseil en investissement apparaît, vérification
-  des statuts AMF/CIF/ORIAS avec un juriste.
-- **Assurance RC Pro**, registre RGPD des traitements, DPO, données hébergées dans l'UE.
-- **Réseau de partenaires :** notaires, avocats d'affaires, experts-comptables, banques,
-  cabinets de due diligence, managers de transition.
-- **Financement :** amorçage sur fonds propres, puis prêt/subvention Bpifrance et
-  réinvestissement (modèle à forte marge).
+**Coûts IA spécifiques (détail) :**
 
-## 5.3 Gouvernance et éthique (humain dans la boucle)
-
-- **Humain dans la boucle :** les agents préparent, l'humain décide et signe. Aucun contact
-  vendeur ni validation acheteur automatiques.
-- **Transparence :** les brouillons IA sont signalés en interne ; le client ne reçoit que du
-  validé.
-- **Responsabilité :** chaque dossier a un propriétaire (fondateur / deal-manager).
-
-## 5.4 Bloc conformité — un avantage concurrentiel
-
-Des capitaux venus de la CEI et du Moyen-Orient vers une entreprise de l'UE = zone de
-vigilance renforcée. Nous en faisons un **gage de qualité** : « nous ne travaillons qu'avec
-des fonds propres et licites ».
-
-| Domaine | Mesure |
+| Poste | Estimation |
 |---|---|
-| **KYC / LCB-FT** | vérification des bénéficiaires effectifs, origine des fonds, due diligence renforcée si nécessaire |
-| **Sanctions + PEP** | criblage UN/OFAC/EU/UK (agent Conformité, OpenSanctions) ; toute correspondance = arrêt |
-| **Filtrage des IDE (EU FDI Screening)** | nouveau règlement UE (accord politique déc. 2025) : vérifier si l'opération relève d'un contrôle des investissements étrangers (secteurs sensibles, seuils, structure de propriété, bénéficiaire effectif) |
-| **Confidentialité M&A** | NDA, teasers anonymisés, accès data room sur autorisation |
-| **RGPD** | base légale, minimisation, hébergement UE, droits des personnes |
-| **EU AI Act** | classification du risque du système d'IA, transparence, supervision humaine |
+| API Pappers (crédits de recherche) | 100 gratuits, puis ~€/pack selon volume |
+| Claude API (tokens : mémos, matching, rédaction) | ~200–500 €/mois au MVP |
+| n8n (hébergement UE) + Base44 | ~50–150 €/mois |
+| OpenSanctions | gratuit → pro à l'échelle |
+| **Total IA au MVP** | **~300–800 €/mois** |
 
-## 5.5 Risques et mesures
+**Bénéfices :** gain de temps (sourcing ×3,7), moins d'erreurs (grounding), nouveaux revenus
+(honoraires), satisfaction (cycle < 6 mois).
+
+**ROI à 6 et 12 mois :**
+- **6 mois :** phase d'investissement (build + pipeline) ; ROI **opérationnel** déjà visible
+  via l'efficacité — **coût par cible qualifiée −65 %** ; premiers mandats signés.
+- **12 mois :** 1ʳᵉ(s) transaction(s) en cours de closing → premiers **honoraires de succès**
+  + retainers ; retour vers l'**équilibre** de l'investissement d'amorçage (~120 k€).
+- À maturité (an 2–3) : produits ~2,49 M€, charges ~0,6 M€ → **~1,9 M€ net** (marge ~76 %).
+
+**Pourquoi maintenant :** la vague de transmission est à son pic (2025–2035), l'IA en M&A
+vient d'atteindre l'adoption de masse, et l'instabilité géopolitique pousse les capitaux de
+l'Est vers l'UE. La fenêtre est ouverte.
+
+## 4.3 Macroplanning (jalons & charges)
+
+| Phase | Période | Jalons | Charge (j-h) |
+|---|---|---|---|
+| **Cadrage & Fondations** | Mois 0–6 | structure, marque, conformité, **MVP** | ~120 |
+| **MVP buy-side & tests** | Mois 6–15 | mandats signés, **1ʳᵉ transaction** | ~180 |
+| **Plateforme bilatérale** | Mois 15–30 | base sell-side, matching, équipe, CNCFA | ~260 |
+| **Échelle & transition** | Mois 30–48 | Orbis, réseau interim, nouveaux marchés | ~300 |
+
+```mermaid
+gantt
+  dateFormat  YYYY-MM
+  axisFormat  %m/%y
+  section Fondations
+  Cadrage & MVP           :2026-09, 6M
+  section MVP buy-side
+  Mandats & 1re transaction :2027-03, 9M
+  section Plateforme
+  Sell-side & matching    :2027-12, 15M
+  section Echelle
+  Scale & transition      :2029-03, 18M
+```
+
+## 4.4 Conformité éthique et réglementaire
+
+- **RGPD :** données de dirigeants et d'acheteurs traitées → **base légale** (intérêt
+  légitime / consentement), minimisation, hébergement **UE**, registre des traitements, DPO,
+  droits des personnes.
+- **EU AI Act — classification :** système à **risque limité** (recherche, appariement,
+  génération assistée) → obligations de **transparence** et de supervision humaine. Nous
+  appliquons **volontairement** une gouvernance de niveau supérieur (documentation, logs,
+  human-in-the-loop) vu les enjeux financiers. Aucune notation de crédit de particuliers
+  (usage à haut risque) n'est réalisée.
+- **Analyse des biais & mitigation :** risque de biais du sourcing (sur-pondérer certains
+  secteurs/régions) et de la valorisation → **mitigation** : ancrage sur données officielles,
+  sources diversifiées, seuils revus par un humain, suivi des écarts.
+- **Principes éthiques :** transparence (brouillons IA signalés), équité, **human-in-the-loop**
+  (aucune action client sans validation), « uniquement des fonds licites ».
+- **Limites de l'IA :** hallucinations (chiffres inventés), données périmées, excès de
+  confiance dans un score, dépendance → gérées par grounding + validation humaine.
+
+**Risques principaux & atténuation :**
 
 | Risque | Mesure |
 |---|---|
-| Sanctions / réputation (capitaux de la CEI) | KYC strict, refus au moindre doute, documentation de l'origine des fonds |
-| Réglementaire (IDE, secteurs restreints) | vérification juridique en amont, notification du régulateur si requis |
-| Fuite / confidentialité | NDA, anonymisation des teasers, VDR sécurisée |
-| Décalage de trésorerie (deals longs) | retainers + management de transition |
-| Erreurs de l'IA (valorisation, données) | ancrage sur registres officiels + validation humaine |
-| Dépendance au fondateur (réseau) | institutionnalisation : équipe, process, marque, CNCFA |
-| Défiance des cédants envers l'argent « étranger » | réputation, transparence, cas concrets, RC Pro |
+| Sanctions / réputation (capitaux CEI) | KYC strict, refus au moindre doute, origine des fonds documentée |
+| Réglementaire (IDE, secteurs) | vérification juridique en amont, notification si requis |
+| Confidentialité | NDA, teasers anonymisés, VDR |
+| Trésorerie (deals longs) | retainers + transition |
+| Erreurs IA | grounding + humain |
+| Dépendance au fondateur | institutionnalisation (équipe, CNCFA, marque) |
+
+---
+
+# PARTIE 5 — Plan de pilotage et gouvernance
+
+*(Détail complet : fichier `12-Partie5-Pilotage-projet-Agile-FR.md`. Synthèse ci-dessous.)*
+
+## 5.1 Méthode de pilotage
+**Agile hybride** : **Scrum** (produit, sprints de 2 semaines) + **Kanban** (flux des
+affaires). Choix justifié par l'incertitude produit, la petite équipe et l'impératif de
+conformité (intégrée à la *Definition of Done*).
+
+## 5.2 Organisation de l'équipe
+Rôles : Product Owner/Fondateur · Dév no-code/automatisation · Data/AI Analyst · Analyste
+M&A · Responsable conformité · partenaires externes. **Communication :** daily 15 min,
+Slack + Notion, canaux `#produit #deals #conformité #général`. **Dépendances** pilotées via
+un board (ex. : un deal ne passe pas en Négociation sans feu vert Conformité).
+
+## 5.3 Itérations
+6 sprints / 12 semaines : Radar ✅ → CRM → Deal Room → Matching → Conformité →
+Communication+démo. **Backlog priorisé** (Haute/Moyenne/Basse), **burn-down**, revues de
+sprint avec un cédant et un repreneur test, retours réintégrés au backlog.
+
+## 5.4 Tableau de bord de pilotage
+Indicateurs **quantitatifs** (avancement, délais, budget, tokens API) et **qualitatifs**
+(satisfaction, qualité, performance équipe) ; alertes (quota, sanctions) ; actions
+correctives ; **montée en compétences** (formation, pairing, doc dans le dépôt GitHub).
+
+## 5.5 Clôture & REX
+Transfert de connaissances (GitHub, README, Notion) ; REX (Radar livré vite ; MCP portable ;
+données Pappers partielles → enrichissement ; cycles longs → trésorerie) ; recommandations
+de passage à l'échelle (Partie 7.2).
 
 ---
 
 # PARTIE 6 — Prototype et démonstration technique
 
-## 6.1 Le prototype : « Pérennis Deal Room »
+## 6.1 Prototype réalisé
 
-Une application-cockpit interne montrant un **pipeline de transmission** piloté par des
-agents d'IA, avec un **guichet de conformité** bloquant et l'humain dans la boucle.
-Sections : Pipeline (kanban), Cibles, Acheteurs, Matching, Conformité, Transition ;
-bandeau de KPI en tête (cibles qualifiées, mandats actifs, cycle moyen, volume, incidents
-de conformité = 0). *(Voir Annexe C — captures d'écran.)*
+Deux livrables fonctionnels : **(A) Agent Radar** — un workflow **n8n** connecté à l'**API
+Pappers** qui détecte des PME rentables à dirigeant âgé et calcule un **score de succession**
+(prototype de type *Workflow automatisé + Agent IA*, réellement exécutable) ; **(C) « Pérennis
+Deal Room »** — maquette d'app no-code (pipeline kanban, fiche cible, guichet de conformité).
 
-## 6.2 Architecture d'agents (orchestrés par n8n, reliés en MCP)
+## 6.2 Documentation technique
 
-1. **Radar** — détection de cibles (signaux : âge du dirigeant, absence de successeur, santé financière).
-2. **Qualification & Valorisation** — score + fourchette de valeur (multiples EBITDA, DCF simplifié).
-3. **Matching** — appariement cible ↔ acheteur (secteur, ticket, géographie, appétit).
-4. **Communication multilingue** — messages aux vendeurs (FR) et acheteurs (RU/AR/EN).
-5. **Due Diligence** — checklist, synthèse documentaire, détection de risques.
-6. **Conformité KYC/AML & Sanctions** — guichet obligatoire (verdict Cleared / EDD / Blocked).
-7. **Management de transition** — sélection d'un manager interim.
+- **Architecture :** voir schéma 3.2 (agents orchestrés par n8n, données via MCP/API).
+- **Outils & justification :** n8n (orchestration, UE), Pappers (données FR), Claude
+  (rédaction/multilingue), OpenSanctions (conformité), Base44 (UI).
+- **Prompts clés documentés :** prompt de construction Base44 (cadre BASE) ; prompts système
+  des agents **Radar, Matching, Communication, Conformité** (fichier `07`). Le code de
+  scoring du Radar est dans `prototype/radar-pappers-n8n.json`.
+- **Captures d'écran :** maquette Deal Room + résultats du Radar *(Annexe C)*.
+- **Difficultés & solutions :** doc Pappers protégée (403) → paramètres validés via
+  dépôts open-source ; finances parfois absentes → filtres `resultat_min`/`chiffre_affaires_min`
+  garantissant la rentabilité + code défensif.
+- **Limites & améliorations :** enrichissement financier par SIREN, passage en Schedule
+  Trigger (Radar quotidien), écriture directe dans un CRM, agent Matching.
 
-## 6.3 Prompt de construction (Base44, cadre BASE) — extrait
+## 6.3 Vidéo de démonstration (3–5 min)
 
-```
-Build a professional B2B web app called "Pérennis Deal Room" for a cross-border M&A
-advisory that helps aging European SME owners (no successor) sell to vetted investors
-from the CIS and the Middle East. Sober, institutional design (navy, ivory, gold accent).
-Sections: Pipeline (kanban) · Targets (with a Succession Score and an AI valuation range)
-· Buyers (with a KYC status chip) · Matching · a COMPLIANCE GATE a deal cannot pass
-without a "Cleared" status · Transition. Confidentiality banner ("anonymized teasers,
-access under NDA") and a human-in-the-loop rule ("AI drafts, a human approves").
-```
-
-## 6.4 Prompt système — agent Conformité (extrait)
-
-```
-You are the compliance gate for Pérennis. For a buyer, run KYC (beneficial owners),
-source-of-funds plausibility, sanctions & PEP screening (UN/OFAC/EU/UK), and EU FDI
-exposure. Output CLEARED / ENHANCED DUE DILIGENCE / BLOCKED with reasons. Any sanctions
-or PEP hit, or opaque ownership → do NOT clear; escalate to a human.
-```
-
-## 6.5 Scénario de démonstration (3-5 min)
-
-1. **Le problème** — des milliers d'entreprises saines menacées faute de successeur ; 3× moins d'acheteurs.
-2. **Le pont** — relier vendeurs européens et acheteurs vérifiés de la CEI / du Moyen-Orient.
-3. **Démo Deal Room** — fiche cible (Score de succession, valorisation IA) → Matching →
-   **guichet de conformité (KYC/sanctions)** → pipeline → manager de transition.
-4. **Conformité & humain dans la boucle** — pas de « Cleared », pas de passage ; l'IA prépare, l'humain décide.
-5. **Conclusion** — plus rapide, plus sûr, plus propre : on sauve l'entreprise, les emplois
-   et le savoir-faire, et on offre au capital une entrée légitime dans l'économie de l'UE.
+Script prêt à enregistrer (fichier `10`) : problème → pont → démo Deal Room (fiche cible →
+matching → **guichet de conformité** → pipeline) → conformité & humain dans la boucle →
+conclusion. Une **démo auto-jouée sous-titrée** existe (`prototype/perennis-demo.html`).
 
 ---
 
 # PARTIE 7 — Pitch final et recommandations
 
-## 7.1 Message clé
+## 7.1 Pitch Deck (13 slides)
 
-> **« Pérennis — nous sauvons les entreprises qui ont fait l'Europe. »**
-> L'IA trouve et vérifie, mon réseau apporte les repreneurs, l'humain garde le contrôle —
-> de façon rentable et parfaitement conforme.
+Titre · Problème · Marché · Insight (3×) · Solution · Mon fossé · Agents IA · Technologie/MCP
+· ROI de l'IA · Modèle économique · Conformité (avantage) · Feuille de route · Vision.
+*(Fichier `prototype/perennis-pitch.html`.)*
 
-## 7.2 Recommandations
+## 7.2 Recommandations de déploiement
 
-1. **Démarrer par le MVP buy-side** (2-3 acheteurs du réseau + sourcing IA) — rapide, peu coûteux.
-2. **La conformité dès le premier jour** — condition de confiance et de légitimité.
-3. **Humain dans la boucle** — l'IA accélère, l'humain décide.
-4. **Construire le réseau de partenaires en parallèle** (notaires, avocats, banques).
-5. **Le management de transition comme ligne à part** — différenciateur clé (il lève la
-   peur n°1 de l'acheteur : gérer à distance).
-6. **Institutionnaliser la marque** (CNCFA, cas concrets, RC Pro) pour ne pas dépendre du
-   seul réseau du fondateur.
-
-## 7.3 Support de présentation
-
-Un pitch deck de 13 slides accompagne ce dossier (problème → marché → insight → solution →
-fossé → agents IA → technologie/MCP → ROI IA → modèle → conformité → feuille de route → vision).
+- **Feuille de route 6–12 mois :** MVP buy-side (2–3 acheteurs + Radar) → 1ʳᵉ transaction →
+  base sell-side.
+- **Facteurs clés de succès :** conformité irréprochable, réseau d'acheteurs actif, réseau de
+  partenaires (notaires/avocats/banques), confiance des cédants.
+- **Conduite du changement :** formation de l'équipe (prompt engineering, n8n, LCB-FT),
+  positionnement de l'IA comme **assistant** (pas remplaçant), documentation vivante.
+- **Indicateurs post-déploiement :** volume de transactions, cycle moyen, taux de conversion
+  mandat→closing, satisfaction cédant/repreneur, **0 incident de conformité**.
 
 ---
 
 # ANNEXES
 
-## Annexe A — Brief (1 page)
-- **Commanditaire :** le fondateur (projet entrepreneurial réel).
-- **Problème :** vague de transmission des PME en Europe ; 3× plus de vendeurs que
-  d'acheteurs ; une cession sur deux échoue.
-- **Mission :** concevoir une plateforme d'IA + un conseil M&A reliant vendeurs européens
-  et acheteurs de la CEI / du Moyen-Orient, avec accompagnement A→Z et management de transition.
-- **Contraintes :** conformité stricte (RGPD, LCB-FT, sanctions, IDE), confidentialité,
-  humain dans la boucle, budget de jeune structure, délais réalistes.
-- **Livrables :** prototype, plan de mise en œuvre, business case.
-
-## Annexe B — Personas
-Jean-Pierre Rousseau (cédant, 64 ans), Timur A. (repreneur, 45 ans), Léa (analyste M&A) — voir Partie 2.2.
-
-## Annexe C — Captures d'écran du prototype
-Maquette « Pérennis Deal Room » (cockpit M&A) : bandeau de KPI, pipeline kanban, fiche
-cible avec Score de succession et valorisation IA, **guichet de conformité** avec verdict
-« Cleared », suggestion de matching. *(Insérer 3-4 captures : vue d'ensemble, guichet de
-conformité, fiche cible.)*
-
-## Annexe D — Sources (avec liens)
-- BPCE L'Observatoire — cession-transmission des TPE/PME : bpifrance-creation.fr/observatoire
-- BPCE — cession-transmission en Europe : groupebpce.com/etudes-economiques
-- Bpifrance Le Lab — marché de 370 000 entreprises d'ici 2030 : lelab.bpifrance.fr
-- DGE — les transmissions d'entreprises : entreprises.gouv.fr
-- Institut Sapiens — la vague de transmission des PME (2025-2035) : institutsapiens.fr
-- CRA — Observatoire janvier 2025 : cra.asso.fr
-- KfW — SME succession status report : kfw.de
-- EthosData / IMAA — l'IA dans le M&A (deal origination) : ethosdata.com · imaa-institute.org
-- Freshfields — nouveau règlement UE de filtrage des IDE : freshfields.com
+- **Annexe A — Brief client (1 p.) :** commanditaire, mission (une phrase), contraintes,
+  livrables (voir 2.0).
+- **Annexe B — Personas :** Jean-Pierre (cédant), Timur (repreneur), Léa (analyste).
+- **Annexe C — Captures :** maquette Deal Room (KPI, pipeline, fiche cible, guichet de
+  conformité), résultats de l'agent Radar.
+- **Annexe D — Prototype technique :** `radar-pappers-n8n.json` (workflow), prompts des agents.
+- **Annexe E — Sources :** BPCE L'Observatoire · Bpifrance Le Lab · DGE · CRA · Banque de
+  France · KfW · Institut Sapiens · EthosData/IMAA (IA en M&A) · Cyndx/Sourcescrub ·
+  Freshfields (filtrage des IDE).
 
 ---
 
-*Ce dossier valide les blocs BC01 (Définition du projet) et BC04 (Pilotage du projet) du
-RNCP 40247 — titre professionnel visé de la formation AI for Business.*
+*Ce dossier valide les blocs BC01 et BC04 du RNCP 40247 — formation AI for Business, PSTB.*

@@ -2,71 +2,72 @@
 <style>
   :root{
     --navy:#152238; --navy-2:#1D2E49; --gold:#9E7A2E; --gold-soft:#EFE6D2;
-    --ink:#1B2230; --ink-2:#4A5468; --muted:#7B8496; --line:#D9DEE6; --bg:#ffffff;
+    --ink:#1B2230; --ink-2:#4A5468; --muted:#7B8496; --line:#D9DEE6;
   }
   *{box-sizing:border-box}
   html,body{margin:0;background:#e9ebef}
-  body{font-family:Georgia,"Iowan Old Style",serif;color:#1B2230;line-height:1.55;font-size:11.2pt}
-  .page{background:#fff;max-width:830px;margin:22px auto;padding:64px 70px;
-    box-shadow:0 2px 16px rgba(20,30,50,.12)}
+  body{font-family:Georgia,"Iowan Old Style",serif;color:#1B2230;line-height:1.5;font-size:10.8pt}
+  .page{background:#fff;max-width:830px;margin:22px auto;padding:60px 66px;box-shadow:0 2px 16px rgba(20,30,50,.12)}
   h1,h2,h3,h4{font-family:Georgia,serif;color:#152238;line-height:1.2;text-wrap:balance}
   .tnum{font-variant-numeric:tabular-nums}
-  /* Cover */
-  .cover{min-height:64vh;display:flex;flex-direction:column;justify-content:center}
-  .flag{width:120px;height:6px;border-radius:3px;background:linear-gradient(90deg,#4E6B57 0 34%,#EFE6D2 34% 66%,#9E7A2E 66%);margin-bottom:30px}
-  .eyebrow{font-family:system-ui,sans-serif;font-size:10.5pt;letter-spacing:.22em;text-transform:uppercase;color:#9E7A2E;margin-bottom:14px}
-  .cover h1{font-size:40pt;margin:0 0 6px;letter-spacing:-.5px}
-  .cover .sub{font-size:15pt;color:#4A5468;font-style:italic;margin:6px 0 30px;max-width:60ch}
-  .meta{font-family:system-ui,sans-serif;font-size:10.5pt;color:#4A5468;line-height:1.9;border-top:1px solid #D9DEE6;padding-top:18px}
+  .cover{min-height:60vh;display:flex;flex-direction:column;justify-content:center}
+  .flag{width:120px;height:6px;border-radius:3px;background:linear-gradient(90deg,#4E6B57 0 34%,#EFE6D2 34% 66%,#9E7A2E 66%);margin-bottom:28px}
+  .eyebrow{font-family:system-ui,sans-serif;font-size:10pt;letter-spacing:.22em;text-transform:uppercase;color:#9E7A2E;margin-bottom:12px}
+  .cover h1{font-size:36pt;margin:0 0 6px;letter-spacing:-.5px}
+  .cover .sub{font-size:14pt;color:#4A5468;font-style:italic;margin:6px 0 26px;max-width:60ch}
+  .meta{font-family:system-ui,sans-serif;font-size:10pt;color:#4A5468;line-height:1.9;border-top:1px solid #D9DEE6;padding-top:16px}
   .meta b{color:#152238}
-  /* Headings */
   .part{border-top:3px solid #152238;margin-top:0;padding-top:8px}
-  h1.part-t{font-size:20pt;margin:6px 0 4px;color:#152238}
-  .part-k{font-family:system-ui,sans-serif;font-size:10pt;letter-spacing:.16em;text-transform:uppercase;color:#9E7A2E}
-  h2{font-size:14pt;margin:26px 0 8px;padding-bottom:5px;border-bottom:1px solid #E4E8EE}
-  h3{font-size:11.6pt;margin:18px 0 6px;font-family:system-ui,sans-serif;color:#1D2E49}
-  p{margin:8px 0}
-  ul,ol{margin:8px 0;padding-left:20px}
-  li{margin:4px 0}
+  h1.part-t{font-size:19pt;margin:6px 0 4px}
+  .part-k{font-family:system-ui,sans-serif;font-size:9.5pt;letter-spacing:.16em;text-transform:uppercase;color:#9E7A2E}
+  h2{font-size:13pt;margin:22px 0 7px;padding-bottom:5px;border-bottom:1px solid #E4E8EE}
+  h3{font-size:11pt;margin:16px 0 5px;font-family:system-ui,sans-serif;color:#1D2E49}
+  p{margin:7px 0}
+  ul,ol{margin:7px 0;padding-left:20px}
+  li{margin:3px 0}
   strong{color:#111823}
   em{color:#3a4657}
-  a{color:#856323;text-decoration:none}
-  blockquote{margin:14px 0;padding:12px 18px;background:#F6F4EE;border-left:3px solid #9E7A2E;
-    font-style:italic;color:#3f4657;border-radius:0 6px 6px 0}
+  blockquote{margin:12px 0;padding:11px 16px;background:#F6F4EE;border-left:3px solid #9E7A2E;font-style:italic;color:#3f4657;border-radius:0 6px 6px 0}
   blockquote strong{font-style:normal}
-  /* Persona box */
-  .persona{background:#F5F7FA;border:1px solid #E4E8EE;border-radius:8px;padding:12px 16px;margin:12px 0;font-size:10.6pt}
-  /* Tables */
-  table{border-collapse:collapse;width:100%;margin:14px 0;font-family:system-ui,sans-serif;font-size:9.8pt}
-  th,td{border:1px solid #DCE1E8;padding:7px 10px;text-align:left;vertical-align:top}
-  thead th{background:#152238;color:#EAEFF7;font-weight:600;letter-spacing:.01em}
+  .persona{background:#F5F7FA;border:1px solid #E4E8EE;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:10.2pt}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-family:system-ui,sans-serif;font-size:9.2pt}
+  th,td{border:1px solid #DCE1E8;padding:6px 9px;text-align:left;vertical-align:top}
+  thead th{background:#152238;color:#EAEFF7;font-weight:600}
   tbody tr:nth-child(even){background:#F5F7FA}
-  td .ok{color:#2F7D5B;font-weight:700}
   .win{background:#EFE6D2!important;font-weight:700}
-  /* Code */
-  pre{background:#141C28;color:#E7ECF4;border-radius:8px;padding:14px 16px;overflow-x:auto;
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.7pt;line-height:1.5;white-space:pre-wrap}
-  /* Exec summary highlight */
-  .exec{background:linear-gradient(180deg,#F6F4EE,#fff);border:1px solid #E9E2D0;border-radius:10px;padding:6px 22px 16px;margin:18px 0}
-  .lead{font-size:12pt;color:#2a3346}
-  .kpibar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-  .kpibar .k{flex:1;min-width:120px;background:#152238;color:#fff;border-radius:8px;padding:12px 14px;font-family:system-ui,sans-serif}
-  .kpibar .k .v{font-size:19pt;font-weight:700;line-height:1;color:#EFE6D2}
-  .kpibar .k .l{font-size:8.6pt;color:#B9C3D4;margin-top:5px;letter-spacing:.02em}
-  footer.doc{font-family:system-ui,sans-serif;font-size:9pt;color:#7B8496;border-top:1px solid #E4E8EE;
-    margin-top:26px;padding-top:12px;font-style:italic}
-  .print-hint{position:fixed;top:12px;right:12px;background:#152238;color:#fff;font-family:system-ui,sans-serif;
-    font-size:11px;padding:9px 13px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:99}
+  pre{background:#141C28;color:#E7ECF4;border-radius:8px;padding:12px 14px;overflow-x:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.3pt;line-height:1.5;white-space:pre-wrap}
+  .exec{background:linear-gradient(180deg,#F6F4EE,#fff);border:1px solid #E9E2D0;border-radius:10px;padding:6px 20px 14px;margin:16px 0}
+  .lead{font-size:11.5pt;color:#2a3346}
+  .kpibar{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+  .kpibar .k{flex:1;min-width:115px;background:#152238;color:#fff;border-radius:8px;padding:11px 13px;font-family:system-ui,sans-serif}
+  .kpibar .k .v{font-size:17pt;font-weight:700;line-height:1;color:#EFE6D2}
+  .kpibar .k .l{font-size:8.2pt;color:#B9C3D4;margin-top:5px}
+  /* diagram */
+  .diagram{border:1px solid #E4E8EE;border-radius:10px;padding:16px;margin:12px 0;background:#FAFBFC;text-align:center}
+  .drow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin-bottom:8px}
+  .dbox{background:#152238;color:#EAEFF7;border-radius:7px;padding:6px 11px;font-family:system-ui,sans-serif;font-size:9pt}
+  .dbox.gate{background:#9E7A2E;color:#fff}
+  .darr{color:#9E7A2E;font-weight:700}
+  .dnote{font-family:system-ui,sans-serif;font-size:8.6pt;color:#4A5468;margin-top:6px}
+  /* gantt */
+  .gantt{font-family:system-ui,sans-serif;font-size:8.8pt;margin:12px 0}
+  .grow{display:flex;align-items:center;gap:10px;margin:4px 0}
+  .glabel{width:150px;flex:none;color:#1D2E49;font-weight:600}
+  .gtrack{flex:1;background:#F0F2F6;border-radius:5px;height:20px;position:relative;border:1px solid #E4E8EE}
+  .gbar{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,#1D2E49,#9E7A2E);border-radius:5px;color:#fff;font-size:8pt;display:flex;align-items:center;padding-left:8px}
+  .gaxis{display:flex;justify-content:space-between;font-size:7.6pt;color:#7B8496;margin-left:160px;margin-top:2px}
+  footer.doc{font-family:system-ui,sans-serif;font-size:8.8pt;color:#7B8496;border-top:1px solid #E4E8EE;margin-top:22px;padding-top:10px;font-style:italic}
+  .print-hint{position:fixed;top:12px;right:12px;background:#152238;color:#fff;font-family:system-ui,sans-serif;font-size:11px;padding:9px 13px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:99}
   .print-hint b{color:#EFE6D2}
   @media print{
     html,body{background:#fff}
     .page{box-shadow:none;margin:0;max-width:none;padding:0 8mm}
     .print-hint{display:none}
     .part{break-before:page;page-break-before:always}
-    .cover,.exec-page{break-before:auto;page-break-before:avoid}
-    h2,h3{break-after:avoid} table,blockquote,pre,.persona,.kpibar{break-inside:avoid}
+    .cover,.exec-page{break-before:auto}
+    h2,h3{break-after:avoid} table,blockquote,pre,.persona,.kpibar,.diagram,.gantt{break-inside:avoid}
     thead{display:table-header-group}
-    @page{size:A4;margin:16mm 14mm}
+    @page{size:A4;margin:15mm 13mm}
   }
 </style>
 
@@ -74,389 +75,282 @@
 
 <div class="page">
 
-  <!-- ===================== COVER ===================== -->
+  <!-- COVER -->
   <section class="cover">
     <div class="flag"></div>
     <div class="eyebrow">Projet Capstone · AI for Business · PSTB</div>
     <h1>Pérennis</h1>
-    <div class="sub">Une plateforme d'IA et un conseil M&amp;A pour la transmission des entreprises européennes.</div>
+    <div class="sub">Plateforme d'agents d'IA et conseil M&amp;A pour la transmission d'entreprises en Europe.</div>
     <div class="meta">
       <b>Spécialisation :</b> AI for Business — Stratégie, Finance &amp; M&amp;A<br>
-      <b>Étudiant :</b> Abdul Gueny Djeirkhanov<br>
-      <b>Cohorte :</b> FR_AI_BIZ · Campus France<br>
-      <b>Nature :</b> création d'entreprise réelle (le fondateur est commanditaire et consultant IA)<br>
-      <b>Référentiel :</b> valide les blocs BC01 (Définition du projet) et BC04 (Pilotage) du RNCP 40247
+      <b>Étudiant :</b> Abdul Gueny Djeirkhanov &nbsp;·&nbsp; <b>Cohorte :</b> FR_AI_BIZ · Campus France<br>
+      <b>Nature :</b> création d'entreprise réelle (fondateur = commanditaire &amp; consultant IA)<br>
+      <b>Référentiel :</b> valide les blocs BC01 (Définition) et BC04 (Pilotage) du RNCP 40247
     </div>
   </section>
 
-  <!-- ===================== EXEC SUMMARY ===================== -->
+  <!-- EXEC -->
   <section class="exec-page">
-    <h2 style="border:none;font-size:16pt">Résumé exécutif</h2>
+    <h2 style="border:none;font-size:15pt">Résumé exécutif</h2>
     <div class="exec">
-      <p class="lead">L'Europe fait face à une <strong>crise silencieuse de la transmission
-      d'entreprises</strong>. Des centaines de milliers de PME rentables risquent de disparaître,
-      non par échec, mais parce que leurs dirigeants vieillissent <strong>sans successeur</strong>.</p>
-      <p>En France, <strong>près de 500 000 dirigeants</strong> partiront à la retraite dans les
-      prochaines années — <strong>plus de 3 millions d'emplois</strong> en jeu (DGE, 2025) — et
-      <strong>une entreprise sur deux ne trouve pas de repreneur</strong>. Le déséquilibre est
-      structurel : <strong>les vendeurs sont ~3× plus nombreux que les acheteurs</strong>. Le facteur
-      rare n'est pas l'entreprise à céder, mais <strong>l'acheteur solvable et de confiance</strong>.</p>
-      <p><strong>Pérennis</strong> répond aux deux faces du problème : (1) une plateforme d'agents
-      d'IA qui détecte, qualifie, valorise et met en correspondance les entreprises — avec un
-      <strong>guichet de conformité</strong> (KYC/AML/sanctions) et l'humain dans la boucle ;
-      (2) un <strong>réseau propriétaire d'acheteurs</strong> de la CEI et du Moyen-Orient
-      (mon avantage : réseau, langue russe, culture) ; (3) un <strong>accompagnement A→Z</strong>
-      et un <strong>management de transition</strong> qui fait percevoir les bénéfices dès le
-      premier jour.</p>
+      <p class="lead">L'Europe fait face à une <strong>crise silencieuse de la transmission d'entreprises</strong> : des PME rentables disparaissent faute de successeur.</p>
+      <p>En France, <strong>~500 000 dirigeants</strong> partiront à la retraite (<strong>+3 M d'emplois</strong> en jeu) et <strong>une entreprise sur deux ne trouve pas de repreneur</strong>. Le marché est déséquilibré : <strong>3× plus de vendeurs que d'acheteurs</strong> — le facteur rare est l'acheteur solvable et de confiance.</p>
+      <p><strong>Pérennis</strong> relie les deux rives : des <strong>agents d'IA</strong> détectent, valorisent et apparient les entreprises (avec un <strong>guichet de conformité</strong> et l'humain dans la boucle), et j'apporte un <strong>réseau d'acheteurs</strong> de la CEI et du Moyen-Orient (mon avantage : réseau, langue russe), plus un <strong>management de transition</strong>.</p>
       <div class="kpibar">
-        <div class="k"><div class="v">×3,7</div><div class="l">productivité du sourcing (coût/cible −65 %)</div></div>
-        <div class="k"><div class="v">&lt; 6 mois</div><div class="l">cycle de transaction (marché &gt; 12)</div></div>
-        <div class="k"><div class="v">~2,5 M€</div><div class="l">CA à maturité (~50 M€/an de volume)</div></div>
-        <div class="k"><div class="v">~1,9 M€</div><div class="l">résultat net (marge ~76 %)</div></div>
+        <div class="k"><div class="v">×3,7</div><div class="l">sourcing (coût/cible −65 %)</div></div>
+        <div class="k"><div class="v">&lt; 6 mois</div><div class="l">cycle (marché &gt; 12)</div></div>
+        <div class="k"><div class="v">~2,49 M€</div><div class="l">produits à maturité</div></div>
+        <div class="k"><div class="v">~1,9 M€</div><div class="l">résultat net (~76 %)</div></div>
       </div>
-      <p style="margin-bottom:4px">Le tout dans un cadre strictement conforme : RGPD, LCB-FT,
-      sanctions, filtrage des IDE, EU AI Act.</p>
     </div>
   </section>
 
-  <!-- ===================== PARTIE 1 ===================== -->
+  <!-- PARTIE 1 -->
   <section class="part">
     <div class="part-k">Partie 1</div>
     <h1 class="part-t">Veille stratégique IA et analyse sectorielle</h1>
 
     <h3>1.1 Dispositif de veille</h3>
     <ul>
-      <li><strong>Sources sectorielles :</strong> BPCE L'Observatoire, Bpifrance Le Lab, DGE, CRA, Banque de France, KfW, Institut Sapiens.</li>
-      <li><strong>Veille réglementaire :</strong> filtrage des IDE (EU FDI Screening), LCB-FT / KYC, EU AI Act, CNIL / RGPD.</li>
-      <li><strong>Veille technologique :</strong> usages de l'IA en M&amp;A (deal sourcing, due diligence), plateformes de deal origination.</li>
+      <li><strong>Sources :</strong> BPCE L'Observatoire, Bpifrance Le Lab, DGE, CRA, Banque de France, KfW, Institut Sapiens, McKinsey/BCG.</li>
+      <li><strong>Réglementaire :</strong> EU AI Act, CNIL/RGPD, LCB-FT, règlement UE de filtrage des IDE.</li>
+      <li><strong>Outils :</strong> Perplexity/WebSearch, Feedly, Notion, alertes, newsletters.</li>
+      <li><strong>Couverture :</strong> concurrence, réglementation, technologies (agents IA, MCP), tendances, et <strong>RSE/éthique</strong> (préservation des emplois &amp; du savoir-faire ; anti-blanchiment).</li>
     </ul>
+    <p><strong>Conclusions :</strong> l'IA générative est devenue un standard du M&amp;A ; la contrainte est désormais organisationnelle (données, conformité, confiance). Le besoin de transmission est massif et durable, mais le marché est inefficace.</p>
 
-    <h2>1.2 Panorama sectoriel — la vague de transmission</h2>
-    <p><strong>En France :</strong></p>
-    <ul>
-      <li><strong>~500 000 dirigeants</strong> de TPE-PME partiront à la retraite ; <strong>&gt; 3 millions d'emplois</strong> concernés <em>(DGE, 2025)</em>.</li>
-      <li>Potentiel de <strong>~370 000 entreprises à céder d'ici 2030</strong> (≈ 310 000 TPE, 58 000 PME, 1 200 ETI) <em>(CCI/CMA/CRA + Bpifrance, 2024-2025)</em>.</li>
-      <li><strong>Une entreprise sur deux ne trouve pas de repreneur</strong> ; seules ~130 000 transmises sur 5 ans → <strong>potentiel ~3× la réalité</strong> <em>(Bpifrance Le Lab / Institut Sapiens, 2025)</em>.</li>
-      <li><strong>42 % des cessions échouent faute de repreneur</strong> (jusqu'à 57 % en zones rurales) <em>(Banque de France, 2024)</em>.</li>
-      <li><strong>41 % des négociations échouent sur le prix</strong> ; <strong>55 % des repreneurs</strong> mettent <strong>&gt; 1 an</strong> à trouver une cible <em>(CRA, 2024)</em>.</li>
-    </ul>
-    <p><strong>En Europe :</strong></p>
-    <ul>
-      <li><strong>Allemagne :</strong> 545 000 propriétaires de Mittelstand à transmettre d'ici fin 2029 ; 569 000 envisagent de <strong>fermer</strong> <em>(KfW)</em>.</li>
-      <li><strong>~114 000 entreprises/an</strong> en Europe ferment faute de successeur, non par échec.</li>
-      <li>Les acheteurs sont <strong>~3× moins nombreux</strong> que les vendeurs. Suisse : ~168 000 PME transmises d'ici 2030.</li>
-    </ul>
+    <h2>1.2 Panorama sectoriel — 5 cas d'usage IA</h2>
+    <table>
+      <thead><tr><th>Acteur</th><th>Problème</th><th>Solution IA</th><th>Résultat</th><th>Leçon</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cyndx</strong></td><td>trouver des cibles avant le marché</td><td>« Projected to Raise » (NLP + base mondiale)</td><td><strong>~86 %</strong> de précision</td><td>→ agent Radar (sourcing prédictif)</td></tr>
+        <tr><td><strong>Sourcescrub</strong></td><td>sourcer des PME de fondateurs</td><td>agrégation de signaux</td><td>pipelines propriétaires</td><td>→ sourcer au-delà des registres</td></tr>
+        <tr><td><strong>Marché M&amp;A 2025</strong></td><td>efficacité des deals</td><td>GenAI dans les workflows</td><td><strong>86 %</strong> l'ont intégrée (65 % en 1 an)</td><td>approche dé-risquée</td></tr>
+        <tr><td><strong>Due diligence IA</strong></td><td>DD lente, risques manqués</td><td>lecture de contrats, anomalies</td><td>DD plus rapide</td><td>→ agent Due Diligence</td></tr>
+        <tr><td><strong>RegTech KYC/AML</strong></td><td>criblage manuel</td><td>screening sanctions &amp; PEP</td><td>conformité à l'échelle</td><td>→ agent Conformité</td></tr>
+      </tbody>
+    </table>
 
-    <h2>1.3 Tendance — l'IA transforme déjà le M&amp;A</h2>
-    <ul>
-      <li><strong>86 % des responsables de transactions</strong> ont déjà intégré l'IA générative dans leurs processus M&amp;A ; 65 % dans la dernière année <em>(2025)</em>.</li>
-      <li>L'IA intervient en origination (NLP détectant les vendeurs potentiels), due diligence, valorisation, intégration. Cyndx « Projected to Raise » : <strong>~86 %</strong> de précision.</li>
-    </ul>
-    <blockquote><strong>Conclusion :</strong> un enjeu structurel de la décennie, sur un marché
-      vaste mais inefficace (3× plus de vendeurs, une cession sur deux qui échoue, un an de
-      recherche). Les plateformes IA existantes sont anglo-saxonnes et <strong>ne traitent ni le
-      pont Europe ↔ Est, ni la barrière linguistique (russe / arabe)</strong> — l'espace de Pérennis.</blockquote>
-
-    <h3>1.4 Leviers (cadre AI Traffic Light)</h3>
-    <p>Pérennis se positionne en <strong>Innovation</strong> (marché transfrontalier inédit,
-      adossé à l'IA) <strong>et en Augmentation</strong> (l'IA démultiplie une petite équipe).
-      Ce n'est pas une automatisation intégrale : décisions et relations restent humaines.</p>
+    <h3>1.3 Leviers (AI Traffic Light)</h3>
+    <p><strong>Innovation</strong> (marché transfrontalier inédit adossé à l'IA) <strong>+ Augmentation</strong> (l'IA démultiplie une petite équipe). Leviers : efficacité opérationnelle, scalabilité, qualité, conformité. Décisions et relations restent humaines.</p>
   </section>
 
-  <!-- ===================== PARTIE 2 ===================== -->
+  <!-- PARTIE 2 -->
   <section class="part">
     <div class="part-k">Partie 2</div>
     <h1 class="part-t">Analyse du besoin et idéation</h1>
 
-    <h3>2.0 Le commanditaire</h3>
-    <p>Le commanditaire est <strong>le fondateur lui-même</strong> : je construis un cabinet de
-      conseil M&amp;A adossé à une plateforme d'IA. <strong>Mon avantage concurrentiel :</strong>
-      relations et réputation dans les ex-républiques de l'URSS, maîtrise du russe, liens avec des
-      chefs d'entreprise du Moyen-Orient cherchant une économie stable de l'UE. Je suis le
-      <strong>pont</strong> entre cédants européens et repreneurs de l'Est.</p>
+    <h3>2.0 La commande du commanditaire</h3>
+    <p><strong>Commanditaire :</strong> le comité de fondation de Pérennis (le fondateur mandatant le consultant IA). <strong>Mission :</strong> <em>« Concevoir et prototyper une solution d'IA qui détecte les PME européennes à céder sans successeur et les met en relation, en toute conformité, avec des acheteurs vérifiés de la CEI et du Moyen-Orient. »</em> <strong>Contraintes :</strong> budget d'amorçage, conformité stricte, confidentialité, humain dans la boucle. <strong>Livrables :</strong> prototype, business case, plan de pilotage.</p>
 
-    <h2>2.1 Le besoin (un marché à deux faces)</h2>
+    <h2>2.1 Analyse du besoin</h2>
     <ul>
-      <li><strong>Côté vendeur :</strong> un repreneur sérieux et solvable, en toute
-        confidentialité, à un juste prix, en préservant emplois et savoir-faire.</li>
-      <li><strong>Côté acheteur :</strong> des cibles vérifiées sur un marché inconnu, un
-        accompagnement dans sa langue, la confiance, et la possibilité de gérer à distance grâce
-        au management de transition.</li>
+      <li><strong>Pain point mesurable :</strong> &gt; 12 mois de recherche, 42 % de cessions échouées, 3× plus de vendeurs que d'acheteurs.</li>
+      <li><strong>Parties prenantes :</strong> cédants (prix, discrétion, continuité) · repreneurs (cibles vérifiées, langue, gestion à distance) · régulateur · équipe.</li>
+      <li><strong>Hiérarchisation :</strong> 1) apporter des acheteurs solvables ; 2) conformité ; 3) sourcing efficace ; 4) accompagnement A→Z ; 5) transition.</li>
+      <li><strong>Conformité du besoin :</strong> données personnelles → base légale RGPD ; usage à risque limité (EU AI Act, voir 4.4).</li>
     </ul>
 
-    <h2>2.2 Personas</h2>
-    <div class="persona"><strong>Persona 1 — Le cédant. Jean-Pierre Rousseau, 64 ans</strong>,
-      PME de composants métalliques de précision (Auvergne-Rhône-Alpes), CA ≈ 8 M€, 45 salariés,
-      EBITDA ≈ 1,2 M€. <em>« Ma fille est médecin au Canada, mon fils ne veut pas de l'usine. Je
-      ne sais pas ce que vaut mon entreprise et je ne veux pas que ça s'ébruite. »</em> Attentes :
-      acheteur solvable, discrétion totale, juste prix, continuité.</div>
-    <div class="persona"><strong>Persona 2 — Le repreneur. Timur A., 45 ans</strong>, entrepreneur
-      à Almaty (activités à Dubaï), capital 3–10 M€. Objectifs : placer son capital dans une
-      économie stable de l'UE, un actif tangible et rentable. <em>« Je ne connais pas le marché,
-      la langue, la culture. À qui faire confiance ? Comment gérer à distance ? »</em> Attentes :
-      un partenaire parlant sa langue (RU/AR), des cibles vérifiées, un accompagnement complet et
-      <strong>un management de transition</strong>.</div>
-    <div class="persona"><strong>Persona 3 — L'utilisateur interne. Léa, 29 ans</strong>, analyste
-      M&amp;A. Aujourd'hui : des heures dans les registres. Avec Pérennis : l'agent Radar source,
-      elle se concentre sur les relations et les transactions.</div>
-
-    <h2>2.3 Parcours utilisateur (avant → après)</h2>
+    <h2>2.2 Idéation</h2>
+    <div class="persona"><strong>Cédant — Jean-Pierre Rousseau, 64 ans</strong> (mécanique de précision, 8 M€ CA, 45 salariés). <em>« Personne à qui transmettre ; je ne connais pas la valeur ; je veux la discrétion. »</em></div>
+    <div class="persona"><strong>Repreneur — Timur A., 45 ans</strong> (Almaty/Dubaï, 3–10 M€). <em>« Je ne connais pas le marché ; à qui faire confiance ; comment gérer à distance ? »</em></div>
+    <div class="persona"><strong>Interne — Léa, 29 ans</strong>, analyste M&amp;A (sourcing).</div>
+    <p><strong>User journey :</strong> de « &gt; 12 mois, échec 42 % » à « acheteur vérifié, cycle &lt; 6 mois, teaser anonyme, conformité intégrée, transition assurée ».</p>
     <table>
-      <thead><tr><th>Étape</th><th>Aujourd'hui</th><th>Avec Pérennis</th></tr></thead>
+      <thead><tr><th>Critère (1–5)</th><th>Pérennis (hybride)</th><th>SaaS sourcing</th><th>Conciergerie buy-side</th></tr></thead>
       <tbody>
-        <tr><td>Estimer la valeur (vendeur)</td><td>ne sait pas, doute</td><td>agent Valorisation → fourchette</td></tr>
-        <tr><td>Trouver un repreneur</td><td>&gt; 12 mois, échec dans 42 %</td><td>acheteur vérifié apporté par le réseau</td></tr>
-        <tr><td>Confidentialité</td><td>risque de fuite</td><td>teaser anonyme, accès sous NDA</td></tr>
-        <tr><td>Trouver une cible (acheteur)</td><td>marché inconnu</td><td>agent Matching selon critères</td></tr>
-        <tr><td>Confiance / langue</td><td>barrière RU/AR</td><td>partenaire dans sa langue</td></tr>
-        <tr><td>Vérification</td><td>crainte de fraude</td><td>agents Due Diligence + KYC/AML</td></tr>
-        <tr><td>Gestion post-reprise</td><td>ne sait pas gérer à distance</td><td>manager de transition</td></tr>
-        <tr><td>Cycle</td><td>&gt; 12 mois</td><td>&lt; 6 mois (objectif)</td></tr>
-      </tbody>
-    </table>
-
-    <h2>2.4 Idéation et choix</h2>
-    <table>
-      <thead><tr><th>Critère (1–5)</th><th>Pérennis (hybride)</th><th>SaaS de sourcing</th><th>Conciergerie buy-side</th></tr></thead>
-      <tbody>
-        <tr><td>Impact sur le problème</td><td>5</td><td>3</td><td>4</td></tr>
+        <tr><td>Impact</td><td>5</td><td>3</td><td>4</td></tr>
         <tr><td>Exploite mon fossé</td><td>5</td><td>1</td><td>5</td></tr>
         <tr><td>Différenciation</td><td>5</td><td>2</td><td>4</td></tr>
         <tr><td>Effet démo</td><td>5</td><td>3</td><td>4</td></tr>
         <tr><td>Faisabilité</td><td>3</td><td>4</td><td>4</td></tr>
-        <tr><td>Coût de lancement</td><td>3</td><td>4</td><td>4</td></tr>
+        <tr><td>Coût</td><td>3</td><td>4</td><td>4</td></tr>
         <tr class="win"><td>Total</td><td>26 ✅</td><td>17</td><td>25</td></tr>
       </tbody>
     </table>
-    <blockquote><strong>Décision :</strong> la solution hybride <strong>Pérennis</strong> est
-      retenue — seule à exploiter pleinement mon avantage et à créer un effet plateforme. Pour
-      rester réaliste, le lancement est <strong>phasé</strong> : la conciergerie buy-side devient
-      le <strong>MVP</strong>, avant la base sell-side puis la ligne de management de transition.</blockquote>
+    <p><strong>Décision :</strong> l'hybride Pérennis, lancé par phases (MVP conciergerie buy-side d'abord).</p>
+
+    <h3>2.3 Solution retenue</h3>
+    <ul>
+      <li><strong>Pitch :</strong> <em>Pérennis — « Assurer la pérennité des entreprises qui ont fait l'Europe. »</em></li>
+      <li><strong>Type d'IA :</strong> agents d'IA (n8n) + IA générative (Claude, multilingue, documents) + automatisation ; scoring à base de règles.</li>
+      <li><strong>Données &amp; disponibilité :</strong> registres publics (Pappers/Infogreffe/BODACC/INSEE — API), CRM acheteurs (interne), listes sanctions/PEP (OpenSanctions — ouvertes), documents de deal (sous NDA).</li>
+    </ul>
   </section>
 
-  <!-- ===================== PARTIE 3 ===================== -->
+  <!-- PARTIE 3 -->
   <section class="part">
     <div class="part-k">Partie 3</div>
     <h1 class="part-t">Benchmark des outils IA / No-Code</h1>
     <table>
-      <thead><tr><th>Couche</th><th>Retenu</th><th>Alternatives / verdict</th></tr></thead>
+      <thead><tr><th>Outil</th><th>Catégorie</th><th>Interopérabilité</th><th>Coûts</th><th>Limites</th></tr></thead>
       <tbody>
-        <tr><td>Interface / CRM</td><td><strong>Base44</strong></td><td>Lovable/Bubble (réserve) ; Salesforce (trop lourd)</td></tr>
-        <tr><td>Orchestration</td><td><strong>n8n</strong> (auto-hébergé UE → RGPD)</td><td>Zapier/Make (limité) ; code (plus tard)</td></tr>
-        <tr><td>Moteur (LLM)</td><td><strong>Claude</strong> (RU/AR/FR/EN, documents)</td><td>GPT-5.x (option) ; modèles ouverts (données sensibles)</td></tr>
-        <tr><td>Données FR</td><td><strong>Pappers, Infogreffe, BODACC, INSEE</strong></td><td>Orbis / Bureau van Dijk (UE, payant)</td></tr>
-        <tr><td>Conformité</td><td><strong>OpenSanctions</strong> (UN/OFAC/EU/UK + PEP)</td><td>ComplyAdvantage / Sanction Scanner (pilote)</td></tr>
-        <tr><td>CRM / e-mail / data room</td><td><strong>HubSpot ou Airtable · Gmail/Outlook · Drive/Notion/VDR</strong></td><td>—</td></tr>
+        <tr><td><strong>Base44</strong></td><td>App no-code</td><td>API/webhooks, MCP</td><td>freemium</td><td>moins de contrôle logique</td></tr>
+        <tr><td><strong>n8n</strong></td><td>Automatisation / agents</td><td>connecte Claude, Pappers, Airtable (natif)</td><td>open-source / cloud</td><td>courbe d'apprentissage</td></tr>
+        <tr><td><strong>Claude</strong></td><td>LLM</td><td>API, MCP, appelable par n8n</td><td>à l'usage (tokens)</td><td>coût au volume</td></tr>
+        <tr><td><strong>Pappers</strong></td><td>Données entreprises</td><td>API REST (branchée à n8n)</td><td>100 crédits gratuits + packs</td><td>finances parfois partielles</td></tr>
+        <tr><td><strong>OpenSanctions</strong></td><td>Conformité</td><td>API / données ouvertes</td><td>gratuit / pro</td><td>nécessite interprétation</td></tr>
       </tbody>
     </table>
-    <blockquote><strong>Justification :</strong> no-code + modèles standard = rapidité et coût
-      maîtrisé ; <strong>MCP = portabilité sans vendor lock-in</strong> (on remplace un LLM ou une
-      source sans réécrire, et on héberge dans l'UE → risque RGPD réduit) ; coûts phasés (gratuit
-      au départ, Orbis/VDR à l'échelle).</blockquote>
+    <p><em>Interopérabilité — exemple :</em> dans n8n, un nœud interroge Pappers → scoring → Claude rédige un mémo → écriture dans Airtable ; tout est relié via API/MCP, sans lock-in.</p>
+
+    <h2>3.2 Stack retenue &amp; architecture</h2>
+    <p><strong>Base44</strong> (interface) + <strong>n8n</strong> (orchestration, UE) + <strong>Claude</strong> (moteur) + <strong>Pappers/Infogreffe</strong> (données) + <strong>OpenSanctions</strong> (conformité), reliés par <strong>MCP</strong>.</p>
+    <div class="diagram">
+      <div class="drow">
+        <span class="dbox">Radar</span><span class="darr">→</span>
+        <span class="dbox">Qualif &amp; Valo</span><span class="darr">→</span>
+        <span class="dbox">Matching</span><span class="darr">→</span>
+        <span class="dbox">Communication</span>
+      </div>
+      <div class="drow">
+        <span class="dbox">Due Diligence</span><span class="darr">→</span>
+        <span class="dbox gate">🛡 Conformité KYC/AML</span><span class="darr">→</span>
+        <span class="dbox">Transition</span>
+      </div>
+      <div class="dnote">Données via MCP/API : Pappers · OpenSanctions · CRM &nbsp;—&nbsp; Orchestrateur n8n &nbsp;—&nbsp; l'humain valide chaque étape</div>
+    </div>
   </section>
 
-  <!-- ===================== PARTIE 4 ===================== -->
+  <!-- PARTIE 4 -->
   <section class="part">
     <div class="part-k">Partie 4</div>
-    <h1 class="part-t">Cadrage et Business Case</h1>
+    <h1 class="part-t">Cadrage du projet et Business Case</h1>
 
-    <h3>4.1 Périmètre</h3>
-    <p><strong>Dans le périmètre :</strong> sourcing, qualification, valorisation, matching,
-      accompagnement A→Z, management de transition (validation humaine à chaque étape clé).
-      <strong>Hors périmètre :</strong> clôture automatisée, signature juridique (notaire/avocat),
-      détention de fonds (tiers séquestre).</p>
+    <h3>4.1 Note de cadrage</h3>
+    <p><strong>Périmètre — inclus :</strong> sourcing, valorisation, matching, conformité, accompagnement A→Z, transition. <strong>Exclu :</strong> clôture automatisée, signature juridique, détention de fonds.</p>
+    <p><strong>Objectifs SMART :</strong> agent Radar fonctionnel (fait ✅) · ≥ 150 cibles qualifiées/mois d'ici mois 6 · 2–3 mandats acheteurs en Phase 1 · 1ʳᵉ transaction mois 9–15 · 0 incident de conformité.</p>
 
-    <h3>4.2 Modèle de revenus</h3>
+    <h2>4.2 Business Plan IA</h2>
+    <p><strong>Charges (annuel, maturité) ≈ 600 k€</strong> (équipe 350 · outils/IA 60 · conformité 60 · BD 80 · admin 50).</p>
+    <table>
+      <thead><tr><th>Coûts IA spécifiques</th><th>Estimation</th></tr></thead>
+      <tbody>
+        <tr><td>API Pappers (crédits)</td><td>100 gratuits, puis packs</td></tr>
+        <tr><td>Claude API (tokens)</td><td>~200–500 €/mois (MVP)</td></tr>
+        <tr><td>n8n (UE) + Base44</td><td>~50–150 €/mois</td></tr>
+        <tr><td>OpenSanctions</td><td>gratuit → pro</td></tr>
+        <tr><td><strong>Total IA (MVP)</strong></td><td><strong>~300–800 €/mois</strong></td></tr>
+      </tbody>
+    </table>
+    <p><strong>ROI à 6 mois :</strong> phase d'investissement ; ROI opérationnel via efficacité (coût/cible −65 %), premiers mandats. <strong>ROI à 12 mois :</strong> 1ʳᵉ(s) transaction(s) → premiers honoraires + retainers → retour vers l'équilibre de l'amorçage (~120 k€). <strong>Maturité :</strong> ~1,9 M€ net.</p>
+    <p><strong>Pourquoi maintenant :</strong> pic de la vague de transmission (2025–2035), adoption de masse de l'IA en M&amp;A, capitaux de l'Est en quête de stabilité UE.</p>
+
+    <h2>4.3 Macroplanning</h2>
+    <div class="gantt">
+      <div class="grow"><span class="glabel">Fondations &amp; MVP</span><div class="gtrack"><div class="gbar" style="left:0%;width:12.5%">M0–6</div></div></div>
+      <div class="grow"><span class="glabel">MVP buy-side (1ʳᵉ transac.)</span><div class="gtrack"><div class="gbar" style="left:12.5%;width:18.75%">M6–15</div></div></div>
+      <div class="grow"><span class="glabel">Plateforme bilatérale</span><div class="gtrack"><div class="gbar" style="left:31.25%;width:31.25%">M15–30</div></div></div>
+      <div class="grow"><span class="glabel">Échelle &amp; transition</span><div class="gtrack"><div class="gbar" style="left:62.5%;width:37.5%">M30–48</div></div></div>
+      <div class="gaxis"><span>M0</span><span>M12</span><span>M24</span><span>M36</span><span>M48</span></div>
+    </div>
+    <table>
+      <thead><tr><th>Phase</th><th>Jalons</th><th>Charge (j-h)</th></tr></thead>
+      <tbody>
+        <tr><td>Fondations (M0–6)</td><td>structure, conformité, MVP</td><td>~120</td></tr>
+        <tr><td>MVP buy-side (M6–15)</td><td>mandats, 1ʳᵉ transaction</td><td>~180</td></tr>
+        <tr><td>Plateforme (M15–30)</td><td>sell-side, matching, CNCFA</td><td>~260</td></tr>
+        <tr><td>Échelle (M30–48)</td><td>Orbis, interim, marchés</td><td>~300</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4.4 Conformité éthique et réglementaire</h2>
     <ul>
-      <li><strong>Honoraires de succès :</strong> ≈ 4 % du montant (barème type Lehman).</li>
-      <li><strong>Honoraires de mandat :</strong> ≈ 4 000 €/mois par mandat actif.</li>
-      <li><strong>Management de transition :</strong> ≈ 50 000 €/an de contribution nette par mandat.</li>
+      <li><strong>RGPD :</strong> base légale, minimisation, hébergement UE, registre, DPO, droits des personnes.</li>
+      <li><strong>EU AI Act :</strong> système à <strong>risque limité</strong> → transparence + supervision humaine ; gouvernance de niveau supérieur appliquée volontairement ; pas de notation de crédit de particuliers.</li>
+      <li><strong>Biais &amp; mitigation :</strong> risque de biais du sourcing/valorisation → ancrage sur données officielles, sources diversifiées, revue humaine, suivi des écarts.</li>
+      <li><strong>Éthique :</strong> transparence, équité, human-in-the-loop, « uniquement des fonds licites ».</li>
+      <li><strong>Limites de l'IA :</strong> hallucinations, données périmées, excès de confiance, dépendance → grounding + validation humaine.</li>
     </ul>
-
-    <h2>4.3 ROI n°1 — l'efficacité de l'IA</h2>
-    <table>
-      <thead><tr><th>Indicateur</th><th>Manuel</th><th>Avec les agents Pérennis</th></tr></thead>
-      <tbody>
-        <tr><td>Cibles qualifiées / analyste / mois</td><td>~40</td><td>~150</td></tr>
-        <tr><td>Temps par cible</td><td>~3–4 h</td><td>~30–40 min</td></tr>
-        <tr><td>Coût par cible qualifiée</td><td>≈ 125 €</td><td>≈ 40 €</td></tr>
-      </tbody>
-    </table>
-    <blockquote><strong>Débit ×3,7 ; coût par cible −65 %.</strong> Une petite équipe génère un
-      pipeline bien plus large → plus de transactions à effectif constant = scalabilité.</blockquote>
-
-    <h2>4.4 ROI n°2 — l'économie de l'entreprise (régime cible, ~50 M€/an)</h2>
-    <table>
-      <thead><tr><th>Poste</th><th>Montant</th></tr></thead>
-      <tbody>
-        <tr><td>Success fees (50 M€ × 4 %)</td><td class="tnum">2 000 000 €</td></tr>
-        <tr><td>Retainers (6 × 4 000 € × 12)</td><td class="tnum">288 000 €</td></tr>
-        <tr><td>Management de transition (~4 × 50 000 €)</td><td class="tnum">200 000 €</td></tr>
-        <tr><td><strong>Produits</strong></td><td class="tnum"><strong>≈ 2 490 000 €</strong></td></tr>
-        <tr><td>Charges (équipe, tech, conformité, BD, admin)</td><td class="tnum">≈ 600 000 €</td></tr>
-        <tr class="win"><td>Résultat net (marge ~76 %)</td><td class="tnum">≈ 1 890 000 €</td></tr>
-      </tbody>
-    </table>
-    <p><strong>Année 1 (montée en charge, honnêtement) :</strong> volume ~15 M€ → produits
-      ~750 000 € ; charges ~450 000 € ; investissement de lancement ~120 000 €, amorti dans l'année.
-      Les honoraires de succès sont irréguliers (deals de 6-12 mois) ; retainers et transition
-      lissent la trésorerie. Chiffres = hypothèses prudentes, validées au pilote.</p>
-
-    <h2>4.5 KPI et porte de décision</h2>
-    <table>
-      <thead><tr><th>KPI</th><th>Objectif</th></tr></thead>
-      <tbody>
-        <tr><td>Cibles qualifiées / mois</td><td>≥ 150</td></tr>
-        <tr><td>Coût par cible qualifiée</td><td>−65 %</td></tr>
-        <tr><td>Mandats actifs</td><td>≥ 6</td></tr>
-        <tr><td>Cycle moyen d'une transaction</td><td>&lt; 6 mois</td></tr>
-        <tr><td>Volume accompagné</td><td>→ 50 M€/an</td></tr>
-        <tr><td>Mandats de transition réussis</td><td>≥ 80 %</td></tr>
-        <tr><td><strong>Incidents de conformité</strong></td><td><strong>0 (KPI critique)</strong></td></tr>
-      </tbody>
-    </table>
-    <p><strong>Porte de décision :</strong> passage à la Phase 2 uniquement si pipeline ≥ 100
-      cibles/mois, ≥ 1 transaction conclue, cycle &lt; 6 mois, et zéro incident de conformité.</p>
-  </section>
-
-  <!-- ===================== PARTIE 5 ===================== -->
-  <section class="part">
-    <div class="part-k">Partie 5</div>
-    <h1 class="part-t">Pilotage, gouvernance et conformité</h1>
-
-    <h2>5.1 Feuille de route réaliste</h2>
-    <table>
-      <thead><tr><th>Phase</th><th>Horizon</th><th>Contenu</th></tr></thead>
-      <tbody>
-        <tr><td><strong>0 — Fondations</strong></td><td>Mois 0–6</td><td>SAS, marque, site FR/EN/RU/AR, cadre de conformité, réseau de partenaires, MVP, 2-3 acheteurs</td></tr>
-        <tr><td><strong>1 — MVP buy-side</strong></td><td>Mois 6–15</td><td>sourcing IA sur mandats acheteurs ; cycle complet ; <strong>1ʳᵉ transaction : mois 9-15</strong></td></tr>
-        <tr><td><strong>2 — Plateforme</strong></td><td>Mois 15–30</td><td>base sell-side + matching, croissance de l'équipe, adhésion CNCFA</td></tr>
-        <tr><td><strong>3 — Échelle + transition</strong></td><td>Mois 30–48</td><td>Orbis (UE), réseau de managers de transition, nouveaux marchés</td></tr>
-      </tbody>
-    </table>
-    <blockquote>Grande ambition, <strong>rythme réaliste</strong> : les cycles M&amp;A sont longs
-      et la confiance se construit dans la durée.</blockquote>
-
-    <h2>5.2 Attributs d'un véritable institut</h2>
-    <ul>
-      <li><strong>Forme juridique :</strong> SAS ; holding à l'échelle. <strong>Base des honoraires :</strong> mandat de cession/recherche écrit.</li>
-      <li><strong>Statut &amp; éthique :</strong> le conseil M&amp;A n'est pas réglementé en France, mais adhésion <strong>CNCFA</strong> (déontologie) et <strong>non-détention des fonds</strong> (séquestre notaire/avocat) ; vérification AMF/CIF/ORIAS avec un juriste si besoin.</li>
-      <li><strong>Assurance RC Pro</strong>, registre RGPD, DPO, données hébergées dans l'UE.</li>
-      <li><strong>Réseau de partenaires :</strong> notaires, avocats d'affaires, experts-comptables, banques, cabinets de due diligence, managers de transition.</li>
-      <li><strong>Financement :</strong> amorçage sur fonds propres, puis Bpifrance et réinvestissement.</li>
-    </ul>
-
-    <h3>5.3 Gouvernance (humain dans la boucle)</h3>
-    <p>Les agents préparent, l'humain décide et signe. Aucun contact vendeur ni validation acheteur
-      automatiques. Brouillons IA signalés en interne ; chaque dossier a un propriétaire.</p>
-
-    <h2>5.4 Bloc conformité — un avantage concurrentiel</h2>
-    <p>Des capitaux de la CEI et du Moyen-Orient vers l'UE = vigilance renforcée. Nous en faisons un
-      <strong>gage de qualité</strong> : « uniquement des fonds licites ».</p>
-    <table>
-      <thead><tr><th>Domaine</th><th>Mesure</th></tr></thead>
-      <tbody>
-        <tr><td><strong>KYC / LCB-FT</strong></td><td>bénéficiaires effectifs, origine des fonds, due diligence renforcée si nécessaire</td></tr>
-        <tr><td><strong>Sanctions + PEP</strong></td><td>criblage UN/OFAC/EU/UK ; toute correspondance = arrêt</td></tr>
-        <tr><td><strong>Filtrage des IDE</strong></td><td>nouveau règlement UE (accord politique déc. 2025) : vérifier secteurs sensibles, seuils, structure de propriété, bénéficiaire effectif</td></tr>
-        <tr><td><strong>Confidentialité M&amp;A</strong></td><td>NDA, teasers anonymisés, accès data room autorisé</td></tr>
-        <tr><td><strong>RGPD</strong></td><td>base légale, minimisation, hébergement UE, droits des personnes</td></tr>
-        <tr><td><strong>EU AI Act</strong></td><td>classification du risque, transparence, supervision humaine</td></tr>
-      </tbody>
-    </table>
-
-    <h2>5.5 Risques et mesures</h2>
     <table>
       <thead><tr><th>Risque</th><th>Mesure</th></tr></thead>
       <tbody>
-        <tr><td>Sanctions / réputation (capitaux CEI)</td><td>KYC strict, refus au moindre doute, documentation de l'origine des fonds</td></tr>
-        <tr><td>Réglementaire (IDE, secteurs restreints)</td><td>vérification juridique en amont, notification si requis</td></tr>
-        <tr><td>Fuite / confidentialité</td><td>NDA, anonymisation, VDR sécurisée</td></tr>
-        <tr><td>Décalage de trésorerie</td><td>retainers + management de transition</td></tr>
-        <tr><td>Erreurs de l'IA</td><td>ancrage sur registres officiels + validation humaine</td></tr>
-        <tr><td>Dépendance au fondateur</td><td>institutionnalisation : équipe, process, marque, CNCFA</td></tr>
+        <tr><td>Sanctions / réputation (capitaux CEI)</td><td>KYC strict, refus au moindre doute, origine des fonds documentée</td></tr>
+        <tr><td>Réglementaire (IDE, secteurs)</td><td>vérification juridique, notification si requis</td></tr>
+        <tr><td>Confidentialité</td><td>NDA, teasers anonymisés, VDR</td></tr>
+        <tr><td>Trésorerie (deals longs)</td><td>retainers + transition</td></tr>
+        <tr><td>Erreurs IA / dépendance fondateur</td><td>grounding + humain ; institutionnalisation (CNCFA, équipe)</td></tr>
       </tbody>
     </table>
   </section>
 
-  <!-- ===================== PARTIE 6 ===================== -->
+  <!-- PARTIE 5 -->
+  <section class="part">
+    <div class="part-k">Partie 5 · Bloc 04</div>
+    <h1 class="part-t">Plan de pilotage et gouvernance</h1>
+
+    <h3>5.1 Méthode de pilotage</h3>
+    <p><strong>Agile hybride : Scrum</strong> (produit, sprints de 2 semaines) <strong>+ Kanban</strong> (flux des affaires). Justifié par l'incertitude produit, la petite équipe et l'impératif de conformité (intégrée à la <em>Definition of Done</em>).</p>
+
+    <h2>5.2 Organisation de l'équipe</h2>
+    <table>
+      <thead><tr><th>Rôle</th><th>Responsabilités</th></tr></thead>
+      <tbody>
+        <tr><td>Product Owner / Fondateur</td><td>vision, backlog, priorités, relations cédants/repreneurs</td></tr>
+        <tr><td>Dév no-code / automatisation</td><td>Deal Room (Base44), workflows (n8n), MCP</td></tr>
+        <tr><td>Data / AI Analyst</td><td>agents IA, prompts, qualité des données, valorisation</td></tr>
+        <tr><td>Analyste M&amp;A</td><td>sourcing, qualification, due diligence, relation client</td></tr>
+        <tr><td>Responsable conformité</td><td>KYC/AML, sanctions, RGPD</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Communication :</strong> daily 15 min · Slack + Notion · canaux <em>#produit #deals #conformité #général</em>. <strong>Dépendances :</strong> un deal ne passe pas en Négociation sans feu vert Conformité ; l'agent Matching dépend du CRM alimenté par le PO.</p>
+
+    <h2>5.3 Planification des itérations</h2>
+    <table>
+      <thead><tr><th>Sprint</th><th>Objectif</th><th>Priorité</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Agent Radar (n8n + Pappers) + scoring ✅</td><td>Haute</td></tr>
+        <tr><td>2</td><td>Enrichissement données + écriture CRM</td><td>Moyenne</td></tr>
+        <tr><td>3</td><td>Deal Room (pipeline, fiche cible)</td><td>Haute</td></tr>
+        <tr><td>4</td><td>Agent Matching + profils acheteurs</td><td>Haute</td></tr>
+        <tr><td>5</td><td>Guichet de conformité (OpenSanctions)</td><td>Haute</td></tr>
+        <tr><td>6</td><td>Communication multilingue + tests + démo</td><td>Moyenne</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Suivi :</strong> % tâches/sprint, livrées vs planifiées, <strong>burn-down</strong>. <strong>Revues de sprint</strong> avec un cédant et un repreneur test ; retours réintégrés au backlog.</p>
+
+    <h3>5.4 Tableau de bord de pilotage</h3>
+    <p><strong>Quantitatif :</strong> avancement, délais, budget, tokens API. <strong>Qualitatif :</strong> satisfaction, qualité, performance équipe. Alertes (quota, sanctions), actions correctives, <strong>montée en compétences</strong> (formation, pairing, doc GitHub).</p>
+
+    <h3>5.5 Clôture &amp; REX</h3>
+    <p>Transfert de connaissances (GitHub, README, Notion) ; REX (Radar livré vite ; MCP portable ; données Pappers partielles → enrichissement ; cycles longs → trésorerie) ; recommandations d'échelle (7.2).</p>
+  </section>
+
+  <!-- PARTIE 6 -->
   <section class="part">
     <div class="part-k">Partie 6</div>
     <h1 class="part-t">Prototype et démonstration technique</h1>
-    <p><strong>Le prototype « Pérennis Deal Room »</strong> est un cockpit interne montrant un
-      pipeline de transmission piloté par des agents d'IA, avec un guichet de conformité bloquant
-      et l'humain dans la boucle. Sections : Pipeline (kanban), Cibles, Acheteurs, Matching,
-      Conformité, Transition ; bandeau de KPI en tête (incidents de conformité = 0).
-      <em>(Voir Annexe C.)</em></p>
-
-    <h3>Architecture d'agents (orchestrés par n8n, reliés en MCP)</h3>
-    <ol>
-      <li><strong>Radar</strong> — détection de cibles (âge du dirigeant, absence de successeur, santé financière).</li>
-      <li><strong>Qualification &amp; Valorisation</strong> — score + fourchette (multiples EBITDA, DCF simplifié).</li>
-      <li><strong>Matching</strong> — appariement cible ↔ acheteur (secteur, ticket, géographie).</li>
-      <li><strong>Communication multilingue</strong> — messages aux vendeurs (FR) et acheteurs (RU/AR/EN).</li>
-      <li><strong>Due Diligence</strong> — checklist, synthèse, détection de risques.</li>
-      <li><strong>Conformité KYC/AML &amp; Sanctions</strong> — guichet obligatoire (Cleared / EDD / Blocked).</li>
-      <li><strong>Management de transition</strong> — sélection d'un manager interim.</li>
-    </ol>
-
-    <h3>Prompt de construction (Base44, cadre BASE) — extrait</h3>
-    <pre>Build a professional B2B web app "Pérennis Deal Room" for a cross-border M&amp;A advisory
-that helps aging European SME owners (no successor) sell to vetted investors from the CIS
-and the Middle East. Sober, institutional design (navy, ivory, gold).
-Sections: Pipeline (kanban) · Targets (Succession Score + AI valuation range) · Buyers
-(KYC status chip) · Matching · a COMPLIANCE GATE a deal cannot pass without "Cleared" ·
-Transition. Confidentiality banner + human-in-the-loop rule ("AI drafts, a human approves").</pre>
-
-    <h3>Prompt système — agent Conformité (extrait)</h3>
-    <pre>You are the compliance gate for Pérennis. For a buyer: KYC (beneficial owners),
-source-of-funds plausibility, sanctions &amp; PEP screening (UN/OFAC/EU/UK), EU FDI exposure.
-Output CLEARED / ENHANCED DUE DILIGENCE / BLOCKED with reasons. Any sanctions/PEP hit or
-opaque ownership → do NOT clear; escalate to a human.</pre>
-
-    <h3>Scénario de démonstration (3-5 min)</h3>
-    <ol>
-      <li>Le problème — entreprises saines menacées faute de successeur ; 3× moins d'acheteurs.</li>
-      <li>Le pont — relier vendeurs européens et acheteurs vérifiés de la CEI / du Moyen-Orient.</li>
-      <li>Démo Deal Room — fiche cible → Matching → <strong>guichet de conformité</strong> → pipeline → transition.</li>
-      <li>Conformité &amp; humain dans la boucle — pas de « Cleared », pas de passage.</li>
-      <li>Conclusion — plus rapide, plus sûr, plus propre : sauver l'entreprise, les emplois, le savoir-faire.</li>
-    </ol>
+    <h3>6.1 Prototype réalisé</h3>
+    <p><strong>(A) Agent Radar</strong> — workflow <strong>n8n</strong> connecté à l'<strong>API Pappers</strong>, détecte des PME rentables à dirigeant âgé et calcule un <strong>score de succession</strong> (réellement exécutable). <strong>(C) « Pérennis Deal Room »</strong> — maquette no-code (pipeline, fiche cible, guichet de conformité).</p>
+    <h3>6.2 Documentation technique</h3>
+    <ul>
+      <li><strong>Architecture :</strong> voir schéma 3.2 (agents orchestrés par n8n, données via MCP/API).</li>
+      <li><strong>Prompts documentés :</strong> prompt BASE (Base44) ; prompts système des agents Radar, Matching, Communication, Conformité ; code de scoring dans <code>radar-pappers-n8n.json</code>.</li>
+      <li><strong>Difficultés &amp; solutions :</strong> doc Pappers protégée → paramètres validés via dépôts open-source ; finances parfois absentes → filtres <code>resultat_min</code>/<code>chiffre_affaires_min</code> + code défensif.</li>
+      <li><strong>Limites &amp; améliorations :</strong> enrichissement par SIREN, Schedule Trigger (Radar quotidien), écriture CRM, agent Matching.</li>
+    </ul>
+    <h3>6.3 Vidéo de démonstration (3–5 min)</h3>
+    <p>Script prêt à enregistrer : problème → pont → démo Deal Room (fiche cible → matching → guichet de conformité → pipeline) → conformité &amp; humain dans la boucle → conclusion. Une démo auto-jouée sous-titrée existe.</p>
   </section>
 
-  <!-- ===================== PARTIE 7 ===================== -->
+  <!-- PARTIE 7 -->
   <section class="part">
     <div class="part-k">Partie 7</div>
     <h1 class="part-t">Pitch final et recommandations</h1>
-    <blockquote style="font-size:12.5pt"><strong>« Pérennis — nous sauvons les entreprises qui ont
-      fait l'Europe. »</strong><br>L'IA trouve et vérifie, mon réseau apporte les repreneurs,
-      l'humain garde le contrôle — de façon rentable et parfaitement conforme.</blockquote>
-    <h3>Recommandations</h3>
-    <ol>
-      <li><strong>Démarrer par le MVP buy-side</strong> (2-3 acheteurs du réseau + sourcing IA).</li>
-      <li><strong>La conformité dès le premier jour</strong> — condition de confiance et de légitimité.</li>
-      <li><strong>Humain dans la boucle</strong> — l'IA accélère, l'humain décide.</li>
-      <li><strong>Construire le réseau de partenaires en parallèle</strong> (notaires, avocats, banques).</li>
-      <li><strong>Le management de transition comme ligne à part</strong> — différenciateur clé.</li>
-      <li><strong>Institutionnaliser la marque</strong> (CNCFA, cas concrets, RC Pro).</li>
-    </ol>
-    <p>Un pitch deck de 13 slides accompagne ce dossier (problème → marché → insight → solution →
-      fossé → agents IA → technologie/MCP → ROI IA → modèle → conformité → feuille de route → vision).</p>
+    <h3>7.1 Pitch Deck (13 slides)</h3>
+    <p>Titre · Problème · Marché · Insight (3×) · Solution · Mon fossé · Agents IA · Technologie/MCP · ROI de l'IA · Modèle économique · Conformité (avantage) · Feuille de route · Vision.</p>
+    <h3>7.2 Recommandations de déploiement</h3>
+    <ul>
+      <li><strong>Feuille de route 6–12 mois :</strong> MVP buy-side → 1ʳᵉ transaction → base sell-side.</li>
+      <li><strong>Facteurs clés de succès :</strong> conformité irréprochable, réseau d'acheteurs, réseau de partenaires, confiance des cédants.</li>
+      <li><strong>Conduite du changement :</strong> formation (prompt engineering, n8n, LCB-FT), IA comme assistant, documentation vivante.</li>
+      <li><strong>Indicateurs post-déploiement :</strong> volume, cycle moyen, taux mandat→closing, satisfaction, 0 incident de conformité.</li>
+    </ul>
 
     <h2>Annexes</h2>
-    <p><strong>A — Brief :</strong> commanditaire = le fondateur ; problème = vague de transmission
-      (3× plus de vendeurs) ; mission = plateforme IA + conseil M&amp;A reliant l'Europe et l'Est,
-      A→Z + transition ; contraintes = conformité stricte, confidentialité, humain dans la boucle.</p>
-    <p><strong>B — Personas :</strong> Jean-Pierre Rousseau (cédant), Timur A. (repreneur), Léa
-      (analyste) — Partie 2.2.</p>
-    <p><strong>C — Captures d'écran :</strong> maquette « Pérennis Deal Room » (KPI, pipeline kanban,
-      fiche cible avec Score de succession et valorisation IA, guichet de conformité « Cleared »,
-      matching). À insérer : vue d'ensemble, guichet de conformité, fiche cible.</p>
-    <p><strong>D — Sources :</strong> BPCE L'Observatoire · Bpifrance Le Lab · DGE · CRA · Banque de
-      France · KfW · Institut Sapiens · EthosData / IMAA (IA en M&amp;A) · Freshfields (filtrage des IDE).</p>
+    <p><strong>A</strong> Brief client (2.0) · <strong>B</strong> Personas (2.2) · <strong>C</strong> Captures (Deal Room, résultats Radar) · <strong>D</strong> Prototype (<code>radar-pappers-n8n.json</code>, prompts) · <strong>E</strong> Sources : BPCE, Bpifrance, DGE, CRA, Banque de France, KfW, Institut Sapiens, EthosData/IMAA, Cyndx/Sourcescrub, Freshfields.</p>
 
-    <footer class="doc">Ce dossier valide les blocs BC01 (Définition du projet) et BC04 (Pilotage du
-      projet) du RNCP 40247 — formation AI for Business, PSTB.</footer>
+    <footer class="doc">Ce dossier valide les blocs BC01 (Définition du projet) et BC04 (Pilotage du projet) du RNCP 40247 — formation AI for Business, PSTB.</footer>
   </section>
 
 </div>
