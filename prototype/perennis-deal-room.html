@@ -1,0 +1,513 @@
+<title>Pérennis Deal Room</title>
+<style>
+  :root{
+    --bg:#EAECF1; --panel:#FFFFFF; --panel-2:#F5F7FA;
+    --ink:#18202E; --ink-2:#525C72; --muted:#8A93A6; --line:#E2E6ED;
+    --navy:#152238; --navy-2:#1D2E49; --on-navy:#EAEFF7; --on-navy-muted:#93A0B8;
+    --gold:#B08A3E; --gold-soft:#EFE4CC; --gold-ink:#856323;
+    --good:#2F7D5B; --good-bg:#E3F0EA;
+    --warn:#B7791C; --warn-bg:#F6EAD5;
+    --crit:#B23B3B; --crit-bg:#F6E2E2;
+    --shadow:0 1px 2px rgba(20,30,50,.05),0 10px 28px rgba(20,30,50,.07);
+    --radius:14px;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0E1622; --panel:#161F2E; --panel-2:#1B2637;
+      --ink:#E7ECF4; --ink-2:#AAB5C8; --muted:#7C889D; --line:#27313F;
+      --navy:#0A111C; --navy-2:#12203A; --on-navy:#EAEFF7; --on-navy-muted:#8695AE;
+      --gold:#CBA455; --gold-soft:#33291640; --gold-ink:#DBBD72;
+      --good:#4FB488; --good-bg:#123329;
+      --warn:#D89A3C; --warn-bg:#38300f47;
+      --crit:#DC6E6E; --crit-bg:#3a1f1f;
+      --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#EAECF1; --panel:#FFFFFF; --panel-2:#F5F7FA;
+    --ink:#18202E; --ink-2:#525C72; --muted:#8A93A6; --line:#E2E6ED;
+    --navy:#152238; --navy-2:#1D2E49; --on-navy:#EAEFF7; --on-navy-muted:#93A0B8;
+    --gold:#B08A3E; --gold-soft:#EFE4CC; --gold-ink:#856323;
+    --good:#2F7D5B; --good-bg:#E3F0EA; --warn:#B7791C; --warn-bg:#F6EAD5;
+    --crit:#B23B3B; --crit-bg:#F6E2E2;
+    --shadow:0 1px 2px rgba(20,30,50,.05),0 10px 28px rgba(20,30,50,.07);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E1622; --panel:#161F2E; --panel-2:#1B2637;
+    --ink:#E7ECF4; --ink-2:#AAB5C8; --muted:#7C889D; --line:#27313F;
+    --navy:#0A111C; --navy-2:#12203A; --on-navy:#EAEFF7; --on-navy-muted:#8695AE;
+    --gold:#CBA455; --gold-soft:#33291640; --gold-ink:#DBBD72;
+    --good:#4FB488; --good-bg:#123329; --warn:#D89A3C; --warn-bg:#38300f47;
+    --crit:#DC6E6E; --crit-bg:#3a1f1f;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{margin:0;text-wrap:balance}
+  .tnum{font-variant-numeric:tabular-nums}
+  .app{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+
+  /* ---------- Rail ---------- */
+  .rail{background:var(--navy);color:var(--on-navy);display:flex;flex-direction:column;
+    padding:22px 16px;gap:26px;position:sticky;top:0;height:100vh}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:34px;height:34px;border-radius:9px;flex:none;
+    background:linear-gradient(150deg,var(--gold),#8A6A24);display:grid;place-items:center;
+    font-family:var(--serif);font-weight:700;color:#1a1206;font-size:19px}
+  .brand .name{font-family:var(--serif);font-size:20px;letter-spacing:.2px;line-height:1}
+  .brand .sub{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted);margin-top:3px}
+  nav{display:flex;flex-direction:column;gap:2px}
+  .nav-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy-muted);
+    padding:0 10px 8px}
+  nav a{display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;color:var(--on-navy);
+    text-decoration:none;font-size:13.5px;cursor:pointer;transition:background .15s}
+  nav a .ic{width:17px;text-align:center;opacity:.85}
+  nav a .cnt{margin-left:auto;font-size:11px;color:var(--on-navy-muted);font-variant-numeric:tabular-nums}
+  nav a:hover{background:#ffffff12}
+  nav a.active{background:#ffffff16;box-shadow:inset 3px 0 0 var(--gold)}
+  nav a.active .cnt{color:var(--gold)}
+  .rail-foot{margin-top:auto;font-size:11px;color:var(--on-navy-muted);line-height:1.5}
+
+  /* ---------- Top bar ---------- */
+  .main{display:flex;flex-direction:column;min-width:0}
+  .confbar{background:var(--navy-2);color:var(--on-navy);font-size:11.5px;letter-spacing:.03em;
+    padding:6px 24px;display:flex;align-items:center;gap:8px;justify-content:center}
+  .confbar .lock{color:var(--gold)}
+  .topbar{display:flex;align-items:center;gap:16px;padding:16px 24px;background:var(--panel);
+    border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  .topbar h1{font-family:var(--serif);font-size:20px;font-weight:600}
+  .topbar h1 .em{color:var(--gold-ink)}
+  .hitl{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--ink-2);
+    background:var(--panel-2);border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+  .hitl .dot{width:7px;height:7px;border-radius:50%;background:var(--good)}
+  .spacer{flex:1}
+  .iconbtn{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--panel);
+    color:var(--ink-2);cursor:pointer;font-size:15px;display:grid;place-items:center}
+  .iconbtn:hover{color:var(--ink);border-color:var(--muted)}
+  .user{display:flex;align-items:center;gap:9px}
+  .avatar{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--on-navy);
+    display:grid;place-items:center;font-size:12px;font-weight:600}
+  .user .u-name{font-size:12.5px;font-weight:600;line-height:1.2}
+  .user .u-role{font-size:11px;color:var(--muted)}
+
+  .content{padding:22px 24px 30px;display:flex;flex-direction:column;gap:20px}
+
+  /* ---------- KPI strip ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:15px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:5px;min-width:0}
+  .kpi .k-label{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .kpi .k-val{font-size:26px;font-weight:650;letter-spacing:-.02em;line-height:1;display:flex;align-items:baseline;gap:6px}
+  .kpi .k-val .unit{font-size:13px;font-weight:500;color:var(--ink-2)}
+  .kpi .k-foot{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-2);margin-top:2px}
+  .trend{font-weight:600}
+  .trend.up{color:var(--good)} .trend.down{color:var(--good)}
+  .spark{display:block}
+  .kpi.guard{background:linear-gradient(180deg,var(--good-bg),var(--panel))}
+
+  /* ---------- Main grid ---------- */
+  .grid{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
+  .section-h{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .section-h h2{font-size:15px;font-weight:650;letter-spacing:.01em}
+  .section-h .hint{font-size:11.5px;color:var(--muted)}
+  .pill{font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:3px 8px;border-radius:999px;
+    display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .pill .pdot{width:6px;height:6px;border-radius:50%}
+  .pill.ai{background:var(--gold-soft);color:var(--gold-ink)}
+  .pill.good{background:var(--good-bg);color:var(--good)}
+  .pill.warn{background:var(--warn-bg);color:var(--warn)}
+  .pill.crit{background:var(--crit-bg);color:var(--crit)}
+  .pill.neutral{background:var(--panel-2);color:var(--ink-2);border:1px solid var(--line)}
+
+  /* ---------- Kanban ---------- */
+  .board-wrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:14px}
+  .board{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+  .col{flex:0 0 174px;min-width:174px;display:flex;flex-direction:column;gap:9px}
+  .col-h{display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-2);padding:2px 2px 4px;border-bottom:2px solid var(--line)}
+  .col-h.gate{border-bottom-color:var(--gold)}
+  .col-h .n{margin-left:auto;color:var(--muted);font-variant-numeric:tabular-nums}
+  .col-h .gk{color:var(--gold-ink)}
+  .deal{background:var(--panel-2);border:1px solid var(--line);border-radius:11px;padding:10px 11px;
+    display:flex;flex-direction:column;gap:7px;cursor:pointer;transition:transform .12s,box-shadow .12s,border-color .12s}
+  .deal:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--muted)}
+  .deal .code{font-weight:650;font-size:13px}
+  .deal .sec{font-size:11px;color:var(--muted);line-height:1.35}
+  .deal .row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .tag{font-size:10px;color:var(--ink-2);background:var(--panel);border:1px solid var(--line);
+    padding:2px 6px;border-radius:6px;font-variant-numeric:tabular-nums}
+  .deal.sel{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+
+  /* ---------- Side cards ---------- */
+  .side{display:flex;flex-direction:column;gap:16px;position:sticky;top:86px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden}
+  .card-h{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px}
+  .card-h h3{font-size:13.5px;font-weight:650}
+  .card-b{padding:14px 15px;display:flex;flex-direction:column;gap:13px}
+  .cible-title{font-family:var(--serif);font-size:18px;font-weight:600;line-height:1.15}
+  .cible-meta{font-size:12px;color:var(--ink-2)}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .fact{background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:8px 10px}
+  .fact .f-l{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .fact .f-v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:1px}
+
+  .meter-l{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink-2);margin-bottom:6px}
+  .meter-l b{font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums}
+  .meter{height:9px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);overflow:hidden}
+  .meter>span{display:block;height:100%;background:linear-gradient(90deg,var(--navy-2),var(--gold))}
+  .signals{font-size:11.5px;color:var(--ink-2);line-height:1.5}
+  .signals b{color:var(--ink);font-weight:600}
+
+  .range-l{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+  .range-v{font-size:20px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .rangebar{position:relative;height:10px;background:var(--panel-2);border:1px solid var(--line);
+    border-radius:999px;margin:8px 0 4px}
+  .rangebar>.band{position:absolute;top:-1px;bottom:-1px;background:var(--gold-soft);
+    border:1px solid var(--gold);border-radius:999px}
+
+  .cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--navy);
+    color:var(--on-navy);border:none;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600;
+    cursor:pointer;font-family:var(--sans);transition:background .15s}
+  .cta:hover{background:var(--navy-2)}
+  .cta .k{color:var(--gold)}
+
+  /* compliance */
+  .chk{display:flex;align-items:center;gap:9px;font-size:12.5px;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .chk:last-child{border-bottom:none}
+  .chk .ci{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-size:11px;flex:none;color:#fff}
+  .chk .ci.ok{background:var(--good)} .chk .ci.wa{background:var(--warn)} .chk .ci.no{background:var(--crit)}
+  .chk .ct{flex:1}
+  .chk .cx{font-size:11px;color:var(--muted)}
+  .verdict{display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:10px;
+    background:var(--good-bg);border:1px solid var(--good)}
+  .verdict .vlabel{font-weight:700;letter-spacing:.06em;color:var(--good);font-size:13px}
+  .verdict .vsub{font-size:11px;color:var(--ink-2)}
+  .gate-note{font-size:11px;color:var(--muted);line-height:1.5;display:flex;gap:7px}
+  .gate-note .lk{color:var(--gold-ink)}
+
+  .match{display:flex;flex-direction:column;gap:10px}
+  .match-row{display:flex;align-items:center;gap:10px}
+  .match-score{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--gold-ink);font-variant-numeric:tabular-nums}
+  .match-pair{font-size:13px;font-weight:600}
+  .match-why{font-size:11.5px;color:var(--ink-2)}
+  .btn-ghost{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:9px;
+    padding:9px 12px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:var(--sans);display:flex;
+    align-items:center;justify-content:center;gap:7px}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-ink)}
+
+  footer{padding:16px 24px 26px;color:var(--muted);font-size:11.5px;display:flex;
+    gap:8px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:6px}
+  footer .b{color:var(--ink-2);font-weight:600}
+
+  a:focus-visible,button:focus-visible,.deal:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  @media (max-width:1080px){
+    .app{grid-template-columns:1fr}
+    .rail{position:static;height:auto;flex-direction:row;align-items:center;flex-wrap:wrap;gap:14px}
+    .rail nav{flex-direction:row;flex-wrap:wrap;flex:1} .nav-label,.rail-foot{display:none}
+    nav a .cnt{display:none}
+    .grid{grid-template-columns:1fr} .side{position:static}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:560px){ .kpis{grid-template-columns:1fr} .facts{grid-template-columns:1fr 1fr} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="app">
+  <!-- ===== RAIL ===== -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="mark">P</div>
+      <div>
+        <div class="name">Pérennis</div>
+        <div class="sub">Deal Room</div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-label">Pilotage</div>
+      <a class="active"><span class="ic">▦</span> Pipeline <span class="cnt">14</span></a>
+      <a><span class="ic">◎</span> Cibles <span class="cnt">152</span></a>
+      <a><span class="ic">◆</span> Acheteurs <span class="cnt">28</span></a>
+      <a><span class="ic">⇄</span> Matching <span class="cnt">9</span></a>
+      <a><span class="ic">🛡</span> Conformité <span class="cnt">4</span></a>
+      <a><span class="ic">⇢</span> Transition <span class="cnt">3</span></a>
+    </nav>
+    <div class="rail-foot">
+      Sourcing & valorisation assistés par IA.<br>Un humain valide chaque décision.
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <div class="main">
+    <div class="confbar"><span class="lock">🔒</span> Confidentiel — teasers anonymisés uniquement · accès sous NDA</div>
+
+    <header class="topbar">
+      <h1>Pipeline des <span class="em">transmissions</span></h1>
+      <span class="hitl"><span class="dot"></span> Humain dans la boucle</span>
+      <div class="spacer"></div>
+      <button class="iconbtn" id="theme" title="Thème clair / sombre" aria-label="Basculer le thème">◐</button>
+      <div class="user">
+        <div class="avatar">LM</div>
+        <div>
+          <div class="u-name">Léa Martin</div>
+          <div class="u-role">Analyste M&amp;A</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- KPI STRIP -->
+      <div class="kpis">
+        <div class="kpi">
+          <div class="k-label">Cibles qualifiées · mois</div>
+          <div class="k-val tnum">152</div>
+          <div class="k-foot">
+            <svg class="spark" width="70" height="22" viewBox="0 0 70 22" fill="none" aria-hidden="true">
+              <path d="M1 18 L12 16 L23 17 L34 12 L45 10 L56 6 L69 3" stroke="var(--good)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="69" cy="3" r="2.6" fill="var(--good)"/>
+            </svg>
+            <span class="trend up">▲ objectif ≥ 150</span>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Mandats actifs</div>
+          <div class="k-val tnum">6</div>
+          <div class="k-foot">4 buy-side · 2 sell-side</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Cycle moyen</div>
+          <div class="k-val tnum">5,2 <span class="unit">mois</span></div>
+          <div class="k-foot">
+            <svg class="spark" width="70" height="22" viewBox="0 0 70 22" fill="none" aria-hidden="true">
+              <path d="M1 5 L12 7 L23 8 L34 11 L45 13 L56 15 L69 17" stroke="var(--good)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="69" cy="17" r="2.6" fill="var(--good)"/>
+            </svg>
+            <span class="trend down">▼ marché &gt; 12 mois</span>
+          </div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">Volume · 12 mois</div>
+          <div class="k-val tnum">48 <span class="unit">M€</span></div>
+          <div class="k-foot">cible ~ 50 M€ / an</div>
+        </div>
+        <div class="kpi guard">
+          <div class="k-label">Incidents de conformité</div>
+          <div class="k-val tnum">0</div>
+          <div class="k-foot"><span class="pill good"><span class="pdot" style="background:var(--good)"></span>KYC / AML / sanctions</span></div>
+        </div>
+      </div>
+
+      <!-- MAIN GRID -->
+      <div class="grid">
+        <!-- KANBAN -->
+        <section>
+          <div class="section-h">
+            <h2>Conduite des affaires</h2>
+            <span class="hint">— glisser une affaire d'une étape à l'autre · l'IA prépare, l'humain valide</span>
+          </div>
+          <div class="board-wrap">
+            <div class="board">
+
+              <div class="col">
+                <div class="col-h">Sourcé <span class="n">3</span></div>
+                <div class="deal">
+                  <div class="code">Projet Chêne</div>
+                  <div class="sec">Composants métalliques de précision</div>
+                  <div class="row"><span class="tag">Auvergne-RA</span><span class="tag">EBITDA 1,2 M€</span></div>
+                  <div class="row"><span class="pill ai"><span class="pdot" style="background:var(--gold)"></span>IA · Radar</span></div>
+                </div>
+                <div class="deal">
+                  <div class="code">Projet Sillon</div>
+                  <div class="sec">Agroalimentaire régional</div>
+                  <div class="row"><span class="tag">Bretagne</span><span class="tag">EBITDA 0,9 M€</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Qualifié <span class="n">2</span></div>
+                <div class="deal">
+                  <div class="code">Projet Lavande</div>
+                  <div class="sec">Cosmétique naturelle</div>
+                  <div class="row"><span class="tag">PACA</span><span class="tag">Score 79</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Matché <span class="n">2</span></div>
+                <div class="deal sel">
+                  <div class="code">Projet Chêne</div>
+                  <div class="sec">↔ Acheteur K-14 · 94 %</div>
+                  <div class="row"><span class="pill neutral">secteur ✓ ticket ✓ géo ✓</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">NDA <span class="n">1</span></div>
+                <div class="deal">
+                  <div class="code">Projet Garonne</div>
+                  <div class="sec">Distribution B2B</div>
+                  <div class="row"><span class="pill good">NDA signé</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Due Diligence <span class="n">2</span></div>
+                <div class="deal">
+                  <div class="code">Projet Vosges</div>
+                  <div class="sec">Menuiserie industrielle</div>
+                  <div class="row"><span class="tag">Data room</span><span class="tag">18 pièces</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h gate">🛡 <span class="gk">Conformité</span> <span class="n">1</span></div>
+                <div class="deal">
+                  <div class="code">Projet Alizé</div>
+                  <div class="sec">Acheteur EAU · vérif. en cours</div>
+                  <div class="row"><span class="pill warn"><span class="pdot" style="background:var(--warn)"></span>EDD en cours</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Négociation <span class="n">1</span></div>
+                <div class="deal">
+                  <div class="code">Projet Méridien</div>
+                  <div class="sec">Services aux entreprises</div>
+                  <div class="row"><span class="tag">LOI</span><span class="tag">5,4 M€</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Closing <span class="n">1</span></div>
+                <div class="deal">
+                  <div class="code">Projet Ardoise</div>
+                  <div class="sec">Matériaux de construction</div>
+                  <div class="row"><span class="pill good">Signature ⇢ notaire</span></div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="col-h">Transition <span class="n">1</span></div>
+                <div class="deal">
+                  <div class="code">Projet Cévennes</div>
+                  <div class="sec">Manager de transition · 9 mois</div>
+                  <div class="row"><span class="pill ai"><span class="pdot" style="background:var(--gold)"></span>Interim affecté</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- SIDE -->
+        <aside class="side">
+
+          <!-- CIBLE -->
+          <div class="card">
+            <div class="card-h">
+              <h3>Fiche cible</h3>
+              <span class="pill ai" style="margin-left:auto"><span class="pdot" style="background:var(--gold)"></span>Sourcé par IA · Radar</span>
+            </div>
+            <div class="card-b">
+              <div>
+                <div class="cible-title">Projet Chêne</div>
+                <div class="cible-meta">Composants métalliques de précision · Auvergne-Rhône-Alpes</div>
+              </div>
+              <div class="facts">
+                <div class="fact"><div class="f-l">CA</div><div class="f-v">8,0 M€</div></div>
+                <div class="fact"><div class="f-l">EBITDA</div><div class="f-v">1,2 M€</div></div>
+                <div class="fact"><div class="f-l">Salariés</div><div class="f-v">45</div></div>
+                <div class="fact"><div class="f-l">Dirigeant</div><div class="f-v">64 ans</div></div>
+              </div>
+              <div>
+                <div class="meter-l"><span>Score de succession</span><b>82 / 100</b></div>
+                <div class="meter"><span style="width:82%"></span></div>
+                <div class="signals" style="margin-top:8px">
+                  Signaux : <b>dirigeant 64 ans</b> · <b>aucun successeur identifié</b> · <b>finances saines</b>
+                </div>
+              </div>
+              <div>
+                <div class="range-l"><span>Valorisation IA (à valider)</span></div>
+                <div class="range-v tnum">4,8 – 6,0 M€</div>
+                <div class="rangebar"><span class="band" style="left:48%;right:40%"></span></div>
+                <div class="range-l"><span>0</span><span>10 M€</span></div>
+              </div>
+              <button class="cta">✦ Générer le mémo de qualification <span class="k">›</span></button>
+            </div>
+          </div>
+
+          <!-- CONFORMITÉ -->
+          <div class="card">
+            <div class="card-h">
+              <span>🛡</span><h3>Guichet de conformité</h3>
+              <span class="pill neutral" style="margin-left:auto">Acheteur K-14 · Kazakhstan</span>
+            </div>
+            <div class="card-b">
+              <div>
+                <div class="chk"><span class="ci ok">✓</span><span class="ct">KYC — bénéficiaires effectifs</span><span class="cx">vérifié</span></div>
+                <div class="chk"><span class="ci ok">✓</span><span class="ct">Origine des fonds</span><span class="cx">documentée</span></div>
+                <div class="chk"><span class="ci ok">✓</span><span class="ct">Sanctions &amp; PEP · UN/OFAC/EU/UK</span><span class="cx">aucune corresp.</span></div>
+                <div class="chk"><span class="ci ok">✓</span><span class="ct">EU FDI — secteur non sensible</span><span class="cx">hors contrôle</span></div>
+              </div>
+              <div class="verdict">
+                <span class="ci ok" style="width:22px;height:22px">✓</span>
+                <div>
+                  <div class="vlabel">CLEARED</div>
+                  <div class="vsub">L'affaire peut franchir l'étape.</div>
+                </div>
+              </div>
+              <div class="gate-note"><span class="lk">🔒</span> Aucune affaire ne franchit ce guichet sans statut <b style="color:var(--good)">&nbsp;Cleared</b>. Toute correspondance sanctions → arrêt &amp; escalade humaine.</div>
+            </div>
+          </div>
+
+          <!-- MATCHING -->
+          <div class="card">
+            <div class="card-h"><span>⇄</span><h3>Suggestion de matching</h3></div>
+            <div class="card-b">
+              <div class="match">
+                <div class="match-row">
+                  <div class="match-score">94%</div>
+                  <div>
+                    <div class="match-pair">Projet Chêne ↔ Acheteur K-14</div>
+                    <div class="match-why">Secteur ✓ · ticket 3–7 M€ ✓ · géographie ✓ · appétit risque ✓</div>
+                  </div>
+                </div>
+                <button class="btn-ghost">Préparer le teaser anonyme ›</button>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <span class="b">Pérennis Deal Room</span> · Prototype (maquette) — Capstone « AI for Business », PSTB.
+      Cockpit interne : sourcing &amp; valorisation par agents IA, guichet de conformité, humain dans la boucle.
+    </footer>
+  </div>
+</div>
+
+<script>
+  // Theme toggle (respects OS default until first click)
+  var root = document.documentElement;
+  document.getElementById('theme').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    if(!cur){ cur = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    root.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  });
+  // Nav active state (visual only)
+  document.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.querySelectorAll('nav a').forEach(function(x){x.classList.remove('active')});
+      a.classList.add('active');
+    });
+  });
+</script>

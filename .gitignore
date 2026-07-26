@@ -1,0 +1,45 @@
+# ─── Secrets & clés API (NE JAMAIS committer) ───────────────
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+credentials.json
+**/credentials*.json
+config.local.*
+# clés Pappers / OpenSanctions / Claude / n8n
+*api*key*
+*token*.txt
+
+# ─── macOS ──────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# ─── Windows ────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─── Éditeurs / IDE ─────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Node / n8n (si exécution locale) ───────────────────────
+node_modules/
+npm-debug.log*
+.n8n/
+*.log
+
+# ─── Fichiers temporaires / exports lourds ──────────────────
+*.tmp
+*.bak
+~$*

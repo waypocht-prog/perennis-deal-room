@@ -1,0 +1,321 @@
+<title>Pérennis — Pitch</title>
+<style>
+  :root{
+    --navy:#0E1A2C; --navy-2:#152238; --panel:#18263C;
+    --ivory:#F3EFE6; --ivory-2:#CBD3E0; --muted:#8B99B0;
+    --gold:#C9A24E; --gold-2:#E0C079; --gold-ink:#B08A3E;
+    --good:#54B98A; --line:#26344A;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:#0A121F;color:var(--ivory);font-family:var(--sans);overflow:hidden}
+  .deck{position:fixed;inset:0}
+
+  .slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+    padding:min(9vh,80px) min(9vw,110px);
+    background:radial-gradient(1200px 700px at 78% -10%,#1b2c47 0%,var(--navy) 46%,#0A121F 100%);
+    opacity:0;visibility:hidden;transform:translateY(14px);
+    transition:opacity .5s ease,transform .5s ease,visibility .5s}
+  .slide.active{opacity:1;visibility:visible;transform:none}
+  .slide::before{content:"";position:absolute;left:min(9vw,110px);top:min(6.4vh,54px);
+    width:96px;height:5px;border-radius:3px;
+    background:linear-gradient(90deg,#4E6B57 0 34%,var(--ivory) 34% 66%,var(--gold) 66%)}
+
+  .eyebrow{font-size:clamp(11px,1.15vw,14px);letter-spacing:.26em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:20px;font-weight:600}
+  h1{font-family:var(--serif);font-weight:600;letter-spacing:-.5px;line-height:1.04;
+    margin:0;text-wrap:balance}
+  .lead{font-size:clamp(17px,2vw,24px);color:var(--ivory-2);line-height:1.45;max-width:24ch;margin-top:0}
+  .em{color:var(--gold-2);font-style:italic}
+  .src{position:absolute;left:min(9vw,110px);bottom:min(7vh,58px);font-size:clamp(10px,1vw,12px);
+    color:var(--muted);letter-spacing:.02em;max-width:70ch}
+  .kicker{font-family:var(--sans);font-size:clamp(15px,1.6vw,19px);color:var(--ivory-2);line-height:1.5;max-width:44ch}
+
+  /* Title slide */
+  .title h1{font-size:clamp(52px,10vw,120px);letter-spacing:-1px}
+  .title .slogan{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.3vw,30px);
+    color:var(--ivory-2);margin-top:14px;max-width:30ch}
+  .title .who{margin-top:34px;font-size:clamp(12px,1.2vw,15px);color:var(--muted);letter-spacing:.04em}
+
+  /* Big statement */
+  .big h1{font-size:clamp(34px,5.4vw,68px)}
+  .huge{font-family:var(--serif);font-weight:600;color:var(--gold-2);
+    font-size:clamp(90px,20vw,240px);line-height:.9;letter-spacing:-3px}
+
+  /* Stat tiles */
+  .tiles{display:flex;gap:clamp(12px,1.6vw,22px);margin-top:34px;flex-wrap:wrap}
+  .tile{flex:1;min-width:170px;background:#ffffff0a;border:1px solid var(--line);border-radius:14px;
+    padding:22px 22px 20px;backdrop-filter:blur(2px)}
+  .tile .v{font-family:var(--serif);font-size:clamp(30px,3.9vw,52px);color:var(--gold-2);line-height:1;
+    font-variant-numeric:tabular-nums}
+  .tile .l{font-size:clamp(12px,1.15vw,14.5px);color:var(--ivory-2);margin-top:12px;line-height:1.4}
+
+  /* Pillars / lists */
+  .pillars{display:flex;gap:clamp(14px,1.6vw,22px);margin-top:30px;flex-wrap:wrap}
+  .pillar{flex:1;min-width:210px;background:#ffffff08;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .pillar .n{font-family:var(--serif);color:var(--gold);font-size:22px;line-height:1;margin-bottom:12px}
+  .pillar h3{font-family:var(--sans);font-size:clamp(15px,1.5vw,18px);margin:0 0 8px;color:var(--ivory)}
+  .pillar p{margin:0;font-size:clamp(12.5px,1.15vw,14.5px);color:var(--ivory-2);line-height:1.5}
+
+  .points{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:16px;max-width:40ch}
+  .points li{display:flex;gap:14px;align-items:flex-start;font-size:clamp(15px,1.5vw,19px);color:var(--ivory)}
+  .points .b{color:var(--gold);font-family:var(--serif);font-size:20px;line-height:1.2;flex:none}
+
+  /* Flow chips */
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:30px;max-width:60ch}
+  .chip{background:#ffffff0d;border:1px solid var(--line);border-radius:999px;padding:10px 16px;
+    font-size:clamp(12px,1.2vw,15px);color:var(--ivory);white-space:nowrap}
+  .chip.gate{border-color:var(--gold);color:var(--gold-2)}
+  .arr{color:var(--muted);font-size:15px}
+  .hitl{margin-top:26px;display:inline-flex;align-items:center;gap:9px;color:var(--ivory-2);
+    font-size:clamp(12px,1.2vw,14.5px)}
+  .hitl .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+
+  .stack{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;max-width:52ch}
+  .stack .s{background:#ffffff0d;border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+    font-size:clamp(13px,1.3vw,16px)}
+  .stack .s b{color:var(--gold-2)}
+
+  /* Compare (ROI) */
+  .compare{display:flex;align-items:center;gap:clamp(18px,3vw,44px);margin-top:30px;flex-wrap:wrap}
+  .compare .from,.compare .to{text-align:center}
+  .compare .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .compare .num{font-family:var(--serif);font-size:clamp(40px,6vw,80px);line-height:1;font-variant-numeric:tabular-nums}
+  .compare .from .num{color:var(--ivory-2)}
+  .compare .to .num{color:var(--gold-2)}
+  .compare .to .sub,.compare .from .sub{font-size:13px;color:var(--muted);margin-top:8px}
+  .compare .to-arr{font-family:var(--serif);font-size:clamp(30px,4vw,54px);color:var(--gold)}
+
+  /* Roadmap */
+  .road{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .ph{flex:1;min-width:170px;background:#ffffff08;border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;
+    border-top:3px solid var(--gold)}
+  .ph .t{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .ph h3{font-family:var(--sans);font-size:clamp(14px,1.4vw,17px);margin:0 0 6px}
+  .ph p{margin:0;font-size:clamp(11.5px,1.1vw,13.5px);color:var(--ivory-2);line-height:1.45}
+
+  .badge0{display:inline-flex;align-items:center;gap:9px;margin-top:26px;background:#122b22;
+    border:1px solid #2f6b52;border-radius:999px;padding:9px 16px;color:var(--good);
+    font-size:clamp(13px,1.3vw,16px);font-weight:600}
+
+  /* Nav */
+  .nav{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:10;
+    display:flex;align-items:center;gap:6px;background:#0b1524cc;border:1px solid var(--line);
+    border-radius:999px;padding:6px 8px;backdrop-filter:blur(6px)}
+  .nav button{background:none;border:none;color:var(--ivory);width:34px;height:34px;border-radius:50%;
+    cursor:pointer;font-size:17px;display:grid;place-items:center}
+  .nav button:hover{background:#ffffff14;color:var(--gold-2)}
+  .counter{font-size:13px;color:var(--ivory-2);font-variant-numeric:tabular-nums;min-width:52px;text-align:center;letter-spacing:.04em}
+  .progress{position:fixed;left:0;top:0;height:3px;background:var(--gold);z-index:11;transition:width .4s ease}
+  .dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;gap:9px}
+  .dots i{width:8px;height:8px;border-radius:50%;background:#ffffff26;cursor:pointer;display:block;transition:background .2s,transform .2s}
+  .dots i.on{background:var(--gold);transform:scale(1.35)}
+  .hint{position:fixed;left:22px;bottom:26px;font-size:11px;color:var(--muted);z-index:10}
+
+  button:focus-visible,.dots i:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  @media (max-width:640px){.dots{display:none} .slide{padding:64px 28px}}
+  @media (prefers-reduced-motion:reduce){.slide{transition:opacity .001s}}
+</style>
+
+<div class="progress" id="prog"></div>
+<div class="deck" id="deck">
+
+  <!-- 1 -->
+  <section class="slide title active">
+    <div class="eyebrow">Projet Capstone · AI for Business · PSTB</div>
+    <h1>Pér<span class="em">e</span>nnis</h1>
+    <div class="slogan">« Assurer la pérennité des entreprises qui ont fait l'Europe. »</div>
+    <div class="who">Une plateforme d'IA &amp; un conseil M&amp;A pour la transmission d'entreprises · Abdul Gueny Djeirkhanov</div>
+  </section>
+
+  <!-- 2 -->
+  <section class="slide big">
+    <div class="eyebrow">Le problème</div>
+    <h1>Des entreprises saines meurent —<br><span class="em">faute d'un successeur.</span></h1>
+    <div class="tiles">
+      <div class="tile"><div class="v">500 000</div><div class="l">dirigeants partent à la retraite (France)</div></div>
+      <div class="tile"><div class="v">+3 M</div><div class="l">emplois en jeu</div></div>
+      <div class="tile"><div class="v">1 sur 2</div><div class="l">entreprise ne trouve pas de repreneur</div></div>
+      <div class="tile"><div class="v">42 %</div><div class="l">des cessions échouent faute d'acheteur</div></div>
+    </div>
+    <div class="src">Sources : DGE (2025) · Banque de France (2024) · Bpifrance Le Lab / Institut Sapiens (2025).</div>
+  </section>
+
+  <!-- 3 -->
+  <section class="slide big">
+    <div class="eyebrow">Le marché</div>
+    <h1>Une vague de transmission,<br>pour toute <span class="em">une décennie.</span></h1>
+    <div class="tiles">
+      <div class="tile"><div class="v">370 000</div><div class="l">entreprises à céder d'ici 2030 (France)</div></div>
+      <div class="tile"><div class="v">114 000</div><div class="l">fermetures/an faute de successeur (Europe)</div></div>
+      <div class="tile"><div class="v">≥ 75 000</div><div class="l">opérations de transmission par an</div></div>
+    </div>
+    <div class="src">Sources : CCI/CMA/CRA + Bpifrance (2024-25) · Eilla / KfW · BPCE L'Observatoire.</div>
+  </section>
+
+  <!-- 4 -->
+  <section class="slide big" style="justify-content:center">
+    <div class="eyebrow">L'insight</div>
+    <div style="display:flex;align-items:baseline;gap:24px;flex-wrap:wrap">
+      <div class="huge">3×</div>
+      <h1 style="font-size:clamp(28px,4.4vw,56px)">plus de <span class="em">vendeurs</span><br>que d'acheteurs.</h1>
+    </div>
+    <p class="lead" style="margin-top:30px;max-width:38ch">Le facteur rare n'est pas l'entreprise à vendre.
+      C'est <b style="color:var(--ivory)">l'acheteur solvable et de confiance.</b> C'est exactement ce que j'apporte.</p>
+  </section>
+
+  <!-- 5 -->
+  <section class="slide">
+    <div class="eyebrow">La solution</div>
+    <h1 style="font-size:clamp(30px,4.4vw,54px)">Pérennis relie <span class="em">les deux rives.</span></h1>
+    <div class="pillars">
+      <div class="pillar"><div class="n">01</div><h3>Plateforme d'agents IA</h3><p>Détecte, qualifie, valorise et met en correspondance — avec un guichet de conformité intégré.</p></div>
+      <div class="pillar"><div class="n">02</div><h3>Réseau d'acheteurs</h3><p>Investisseurs de la CEI et du Moyen-Orient, avec des capitaux, en quête d'une économie stable de l'UE.</p></div>
+      <div class="pillar"><div class="n">03</div><h3>Accompagnement A→Z</h3><p>Toute la transaction, plus un management de transition pour une reprise sereine.</p></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="slide big">
+    <div class="eyebrow">Mon avantage</div>
+    <h1>« Je suis <span class="em">le pont.</span> »</h1>
+    <ul class="points">
+      <li><span class="b">◆</span> Réseau et réputation dans les ex-républiques de l'URSS.</li>
+      <li><span class="b">◆</span> Langue russe et compréhension de la culture d'affaires de l'Est.</li>
+      <li><span class="b">◆</span> Liens au Moyen-Orient — des capitaux qui cherchent une terre stable.</li>
+    </ul>
+  </section>
+
+  <!-- 7 -->
+  <section class="slide">
+    <div class="eyebrow">Comment ça marche</div>
+    <h1 style="font-size:clamp(28px,4.2vw,50px)">Sept agents IA. Un fil. <span class="em">L'humain aux commandes.</span></h1>
+    <div class="flow">
+      <span class="chip">Radar</span><span class="arr">→</span>
+      <span class="chip">Qualification</span><span class="arr">→</span>
+      <span class="chip">Matching</span><span class="arr">→</span>
+      <span class="chip">Communication</span><span class="arr">→</span>
+      <span class="chip">Due Diligence</span><span class="arr">→</span>
+      <span class="chip gate">🛡 Conformité</span><span class="arr">→</span>
+      <span class="chip">Transition</span>
+    </div>
+    <div class="hitl"><span class="dot"></span> Humain dans la boucle — l'IA prépare, un humain valide chaque décision.</div>
+  </section>
+
+  <!-- 8 -->
+  <section class="slide">
+    <div class="eyebrow">La technologie</div>
+    <h1 style="font-size:clamp(30px,4.4vw,52px)">Standard, portable, <span class="em">hébergée dans l'UE.</span></h1>
+    <div class="stack">
+      <div class="s"><b>Base44</b> · interface</div>
+      <div class="s"><b>n8n</b> · orchestration</div>
+      <div class="s"><b>Claude</b> · moteur RU/AR/FR/EN</div>
+      <div class="s"><b>Pappers / Infogreffe</b> · données</div>
+      <div class="s"><b>OpenSanctions</b> · conformité</div>
+    </div>
+    <p class="lead" style="margin-top:26px;max-width:46ch">Relié par <b style="color:var(--gold-2)">MCP</b> — pas de vendor lock-in, données dans l'UE.</p>
+  </section>
+
+  <!-- 9 -->
+  <section class="slide big">
+    <div class="eyebrow">Le ROI de l'IA</div>
+    <h1 style="font-size:clamp(28px,4vw,50px)">Une petite équipe, <span class="em">un pipeline démultiplié.</span></h1>
+    <div class="compare">
+      <div class="from"><div class="lbl">Manuel</div><div class="num">40</div><div class="sub">cibles / analyste / mois</div></div>
+      <div class="to-arr">→</div>
+      <div class="to"><div class="lbl">Avec l'IA</div><div class="num">150</div><div class="sub">cibles / analyste / mois</div></div>
+      <div class="to"><div class="lbl">Débit</div><div class="num">×3,7</div><div class="sub">coût par cible −65 %</div></div>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide">
+    <div class="eyebrow">Le modèle économique</div>
+    <h1 style="font-size:clamp(28px,4vw,50px)">À maturité — ~<span class="em">50 M€/an</span> de volume.</h1>
+    <div class="tiles">
+      <div class="tile"><div class="v">2,49 M€</div><div class="l">produits (success fee + retainer + transition)</div></div>
+      <div class="tile"><div class="v">0,60 M€</div><div class="l">charges</div></div>
+      <div class="tile"><div class="v">1,89 M€</div><div class="l">résultat net · marge ~76 %</div></div>
+    </div>
+    <div class="src">Hypothèses prudentes ; les honoraires de succès sont validés au pilote via les KPI.</div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide">
+    <div class="eyebrow">La conformité</div>
+    <h1 style="font-size:clamp(28px,4vw,50px)">« Uniquement des <span class="em">fonds licites.</span> »</h1>
+    <p class="kicker" style="margin-top:6px">Notre conformité n'est pas un frein — c'est un gage de qualité et de confiance.</p>
+    <div class="flow" style="margin-top:24px">
+      <span class="chip">KYC / LCB-FT</span>
+      <span class="chip">Sanctions &amp; PEP</span>
+      <span class="chip">Filtrage des IDE (UE)</span>
+      <span class="chip">Confidentialité · NDA</span>
+      <span class="chip">RGPD</span>
+      <span class="chip">EU AI Act</span>
+    </div>
+    <div class="badge0">✓ Objectif : 0 incident de conformité</div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide">
+    <div class="eyebrow">La feuille de route</div>
+    <h1 style="font-size:clamp(28px,4vw,50px)">Grande ambition, <span class="em">rythme réaliste.</span></h1>
+    <div class="road">
+      <div class="ph"><div class="t">Phase 0 · Mois 0-6</div><h3>Fondations</h3><p>Structure, marque, conformité, partenaires, MVP.</p></div>
+      <div class="ph"><div class="t">Phase 1 · Mois 6-15</div><h3>MVP buy-side</h3><p>Sourcing IA · 1ʳᵉ transaction mois 9-15.</p></div>
+      <div class="ph"><div class="t">Phase 2 · Mois 15-30</div><h3>Plateforme</h3><p>Base sell-side + matching, équipe, CNCFA.</p></div>
+      <div class="ph"><div class="t">Phase 3 · Mois 30-48</div><h3>Échelle</h3><p>Orbis (UE), réseau de managers de transition.</p></div>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide big" style="justify-content:center">
+    <div class="eyebrow">La vision</div>
+    <h1 style="font-size:clamp(32px,5vw,66px)">« Nous sauvons les entreprises<br>qui ont <span class="em">fait l'Europe.</span> »</h1>
+    <p class="lead" style="margin-top:28px;max-width:52ch">L'IA trouve et vérifie · mon réseau apporte les repreneurs · l'humain garde le contrôle.
+      De façon rentable, et parfaitement conforme.</p>
+    <div class="who" style="margin-top:30px;color:var(--gold-2);font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.8vw,22px)">Merci.</div>
+  </section>
+
+</div>
+
+<div class="dots" id="dots"></div>
+<div class="nav">
+  <button id="prev" aria-label="Slide précédent">‹</button>
+  <span class="counter" id="counter">1 / 13</span>
+  <button id="next" aria-label="Slide suivant">›</button>
+</div>
+<div class="hint">← → pour naviguer</div>
+
+<script>
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var total = slides.length, i = 0;
+  var counter = document.getElementById('counter');
+  var prog = document.getElementById('prog');
+  var dotsWrap = document.getElementById('dots');
+  slides.forEach(function(_,k){
+    var d = document.createElement('i'); d.setAttribute('tabindex','0');
+    d.setAttribute('role','button'); d.setAttribute('aria-label','Aller au slide '+(k+1));
+    d.addEventListener('click', function(){ go(k); });
+    d.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();go(k);} });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+  function go(n){
+    i = Math.max(0, Math.min(total-1, n));
+    slides.forEach(function(s,k){ s.classList.toggle('active', k===i); });
+    dots.forEach(function(d,k){ d.classList.toggle('on', k===i); });
+    counter.textContent = (i+1)+' / '+total;
+    prog.style.width = ((i+1)/total*100)+'%';
+  }
+  document.getElementById('prev').addEventListener('click', function(){ go(i-1); });
+  document.getElementById('next').addEventListener('click', function(){ go(i+1); });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){ e.preventDefault(); go(i+1); }
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); go(i-1); }
+    else if(e.key==='Home'){ go(0); } else if(e.key==='End'){ go(total-1); }
+  });
+  go(0);
+</script>
