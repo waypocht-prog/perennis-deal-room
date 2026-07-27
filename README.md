@@ -15,12 +15,18 @@ Projet Capstone — AI for Business (PSTB). *Valide les blocs BC01 et BC04 du RN
 |---|---|
 | `DOSSIER-CAPSTONE-FR.md` | **Dossier complet** (7 parties) — livrable principal |
 | `DOSSIER-CAPSTONE-FR-imprimable.html` | Version mise en page → impression PDF |
-| `livrables/Dossier-Capstone-Perennis.pdf` | Export PDF du dossier, prêt à déposer |
+| `livrables/Dossier-Capstone-Perennis.pdf` | **Export PDF du dossier**, captures incluses, prêt à déposer |
+| `livrables/Perennis-Pitch-Deck-FR.pptx` | **Pitch deck PowerPoint** (15 slides) |
+| `captures/` | Captures d'écran du prototype (Annexe C) |
 | `prototype/perennis-deal-room.html` | Maquette du cockpit M&A |
-| `prototype/perennis-pitch.html` | Pitch deck (13 slides) |
+| `prototype/perennis-pilotage.html` | **Tableau de bord de pilotage projet** (Partie 5.4) |
+| `prototype/perennis-pitch.html` | Pitch deck, version web (13 slides) |
 | `prototype/perennis-demo.html` | Démo auto-jouée sous-titrée |
 | `prototype/radar-pappers-n8n.json` | **Agent Radar** — workflow n8n (API Pappers) |
 | `prototype/radar-vers-deal-room-n8n.json` | Chaînage Radar → Deal Room (Base44) |
+
+> ⏳ **Reste à produire :** la vidéo de démonstration (3–5 min) — script prêt dans
+> `10-Script-video-demo-FR.md`, support visuel dans `prototype/perennis-demo.html`.
 
 ### Notes de travail
 

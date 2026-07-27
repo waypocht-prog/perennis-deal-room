@@ -1,0 +1,421 @@
+<title>Pérennis — Tableau de bord de pilotage projet</title>
+<style>
+  :root{
+    --bg:#EAECF1; --panel:#FFFFFF; --panel-2:#F5F7FA;
+    --ink:#18202E; --ink-2:#525C72; --muted:#8A93A6; --line:#E2E6ED;
+    --navy:#152238; --navy-2:#1D2E49; --on-navy:#EAEFF7; --on-navy-muted:#93A0B8;
+    --gold:#B08A3E; --gold-soft:#EFE4CC; --gold-ink:#856323;
+    --good:#2F7D5B; --good-bg:#E3F0EA; --good-chart:#1B8A5F;
+    --warn:#B7791C; --warn-bg:#F6EAD5;
+    --crit:#B23B3B; --crit-bg:#F6E2E2;
+    --grid:#E7EBF1;
+    --shadow:0 1px 2px rgba(20,30,50,.05),0 10px 28px rgba(20,30,50,.07);
+    --radius:14px;
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0E1622; --panel:#161F2E; --panel-2:#1B2637;
+      --ink:#E7ECF4; --ink-2:#AAB5C8; --muted:#7C889D; --line:#27313F;
+      --navy:#0A111C; --navy-2:#12203A; --on-navy:#EAEFF7; --on-navy-muted:#8695AE;
+      --gold:#CBA455; --gold-soft:#33291640; --gold-ink:#DBBD72;
+      --good:#4FB488; --good-bg:#123329; --good-chart:#4FB488;
+      --warn:#D89A3C; --warn-bg:#38300f47;
+      --crit:#DC6E6E; --crit-bg:#3a1f1f;
+      --grid:#27313F;
+      --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#EAECF1; --panel:#FFFFFF; --panel-2:#F5F7FA;
+    --ink:#18202E; --ink-2:#525C72; --muted:#8A93A6; --line:#E2E6ED;
+    --navy:#152238; --navy-2:#1D2E49; --on-navy:#EAEFF7; --on-navy-muted:#93A0B8;
+    --gold:#B08A3E; --gold-soft:#EFE4CC; --gold-ink:#856323;
+    --good:#2F7D5B; --good-bg:#E3F0EA; --good-chart:#1B8A5F;
+    --warn:#B7791C; --warn-bg:#F6EAD5; --crit:#B23B3B; --crit-bg:#F6E2E2;
+    --grid:#E7EBF1;
+    --shadow:0 1px 2px rgba(20,30,50,.05),0 10px 28px rgba(20,30,50,.07);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E1622; --panel:#161F2E; --panel-2:#1B2637;
+    --ink:#E7ECF4; --ink-2:#AAB5C8; --muted:#7C889D; --line:#27313F;
+    --navy:#0A111C; --on-navy:#EAEFF7; --on-navy-muted:#8695AE;
+    --gold:#CBA455; --gold-soft:#33291640; --gold-ink:#DBBD72;
+    --good:#4FB488; --good-bg:#123329; --good-chart:#4FB488;
+    --warn:#D89A3C; --warn-bg:#38300f47; --crit:#DC6E6E; --crit-bg:#3a1f1f;
+    --grid:#27313F;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{margin:0;text-wrap:balance}
+  .tnum{font-variant-numeric:tabular-nums}
+
+  /* ---------- Bandeau ---------- */
+  .top{background:var(--navy);color:var(--on-navy);padding:18px 28px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:34px;height:34px;border-radius:9px;flex:none;
+    background:linear-gradient(150deg,var(--gold),#8A6A24);display:grid;place-items:center;
+    font-family:var(--serif);font-weight:700;color:#1a1206;font-size:19px}
+  .brand .name{font-family:var(--serif);font-size:20px;line-height:1}
+  .brand .sub{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--on-navy-muted);margin-top:3px}
+  .top .ttl{margin-left:8px;padding-left:18px;border-left:1px solid #ffffff24}
+  .top .ttl h1{font-size:15.5px;font-weight:600}
+  .top .ttl p{margin:2px 0 0;font-size:12px;color:var(--on-navy-muted)}
+  .sprintchip{margin-left:auto;display:flex;align-items:center;gap:9px;
+    background:#ffffff14;border:1px solid #ffffff1f;border-radius:999px;padding:7px 15px;font-size:12.5px}
+  .sprintchip b{color:var(--gold)}
+
+  .wrap{padding:22px 28px 44px;max-width:1180px;margin:0 auto}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:18px 20px;margin-bottom:18px}
+  .card > h2{font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:14px}
+  .sect-note{font-size:12.2px;color:var(--ink-2);margin:-6px 0 14px}
+
+  /* ---------- Tuiles KPI ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:16px 18px}
+  .kpi .lbl{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .kpi .val{font-family:var(--serif);font-size:31px;line-height:1.15;margin-top:7px;
+    font-variant-numeric:tabular-nums}
+  .kpi .sub{font-size:12px;color:var(--ink-2);margin-top:3px}
+  .bar{height:6px;border-radius:99px;background:var(--panel-2);margin-top:11px;overflow:hidden}
+  .bar > i{display:block;height:100%;border-radius:99px;background:var(--gold)}
+  .bar.ok > i{background:var(--good-chart)}
+  .bar.warn > i{background:var(--warn)}
+
+  /* ---------- Graphique ---------- */
+  .chartwrap{position:relative}
+  svg.chart{display:block;width:100%;height:auto;overflow:visible}
+  .ax{font-size:10.5px;fill:var(--muted);font-variant-numeric:tabular-nums}
+  .gridline{stroke:var(--grid);stroke-width:1}
+  .axisline{stroke:var(--line);stroke-width:1}
+  .ideal{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:5 5;opacity:.75}
+  .actual{fill:none;stroke:var(--gold);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+  .dot{fill:var(--gold);stroke:var(--panel);stroke-width:2}
+  .hit{fill:transparent;cursor:pointer}
+  .dlabel{font-size:11px;fill:var(--ink-2);font-variant-numeric:tabular-nums}
+  .legend{display:flex;gap:20px;flex-wrap:wrap;margin:2px 0 12px;font-size:12.3px;color:var(--ink-2)}
+  .legend span{display:inline-flex;align-items:center;gap:8px}
+  .swatch{width:20px;height:0;border-top:2px solid var(--gold)}
+  .swatch.dash{border-top:2px dashed var(--muted)}
+  .tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .12s;
+    background:var(--navy);color:var(--on-navy);border-radius:9px;padding:8px 11px;
+    font-size:12px;line-height:1.45;white-space:nowrap;box-shadow:var(--shadow);z-index:5}
+  .tip b{color:var(--gold)}
+
+  /* ---------- Tableaux ---------- */
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;padding:0 10px 9px;border-bottom:1px solid var(--line)}
+  td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  td.tnum{text-align:right}
+
+  .chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;
+    padding:3px 10px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .chip.done{background:var(--good-bg);color:var(--good)}
+  .chip.wip{background:var(--gold-soft);color:var(--gold-ink)}
+  .chip.todo{background:var(--panel-2);color:var(--ink-2)}
+  .chip.hi{background:var(--crit-bg);color:var(--crit)}
+  .chip.mid{background:var(--warn-bg);color:var(--warn)}
+  .chip.lo{background:var(--panel-2);color:var(--ink-2)}
+
+  /* ---------- Colonnes ---------- */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:880px){.two{grid-template-columns:1fr}}
+
+  /* ---------- Jauges qualitatives ---------- */
+  .meter{margin-bottom:15px}
+  .meter:last-child{margin-bottom:0}
+  .meter .row{display:flex;align-items:baseline;gap:10px;font-size:13px}
+  .meter .row .n{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:600}
+  .meter .row .src{font-size:11.5px;color:var(--muted)}
+
+  /* ---------- Alertes ---------- */
+  .alert{display:flex;gap:11px;align-items:flex-start;padding:11px 12px;border-radius:10px;
+    margin-bottom:9px;font-size:13px;border:1px solid transparent}
+  .alert:last-child{margin-bottom:0}
+  .alert .ic{flex:none;font-size:14px;line-height:1.35}
+  .alert .t{font-weight:600}
+  .alert .d{color:var(--ink-2);font-size:12.3px;margin-top:1px}
+  .alert.crit{background:var(--crit-bg);border-color:#b23b3b33}
+  .alert.crit .t{color:var(--crit)}
+  .alert.warn{background:var(--warn-bg);border-color:#b7791c33}
+  .alert.warn .t{color:var(--warn)}
+  .alert.info{background:var(--panel-2);border-color:var(--line)}
+
+  ul.plain{margin:0;padding-left:18px;font-size:13px;color:var(--ink-2)}
+  ul.plain li{margin-bottom:6px}
+  ul.plain li:last-child{margin-bottom:0}
+  ul.plain b{color:var(--ink)}
+
+  .foot{text-align:center;font-size:11.5px;color:var(--muted);margin-top:26px}
+
+  @media print{
+    body{background:#fff}
+    .card,.kpi{box-shadow:none;break-inside:avoid}
+    .top{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+
+<div class="top">
+  <div class="brand">
+    <div class="mark">P</div>
+    <div>
+      <div class="name">Pérennis</div>
+      <div class="sub">Pilotage projet</div>
+    </div>
+  </div>
+  <div class="ttl">
+    <h1>Tableau de bord de pilotage — MVP Pérennis</h1>
+    <p>Partie 5.4 du dossier Capstone · méthode Agile hybride (Scrum + Kanban)</p>
+  </div>
+  <div class="sprintchip">Sprint <b>3</b> / 6 &nbsp;·&nbsp; semaine 6 / 12</div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== INDICATEURS QUANTITATIFS ===== -->
+  <div class="kpis">
+    <div class="kpi">
+      <div class="lbl">Avancement global</div>
+      <div class="val">47 <span style="font-size:19px;color:var(--ink-2)">%</span></div>
+      <div class="sub">57 / 120 points livrés</div>
+      <div class="bar"><i style="width:47%"></i></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Respect des délais</div>
+      <div class="val">92 <span style="font-size:19px;color:var(--ink-2)">%</span></div>
+      <div class="sub">11 / 12 jalons tenus</div>
+      <div class="bar ok"><i style="width:92%"></i></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Budget consommé</div>
+      <div class="val">38 <span style="font-size:19px;color:var(--ink-2)">%</span></div>
+      <div class="sub">46 k€ sur 120 k€ d'amorçage</div>
+      <div class="bar ok"><i style="width:38%"></i></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Coût IA — API &amp; tokens</div>
+      <div class="val">412 <span style="font-size:19px;color:var(--ink-2)">€/mois</span></div>
+      <div class="sub">plafond fixé à 800 €/mois</div>
+      <div class="bar warn"><i style="width:52%"></i></div>
+    </div>
+  </div>
+
+  <!-- ===== BURN-DOWN ===== -->
+  <div class="card">
+    <h2>Burn-down — travail restant par sprint</h2>
+    <p class="sect-note">Points de backlog restants à la fin de chaque sprint, comparés à la
+      trajectoire idéale. L'écart au sprint 2 correspond au blocage de la documentation Pappers
+      (voir actions correctives).</p>
+    <div class="legend">
+      <span><i class="swatch"></i> Restant réel</span>
+      <span><i class="swatch dash"></i> Trajectoire idéale</span>
+    </div>
+    <div class="chartwrap">
+      <svg class="chart" viewBox="0 0 660 224" role="img"
+           aria-label="Burn-down : 120 points au départ, 104 après le sprint 1, 86 après le sprint 2, 63 après le sprint 3 ; la trajectoire idéale descend de 120 à 0 en six sprints.">
+        <!-- grille -->
+        <line class="gridline" x1="44" y1="12"  x2="644" y2="12"></line>
+        <line class="gridline" x1="44" y1="57"  x2="644" y2="57"></line>
+        <line class="gridline" x1="44" y1="102" x2="644" y2="102"></line>
+        <line class="gridline" x1="44" y1="147" x2="644" y2="147"></line>
+        <line class="axisline" x1="44" y1="192" x2="644" y2="192"></line>
+        <!-- axe Y -->
+        <text class="ax" x="36" y="16"  text-anchor="end">120</text>
+        <text class="ax" x="36" y="61"  text-anchor="end">90</text>
+        <text class="ax" x="36" y="106" text-anchor="end">60</text>
+        <text class="ax" x="36" y="151" text-anchor="end">30</text>
+        <text class="ax" x="36" y="196" text-anchor="end">0</text>
+        <!-- axe X -->
+        <text class="ax" x="44"  y="210" text-anchor="middle">début</text>
+        <text class="ax" x="141" y="210" text-anchor="middle">S1</text>
+        <text class="ax" x="237" y="210" text-anchor="middle">S2</text>
+        <text class="ax" x="334" y="210" text-anchor="middle">S3</text>
+        <text class="ax" x="431" y="210" text-anchor="middle">S4</text>
+        <text class="ax" x="527" y="210" text-anchor="middle">S5</text>
+        <text class="ax" x="624" y="210" text-anchor="middle">S6</text>
+        <!-- idéal -->
+        <polyline class="ideal" points="44,12 141,42 237,72 334,102 431,132 527,162 624,192"></polyline>
+        <!-- réel -->
+        <polyline class="actual" points="44,12 141,36 237,63 334,97"></polyline>
+        <circle class="dot" cx="44"  cy="12" r="4.5"></circle>
+        <circle class="dot" cx="141" cy="36" r="4.5"></circle>
+        <circle class="dot" cx="237" cy="63" r="4.5"></circle>
+        <circle class="dot" cx="334" cy="97" r="5.5"></circle>
+        <text class="dlabel" x="334" y="86" text-anchor="middle">63 pts restants</text>
+        <!-- zones de survol -->
+        <circle class="hit" cx="44"  cy="12" r="16" data-t="Départ" data-v="120 points au backlog"></circle>
+        <circle class="hit" cx="141" cy="36" r="16" data-t="Sprint 1 — Agent Radar" data-v="104 restants · 16 livrés"></circle>
+        <circle class="hit" cx="237" cy="63" r="16" data-t="Sprint 2 — Données &amp; CRM" data-v="86 restants · 18 livrés"></circle>
+        <circle class="hit" cx="334" cy="97" r="16" data-t="Sprint 3 — Deal Room" data-v="63 restants · 23 livrés"></circle>
+      </svg>
+      <div class="tip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="two">
+    <!-- ===== SPRINTS ===== -->
+    <div class="card">
+      <h2>Itérations — 6 sprints / 12 semaines</h2>
+      <table>
+        <thead><tr><th>Sprint</th><th>Objectif</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td><b>S1</b></td><td>Agent Radar (n8n + Pappers)</td><td><span class="chip done">✓ Livré</span></td></tr>
+          <tr><td><b>S2</b></td><td>Enrichissement &amp; CRM</td><td><span class="chip done">✓ Livré</span></td></tr>
+          <tr><td><b>S3</b></td><td>Deal Room (Base44)</td><td><span class="chip wip">◐ En cours</span></td></tr>
+          <tr><td><b>S4</b></td><td>Agent Matching</td><td><span class="chip todo">À venir</span></td></tr>
+          <tr><td><b>S5</b></td><td>Guichet conformité KYC/AML</td><td><span class="chip todo">À venir</span></td></tr>
+          <tr><td><b>S6</b></td><td>Communication &amp; vidéo-démo</td><td><span class="chip todo">À venir</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== BACKLOG ===== -->
+    <div class="card">
+      <h2>Backlog priorisé</h2>
+      <table>
+        <thead><tr><th>Fonctionnalité</th><th>Priorité</th><th class="tnum">Sprint</th></tr></thead>
+        <tbody>
+          <tr><td>Agent Radar + scoring</td><td><span class="chip hi">Haute</span></td><td class="tnum">1</td></tr>
+          <tr><td>Deal Room (pipeline, fiche cible)</td><td><span class="chip hi">Haute</span></td><td class="tnum">3</td></tr>
+          <tr><td>Agent Matching</td><td><span class="chip hi">Haute</span></td><td class="tnum">4</td></tr>
+          <tr><td>Guichet conformité</td><td><span class="chip hi">Haute</span></td><td class="tnum">5</td></tr>
+          <tr><td>Écriture CRM (Airtable)</td><td><span class="chip mid">Moyenne</span></td><td class="tnum">2</td></tr>
+          <tr><td>Agent Communication multilingue</td><td><span class="chip mid">Moyenne</span></td><td class="tnum">6</td></tr>
+          <tr><td>Enrichissement financier (Orbis)</td><td><span class="chip lo">Basse</span></td><td class="tnum">post</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="two">
+    <!-- ===== QUALITATIF ===== -->
+    <div class="card">
+      <h2>Indicateurs qualitatifs</h2>
+      <p class="sect-note">Recueillis en revue de sprint auprès d'un cédant test et d'un
+        repreneur de mon réseau.</p>
+
+      <div class="meter">
+        <div class="row"><span>Satisfaction cédant test</span><span class="n">4,2 / 5</span></div>
+        <div class="bar ok"><i style="width:84%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Satisfaction repreneur test</span><span class="n">4,6 / 5</span></div>
+        <div class="bar ok"><i style="width:92%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Qualité des livrables <span class="src">(Definition of Done)</span></span><span class="n">89 %</span></div>
+        <div class="bar ok"><i style="width:89%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Performance équipe <span class="src">(vélocité vs engagement)</span></span><span class="n">96 %</span></div>
+        <div class="bar ok"><i style="width:96%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Conformité — incidents</span><span class="n">0</span></div>
+        <div class="bar ok"><i style="width:100%"></i></div>
+      </div>
+    </div>
+
+    <!-- ===== ALERTES ===== -->
+    <div class="card">
+      <h2>Alertes &amp; communication intégrée</h2>
+      <div class="alert crit">
+        <div class="ic">⛔</div>
+        <div><div class="t">Correspondance sanctions détectée</div>
+          <div class="d">Cible #CE-2291 — acheteur bloqué automatiquement, dossier transmis au
+            responsable conformité. Aucun passage en Négociation possible.</div></div>
+      </div>
+      <div class="alert warn">
+        <div class="ic">⚠️</div>
+        <div><div class="t">Quota API Pappers bas</div>
+          <div class="d">18 crédits restants sur 100. Mise en cache activée, filtres resserrés.</div></div>
+      </div>
+      <div class="alert info">
+        <div class="ic">🗓️</div>
+        <div><div class="t">Revue de sprint 3 — vendredi 14 h</div>
+          <div class="d">Démo Deal Room au cédant test ; retours consignés dans Notion puis
+            réintégrés au backlog du sprint 4.</div></div>
+      </div>
+      <div class="alert info">
+        <div class="ic">📤</div>
+        <div><div class="t">Reporting hebdomadaire au sponsor</div>
+          <div class="d">Envoyé chaque lundi · canaux Slack <code>#produit</code>
+            <code>#deals</code> <code>#conformité</code> · daily 15 min.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two">
+    <!-- ===== ACTIONS CORRECTIVES ===== -->
+    <div class="card">
+      <h2>Actions correctives en cas d'écart</h2>
+      <table>
+        <thead><tr><th>Écart constaté</th><th>Action engagée</th></tr></thead>
+        <tbody>
+          <tr><td>Retard de sprint</td><td>Repriorisation du backlog, report en priorité Basse</td></tr>
+          <tr><td>Qualité des données faible</td><td>Ajustement des prompts et des sources, enrichissement par SIREN</td></tr>
+          <tr><td>Dépassement du budget API</td><td>Mise en cache, filtres plus stricts, plafond mensuel</td></tr>
+          <tr><td>Doute de conformité</td><td>Arrêt du deal, revue humaine obligatoire avant reprise</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <div class="card">
+      <h2>Maintien &amp; montée en compétences de l'équipe</h2>
+      <div class="meter">
+        <div class="row"><span>Plan de formation suivi <span class="src">(prompt engineering, n8n, LCB-FT)</span></span><span class="n">75 %</span></div>
+        <div class="bar ok"><i style="width:75%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Sessions de pairing réalisées</span><span class="n">8 / 12</span></div>
+        <div class="bar"><i style="width:67%"></i></div>
+      </div>
+      <div class="meter">
+        <div class="row"><span>Documentation à jour <span class="src">(dépôt GitHub + Notion)</span></span><span class="n">94 %</span></div>
+        <div class="bar ok"><i style="width:94%"></i></div>
+      </div>
+      <ul class="plain" style="margin-top:14px">
+        <li><b>Formation :</b> un créneau de 2 h par sprint, thème choisi selon les blocages rencontrés.</li>
+        <li><b>Pairing :</b> binôme Data/AI Analyst ↔ Développeur no-code sur chaque nouvel agent.</li>
+        <li><b>Documentation vivante :</b> le dépôt et Notion servent de base de connaissances et de support de passation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    Pérennis — Capstone AI for Business (PSTB) · maquette du tableau de bord de pilotage (Partie 5.4).
+    Données illustratives d'un MVP en cours de sprint 3.
+  </div>
+</div>
+
+<script>
+  (function(){
+    var tip = document.getElementById('tip');
+    var wrap = tip.parentElement;
+    document.querySelectorAll('.hit').forEach(function(h){
+      function show(e){
+        var wr = wrap.getBoundingClientRect();
+        var hr = h.getBoundingClientRect();
+        tip.innerHTML = '<b>' + h.dataset.t + '</b><br>' + h.dataset.v;
+        tip.style.opacity = 1;
+        var x = hr.left - wr.left + hr.width/2 - tip.offsetWidth/2;
+        tip.style.left = Math.max(0, Math.min(x, wr.width - tip.offsetWidth)) + 'px';
+        tip.style.top  = (hr.top - wr.top - tip.offsetHeight - 10) + 'px';
+      }
+      h.addEventListener('mouseenter', show);
+      h.addEventListener('mousemove', show);
+      h.addEventListener('mouseleave', function(){ tip.style.opacity = 0; });
+    });
+  })();
+</script>

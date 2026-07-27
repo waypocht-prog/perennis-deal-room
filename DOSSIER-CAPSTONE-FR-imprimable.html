@@ -49,6 +49,11 @@
   .dbox.gate{background:#9E7A2E;color:#fff}
   .darr{color:#9E7A2E;font-weight:700}
   .dnote{font-family:system-ui,sans-serif;font-size:8.6pt;color:#4A5468;margin-top:6px}
+  /* figures / captures d'écran */
+  figure.fig{margin:12px 0 14px;break-inside:avoid;page-break-inside:avoid}
+  figure.fig img{width:100%;height:auto;display:block;border:1px solid #D9DEE7;border-radius:6px}
+  figure.fig figcaption{font-size:8.4pt;color:#5A6474;margin-top:5px;text-align:left}
+  figure.fig figcaption b{color:#1B2534}
   /* gantt */
   .gantt{font-family:system-ui,sans-serif;font-size:8.8pt;margin:12px 0}
   .grow{display:flex;align-items:center;gap:10px;margin:4px 0}
@@ -82,8 +87,8 @@
     <h1>Pérennis</h1>
     <div class="sub">Plateforme d'agents d'IA et conseil M&amp;A pour la transmission d'entreprises en Europe.</div>
     <div class="meta">
-      <b>Spécialisation :</b> AI for Business — Stratégie, Finance &amp; M&amp;A<br>
-      <b>Étudiant :</b> Abdul Gueny Djeirkhanov &nbsp;·&nbsp; <b>Cohorte :</b> FR_AI_BIZ · Campus France<br>
+      <b>Spécialisation :</b> AI for Financial Management <span style="font-style:italic">(appliquée au conseil M&amp;A et à la transmission d'entreprises : valorisation, business case, ROI, conformité LCB-FT)</span><br>
+      <b>Étudiant :</b> Abdul Gueny Djeirkhanov &nbsp;·&nbsp; <b>Cohorte :</b> FR_AI_BIZ#236_FT · Campus France<br>
       <b>Nature :</b> création d'entreprise réelle (fondateur = commanditaire &amp; consultant IA)<br>
       <b>Référentiel :</b> valide les blocs BC01 (Définition) et BC04 (Pilotage) du RNCP 40247
     </div>
@@ -151,24 +156,57 @@
       <li><strong>Conformité du besoin :</strong> données personnelles → base légale RGPD ; usage à risque limité (EU AI Act, voir 4.4).</li>
     </ul>
 
-    <h2>2.2 Idéation</h2>
-    <div class="persona"><strong>Cédant — Jean-Pierre Rousseau, 64 ans</strong> (mécanique de précision, 8 M€ CA, 45 salariés). <em>« Personne à qui transmettre ; je ne connais pas la valeur ; je veux la discrétion. »</em></div>
-    <div class="persona"><strong>Repreneur — Timur A., 45 ans</strong> (Almaty/Dubaï, 3–10 M€). <em>« Je ne connais pas le marché ; à qui faire confiance ; comment gérer à distance ? »</em></div>
-    <div class="persona"><strong>Interne — Léa, 29 ans</strong>, analyste M&amp;A (sourcing).</div>
-    <p><strong>User journey :</strong> de « &gt; 12 mois, échec 42 % » à « acheteur vérifié, cycle &lt; 6 mois, teaser anonyme, conformité intégrée, transition assurée ».</p>
+    <h2>2.2 Session d'idéation</h2>
+    <p><strong>Méthode retenue :</strong> <strong>Design Thinking</strong> (Empathize → Define → Ideate → Prototype → Test) combiné à l'<strong>AI Opportunity Tree</strong> vu au cours <em>Stratégie Business &amp; IA</em>. Le marché étant <strong>bilatéral</strong>, l'idéation a été conduite sur les deux versants avant convergence : divergence sans censure d'abord, convergence par grille de critères ensuite, avec ancrage sur les frustrations réelles issues de mon réseau d'acheteurs.</p>
+
+    <h3>Étape 1 — Compréhension des utilisateurs</h3>
+    <div class="persona"><strong>Cédant — Jean-Pierre Rousseau, 64 ans</strong> (mécanique de précision, Auvergne-Rhône-Alpes, 8 M€ CA, 45 salariés, EBITDA ~1,2 M€). <em>Objectifs :</em> partir à la retraite d'ici 2–3 ans — la vente est son capital retraite ; préserver emplois et savoir-faire bâtis en 35 ans. <em>Frustrations :</em> « ma fille est médecin au Canada, mon fils ne veut pas de l'usine — <strong>personne à qui transmettre</strong> » ; « je ne connais pas la valeur de mon entreprise » ; « si la rumeur sort, clients et salariés paniquent — il me faut le silence » ; « les rares repreneurs français cassent le prix ».</div>
+    <div class="persona"><strong>Repreneur — Timur A., 45 ans</strong> (Almaty, activité à Dubaï, 3–10 M€ à placer). <em>Objectifs :</em> investir dans une économie stable de l'UE, un actif tangible et rentable, diversifier sa juridiction. <em>Frustrations :</em> « je ne connais ni le marché français, ni la langue, ni la culture d'affaires » ; « <strong>à qui faire confiance ?</strong> » ; « comment diriger une usine en France depuis Almaty ? ». <em>Attentes :</em> un partenaire parlant sa langue (RU/AR), des cibles vérifiées, un accompagnement clé en main et un <strong>management de transition</strong>.</div>
+    <div class="persona"><strong>Interne — Léa, 29 ans</strong>, analyste M&amp;A. Passe ses journées à fouiller manuellement les registres ; avec l'agent Radar, elle se concentre sur les personnes et les deals.</div>
+
+    <p><strong>Parcours utilisateur — côté cédant :</strong></p>
+    <table>
+      <thead><tr><th>Étape</th><th>Aujourd'hui</th><th>Avec Pérennis</th></tr></thead>
+      <tbody>
+        <tr><td>Connaître la valeur</td><td>ne sait pas, estime au doigt mouillé</td><td>l'agent <strong>Valorisation</strong> fournit une fourchette argumentée</td></tr>
+        <tr><td>Trouver un repreneur</td><td>&gt; 12 mois d'attente, <strong>42 % d'échecs</strong></td><td>un acheteur <strong>vérifié</strong> de la CEI / du Moyen-Orient est apporté</td></tr>
+        <tr><td>Confidentialité</td><td>risque de fuite dans l'entreprise</td><td>teaser anonymisé, accès sous NDA</td></tr>
+        <tr><td>Prix</td><td>les rares candidats négocient à la baisse</td><td>la concurrence sur un actif rare soutient le prix</td></tr>
+        <tr><td>Après la vente</td><td>il part, la continuité est fragile</td><td>le <strong>manager de transition</strong> assure la passation</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Parcours utilisateur — côté repreneur :</strong></p>
+    <table>
+      <thead><tr><th>Étape</th><th>Aujourd'hui</th><th>Avec Pérennis</th></tr></thead>
+      <tbody>
+        <tr><td>Trouver une cible</td><td>marché européen inconnu</td><td>l'agent <strong>Matching</strong> sélectionne selon ses critères</td></tr>
+        <tr><td>Confiance &amp; langue</td><td>barrière RU/AR, peur de la fraude</td><td>interlocuteur dans sa langue, « pont » culturel</td></tr>
+        <tr><td>Vérification</td><td>crainte d'être trompé</td><td>agent <strong>Due Diligence</strong> + guichet <strong>KYC/AML</strong></td></tr>
+        <tr><td>Direction à distance</td><td>ne sait pas gérer de loin</td><td><strong>management de transition</strong> sur la période charnière</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Étape 2 — Génération d'idées</h3>
+    <p><strong>Idée 1 — Pérennis, plateforme hybride</strong> (IA + conseil + management de transition). Plateforme bilatérale réunissant cédants et repreneurs, agents d'IA pour le sourcing et l'appariement, accompagnement A→Z et management de transition. <em>Outils IA :</em> n8n (orchestration), Claude (analyse et rédaction multilingue), API Pappers/Infogreffe, OpenSanctions, Base44. <em>Avantages :</em> impact maximal, exploite pleinement mon fossé (réseau + langue + transition), effet plateforme, démonstration parlante. <em>Limites :</em> périmètre large → lancement par phases nécessaire.</p>
+    <p><strong>Idée 2 — SaaS de sourcing sell-side</strong> (outil seul). Une IA détecte les entreprises sans successeur et revend les « leads » à d'autres conseils M&amp;A. <em>Outils IA :</em> n8n + API Pappers + scoring, sans couche conseil. <em>Avantages :</em> simple, purement technologique, rapide à construire. <em>Limites :</em> n'exploite pas mon fossé, marge faible, je deviens fournisseur de leads et non auteur de la transaction.</p>
+    <p><strong>Idée 3 — Conciergerie buy-side</strong> (mandats pour acheteurs de l'Est). Je prends le brief d'un acheteur de la CEI / du Moyen-Orient et cherche la cible sur mesure. <em>Outils IA :</em> agent Radar pour le sourcing sur critères, Claude pour les mémos. <em>Avantages :</em> exploite mon fossé, forte valeur par client, mise en œuvre rapide. <em>Limites :</em> ne passe pas à l'échelle sans base sell-side, dépend du flux d'acheteurs, effet plateforme faible.</p>
+
+    <h3>Étape 3 — Sélection et argumentation</h3>
+    <p><strong>Critères de choix</strong> (notés 1–5) : impact sur le problème, exploitation de mon avantage concurrentiel, différenciation, effet de démonstration, faisabilité, coût de lancement.</p>
     <table>
       <thead><tr><th>Critère (1–5)</th><th>Pérennis (hybride)</th><th>SaaS sourcing</th><th>Conciergerie buy-side</th></tr></thead>
       <tbody>
-        <tr><td>Impact</td><td>5</td><td>3</td><td>4</td></tr>
-        <tr><td>Exploite mon fossé</td><td>5</td><td>1</td><td>5</td></tr>
+        <tr><td>Impact sur le problème</td><td>5</td><td>3</td><td>4</td></tr>
+        <tr><td>Exploite mon fossé (réseau / langue / transition)</td><td>5</td><td>1</td><td>5</td></tr>
         <tr><td>Différenciation</td><td>5</td><td>2</td><td>4</td></tr>
-        <tr><td>Effet démo</td><td>5</td><td>3</td><td>4</td></tr>
+        <tr><td>Effet de démonstration</td><td>5</td><td>3</td><td>4</td></tr>
         <tr><td>Faisabilité</td><td>3</td><td>4</td><td>4</td></tr>
-        <tr><td>Coût</td><td>3</td><td>4</td><td>4</td></tr>
+        <tr><td>Coût de lancement <em>(bas = mieux)</em></td><td>3</td><td>4</td><td>4</td></tr>
         <tr class="win"><td>Total</td><td>26 ✅</td><td>17</td><td>25</td></tr>
       </tbody>
     </table>
-    <p><strong>Décision :</strong> l'hybride Pérennis, lancé par phases (MVP conciergerie buy-side d'abord).</p>
+    <p><strong>Décision argumentée :</strong> l'hybride <strong>Pérennis</strong> l'emporte — seule option exploitant entièrement mon avantage (réseau, langue russe, management de transition) tout en créant un effet plateforme. Sa faiblesse — la faisabilité — est corrigée par un <strong>lancement en trois phases</strong> : <em>Phase 1</em> conciergerie buy-side (l'idée 3, arrivée deuxième) avec 2–3 acheteurs et l'agent Radar ; <em>Phase 2</em> ajout de la base sell-side et du matching → plateforme bilatérale ; <em>Phase 3</em> management de transition en ligne de revenus autonome. Grande vision démontrée, démarrage réaliste.</p>
 
     <h3>2.3 Solution retenue</h3>
     <ul>
@@ -310,7 +348,17 @@
     <p><strong>Suivi :</strong> % tâches/sprint, livrées vs planifiées, <strong>burn-down</strong>. <strong>Revues de sprint</strong> avec un cédant et un repreneur test ; retours réintégrés au backlog.</p>
 
     <h3>5.4 Tableau de bord de pilotage</h3>
-    <p><strong>Quantitatif :</strong> avancement, délais, budget, tokens API. <strong>Qualitatif :</strong> satisfaction, qualité, performance équipe. Alertes (quota, sanctions), actions correctives, <strong>montée en compétences</strong> (formation, pairing, doc GitHub).</p>
+    <p><strong>Maquette fonctionnelle réalisée</strong> (<code>prototype/perennis-pilotage.html</code>) réunissant sur un seul écran :</p>
+    <ul>
+      <li><strong>Indicateurs quantitatifs :</strong> avancement global (47 %, 57/120 points), respect des délais (92 %), budget consommé (46 k€ / 120 k€), <strong>coût IA — API &amp; tokens</strong> (412 €/mois pour un plafond de 800 €), et un <strong>burn-down</strong> du travail restant par sprint.</li>
+      <li><strong>Indicateurs qualitatifs :</strong> satisfaction cédant test (4,2/5) et repreneur test (4,6/5), qualité des livrables au regard de la <em>Definition of Done</em> (89 %), performance de l'équipe (vélocité vs engagement, 96 %), <strong>0 incident de conformité</strong>.</li>
+      <li><strong>Communication intégrée :</strong> alertes automatiques (correspondance sanctions → deal bloqué ; quota API bas), revues de sprint, reporting hebdomadaire au sponsor (Slack, Notion).</li>
+      <li><strong>Actions correctives</strong> en cas d'écart et <strong>montée en compétences</strong> de l'équipe (formation 75 %, pairing 8/12, documentation 94 %).</li>
+    </ul>
+    <figure class="fig">
+      <img src="captures/01-tableau-de-bord-pilotage.png" alt="Tableau de bord de pilotage du projet Pérennis : tuiles KPI, burn-down, sprints, backlog priorisé, indicateurs qualitatifs, alertes, actions correctives et montée en compétences.">
+      <figcaption><b>Figure 1 —</b> Maquette du tableau de bord de pilotage (Partie 5.4). Données illustratives d'un MVP en cours de sprint 3.</figcaption>
+    </figure>
 
     <h3>5.5 Clôture &amp; REX</h3>
     <p>Transfert de connaissances (GitHub, README, Notion) ; REX (Radar livré vite ; MCP portable ; données Pappers partielles → enrichissement ; cycles longs → trésorerie) ; recommandations d'échelle (7.2).</p>
@@ -328,7 +376,12 @@
       <li><strong>Prompts documentés :</strong> prompt BASE (Base44) ; prompts système des agents Radar, Matching, Communication, Conformité ; code de scoring dans <code>radar-pappers-n8n.json</code>.</li>
       <li><strong>Difficultés &amp; solutions :</strong> doc Pappers protégée → paramètres validés via dépôts open-source ; finances parfois absentes → filtres <code>resultat_min</code>/<code>chiffre_affaires_min</code> + code défensif.</li>
       <li><strong>Limites &amp; améliorations :</strong> enrichissement par SIREN, Schedule Trigger (Radar quotidien), écriture CRM, agent Matching.</li>
+      <li><strong>Captures d'écran du prototype en fonctionnement :</strong> figure 2 ci-dessous et Annexe C.</li>
     </ul>
+    <figure class="fig">
+      <img src="captures/02-deal-room-cockpit.png" alt="Cockpit Pérennis Deal Room : bandeau de KPI (152 cibles qualifiées, 6 mandats actifs, cycle moyen 5,2 mois, 48 M€ de volume, 0 incident de conformité) et pipeline des transmissions de Sourcé à Transition.">
+      <figcaption><b>Figure 2 —</b> Cockpit « Pérennis Deal Room » : bandeau de KPI et pipeline des transmissions, de <em>Sourcé</em> à <em>Transition</em>, avec l'étape <strong>Conformité</strong> bloquante avant toute négociation.</figcaption>
+    </figure>
     <h3>6.3 Vidéo de démonstration (3–5 min)</h3>
     <p>Script prêt à enregistrer : problème → pont → démo Deal Room (fiche cible → matching → guichet de conformité → pipeline) → conformité &amp; humain dans la boucle → conclusion. Une démo auto-jouée sous-titrée existe.</p>
   </section>
@@ -337,8 +390,9 @@
   <section class="part">
     <div class="part-k">Partie 7</div>
     <h1 class="part-t">Pitch final et recommandations</h1>
-    <h3>7.1 Pitch Deck (13 slides)</h3>
-    <p>Titre · Problème · Marché · Insight (3×) · Solution · Mon fossé · Agents IA · Technologie/MCP · ROI de l'IA · Modèle économique · Conformité (avantage) · Feuille de route · Vision.</p>
+    <h3>7.1 Pitch Deck (15 slides)</h3>
+    <p>Titre · Problème · Marché · Insight (3×) · Solution · Mon avantage · Sept agents IA · Technologie/MCP · ROI de l'IA · Modèle économique · <strong>Équipe &amp; gouvernance</strong> · Conformité (avantage) · <strong>Prototype en action</strong> · Feuille de route · Vision.</p>
+    <p style="font-size:9.4pt;color:#5A6474">Livrable : <code>livrables/Perennis-Pitch-Deck-FR.pptx</code> (PowerPoint, 16:9). Une version web navigable au clavier existe également : <code>prototype/perennis-pitch.html</code>.</p>
     <h3>7.2 Recommandations de déploiement</h3>
     <ul>
       <li><strong>Feuille de route 6–12 mois :</strong> MVP buy-side → 1ʳᵉ transaction → base sell-side.</li>
@@ -348,7 +402,23 @@
     </ul>
 
     <h2>Annexes</h2>
-    <p><strong>A</strong> Brief client (2.0) · <strong>B</strong> Personas (2.2) · <strong>C</strong> Captures (Deal Room, résultats Radar) · <strong>D</strong> Prototype (<code>radar-pappers-n8n.json</code>, prompts) · <strong>E</strong> Sources : BPCE, Bpifrance, DGE, CRA, Banque de France, KfW, Institut Sapiens, EthosData/IMAA, Cyndx/Sourcescrub, Freshfields.</p>
+    <p><strong>A</strong> Brief client (2.0) · <strong>B</strong> Personas et parcours utilisateur (2.2) · <strong>C</strong> Captures d'écran (ci-dessous) · <strong>D</strong> Prototype technique : <code>prototype/radar-pappers-n8n.json</code> (agent Radar, workflow n8n exécutable), <code>prototype/radar-vers-deal-room-n8n.json</code> (chaînage vers la Deal Room), prompts des agents · <strong>E</strong> Sources : BPCE L'Observatoire, Bpifrance Le Lab, DGE, CRA, Banque de France, KfW, Institut Sapiens, EthosData/IMAA, Cyndx/Sourcescrub, Freshfields.</p>
+
+    <h3>Annexe C — Captures d'écran</h3>
+    <p>Les figures 1 et 2 (tableau de bord de pilotage, cockpit Deal Room) figurent aux parties 5.4 et 6.2.</p>
+    <figure class="fig">
+      <img src="captures/03-demo-auto-jouee.png" alt="Démonstration auto-jouée et sous-titrée du parcours Pérennis, écran 1 sur 8.">
+      <figcaption><b>Figure 3 —</b> Démo auto-jouée sous-titrée (<code>prototype/perennis-demo.html</code>) — support de la vidéo de démonstration, 8 séquences.</figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="captures/06-pitch-slide-agents-ia.png" alt="Slide du pitch : les sept agents IA enchaînés — Radar, Qualification, Matching, Communication, Due Diligence, Conformité, Transition — avec l'humain aux commandes.">
+      <figcaption><b>Figure 4 —</b> Pitch deck, slide 7/13 : la chaîne des sept agents d'IA et le principe <em>humain dans la boucle</em>.</figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="captures/07-pitch-slide-conformite.png" alt="Slide du pitch consacré à la conformité : uniquement des fonds licites.">
+      <figcaption><b>Figure 5 —</b> Pitch deck : la conformité (KYC/AML, sanctions, filtrage des IDE) présentée comme avantage concurrentiel et non comme contrainte.</figcaption>
+    </figure>
+    <p style="font-size:9pt;color:#5A6474">Captures complémentaires dans le dossier <code>captures/</code> : <code>04-pitch-slide-titre.png</code>, <code>05-pitch-slide-solution.png</code>.</p>
 
     <footer class="doc">Ce dossier valide les blocs BC01 (Définition du projet) et BC04 (Pilotage du projet) du RNCP 40247 — formation AI for Business, PSTB.</footer>
   </section>
