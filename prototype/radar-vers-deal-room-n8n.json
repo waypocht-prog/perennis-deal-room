@@ -1,0 +1,93 @@
+{
+  "name": "Pérennis — Radar → Deal Room (Base44)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 🔗 Radar → Deal Room\n\nRadar interroge Pappers, calcule le score, met en forme une **Cible**, puis l'envoie à la Deal Room (Base44) via une fonction backend.\n\n### À configurer\n1. **Pappers · Recherche** → credential Header Auth (`api-key` = clé Pappers).\n2. **Envoyer à Deal Room** → remplacer l'URL par celle de ta fonction Base44 `cibleEntrante`, et le secret `x-webhook-secret`.\n\nCf. fichier `14-Radar-vers-Base44-connexion.md`.",
+        "height": 360,
+        "width": 360,
+        "color": 5
+      },
+      "id": "note-1",
+      "name": "Notice",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [80, 180]
+    },
+    {
+      "parameters": {},
+      "id": "trigger-1",
+      "name": "Lancer Radar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [500, 360]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.pappers.fr/v2/recherche",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "chiffre_affaires_min", "value": "1000000" },
+            { "name": "resultat_min", "value": "50000" },
+            { "name": "age_dirigeant_min", "value": "60" },
+            { "name": "entreprise_cessee", "value": "false" },
+            { "name": "par_page", "value": "20" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-1",
+      "name": "Pappers · Recherche",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 360],
+      "credentials": {
+        "httpHeaderAuth": { "id": "REMPLACER", "name": "Pappers api-key" }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const cur=new Date().getFullYear();const words=['Chêne','Sillon','Lavande','Garonne','Vosges','Alizé','Méridien','Ardoise','Cévennes','Mistral','Cèdre','Roseau','Estuaire','Colline','Bruyère','Séquoia'];const data=$input.first().json;const list=data.resultats||data.entreprises||data.results||[];const ageFromDOB=(d)=>{if(!d)return null;const y=parseInt(String(d).slice(0,4),10);return y?cur-y:null;};const out=list.map((c,idx)=>{const dirs=c.dirigeants||c.representants||[];const ages=dirs.map((x)=>(typeof x.age==='number'?x.age:ageFromDOB(x.date_de_naissance))).filter((a)=>typeof a==='number');const age=ages.length?Math.max(...ages):(c.age_dirigeant||null);const nb=dirs.length||1;const ca=(c.chiffre_affaires!=null?c.chiffre_affaires:(c.finances&&c.finances[0]?c.finances[0].chiffre_affaires:null));const res=(c.resultat!=null?c.resultat:(c.finances&&c.finances[0]?c.finances[0].resultat:null));let s=0;if(age!=null){if(age>=70)s+=50;else if(age>=65)s+=42;else if(age>=60)s+=32;else if(age>=55)s+=20;}if(res!=null&&res>0)s+=20;if(ca!=null&&ca>=2000000)s+=12;else if(ca!=null&&ca>=1000000)s+=8;if(nb===1&&age!=null&&age>=60)s+=10;s=Math.min(100,s);const siren=c.siren||c.siren_formate||null;const code=words[idx%words.length];return {json:{nom_code:'Projet '+code,nom_reel:c.nom_entreprise||c.denomination||c.nom||'(inconnu)',secteur:c.libelle_code_naf||c.code_naf||null,region:(c.siege&&(c.siege.region||c.siege.ville||c.siege.code_postal))||c.ville||null,chiffre_affaires:ca,ebitda:res,age_dirigeant:age,nb_dirigeants:nb,score_succession:s,valorisation_min:(res&&res>0)?Math.round(res*4):null,valorisation_max:(res&&res>0)?Math.round(res*6):null,source:'IA · Radar',etape:'Sourcé',siren:siren}};});out.sort((a,b)=>b.json.score_succession-a.json.score_succession);return out;"
+      },
+      "id": "code-1",
+      "name": "Score + Cible",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [940, 360]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://perennis.base44.app/functions/cibleEntrante",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-webhook-secret", "value": "REMPLACER_PAR_VOTRE_SECRET" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {}
+      },
+      "id": "http-2",
+      "name": "Envoyer à Deal Room",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1160, 360],
+      "continueOnFail": true
+    }
+  ],
+  "connections": {
+    "Lancer Radar": { "main": [[{ "node": "Pappers · Recherche", "type": "main", "index": 0 }]] },
+    "Pappers · Recherche": { "main": [[{ "node": "Score + Cible", "type": "main", "index": 0 }]] },
+    "Score + Cible": { "main": [[{ "node": "Envoyer à Deal Room", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}
