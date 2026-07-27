@@ -32,26 +32,26 @@ Projet Capstone — AI for Business (PSTB). *Valide les blocs BC01 et BC04 du RN
 
 | Fichier | Sujet |
 |---|---|
-| `01-Бриф-и-Veille-рынка.md` | Brief client et veille de marché |
-| `02-ИИ-архитектура-агенты-и-MCP.md` | Architecture IA — 7 agents et MCP |
-| `03-Персоны-User-Journey-и-идеация.md` | Personas, user journey, idéation |
-| `04-Бенчмарк-инструментов-и-стек.md` | Benchmark des outils et choix de stack |
-| `05-Business-Case-ROI-и-KPI.md` | Business case, ROI et KPI |
-| `06-План-реализации-атрибуты-бизнеса-и-комплаенс.md` | Plan de réalisation et conformité |
-| `07-Прототип-промпты-и-демо.md` | Prompts du prototype et démo |
-| `08-Питч-и-рекомендации.md` | Pitch et recommandations |
-| `09-Préparation-soutenance-FR.md` | **Préparation de la soutenance** |
+| `01-Brief-et-veille-strategique.md` | Brief du commanditaire et veille stratégique |
+| `02-Architecture-IA-agents-et-MCP.md` | Architecture IA — les sept agents et le MCP |
+| `03-Personas-parcours-utilisateur-et-ideation.md` | Personas, parcours utilisateur, idéation |
+| `04-Benchmark-des-outils-et-stack.md` | Benchmark des outils et choix de la stack |
+| `05-Business-case-ROI-et-KPI.md` | Business case, ROI et KPI |
+| `06-Plan-de-realisation-attributs-et-conformite.md` | Plan de réalisation, attributs et conformité |
+| `07-Prototype-prompts-et-demo.md` | Prompts du prototype et script de démonstration |
+| `08-Pitch-et-recommandations.md` | Pitch et recommandations |
+| `09-Préparation-soutenance-FR.md` | **Préparation de la soutenance** — questions du jury |
 | `10-Script-video-demo-FR.md` | Script de la vidéo de démonstration |
-| `11-Agent-Radar-n8n-инструкция.md` | Mode d'emploi de l'agent Radar |
+| `11-Agent-Radar-n8n-mode-emploi.md` | Mode d'emploi de l'agent Radar |
 | `12-Partie5-Pilotage-projet-Agile-FR.md` | Partie 5 — pilotage de projet Agile |
 | `13-Base44-Deal-Room-prompt.md` | Prompt de génération de la Deal Room |
-| `14-Radar-vers-Base44-connexion.md` | Connexion agent Radar → Base44 |
+| `14-Radar-vers-Base44-connexion.md` | Chaînage agent Radar → Base44 |
 
 ### Référence
 
 | Fichier | Description |
 |---|---|
-| `reference/Требования-курса-к-Capstone.md` | Cahier des charges officiel du Capstone (PSTB) |
+| `reference/Cahier-des-charges-Capstone-PSTB.md` | Cahier des charges officiel du Capstone (PSTB) |
 
 ## 🧠 Architecture IA
 

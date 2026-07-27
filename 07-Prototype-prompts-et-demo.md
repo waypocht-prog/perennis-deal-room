@@ -1,14 +1,19 @@
-# 🖥️ Capstone (v2) · Часть 6 — Прототип (Base44), промпты агентов и видео-демо
+# 🖥️ Capstone · Partie 6 — Prototype (Base44), prompts des agents et vidéo de démonstration
 
-**Проект:** Pérennis. Часть 6 досье. Здесь всё, чтобы собрать прототип — **«Pérennis Deal
-Room»** (дашборд конвейера сделок) — и записать демо.
+**Projet :** Pérennis. Partie 6 du dossier. On y trouve tout le nécessaire pour construire
+le prototype — la **« Pérennis Deal Room »**, tableau de bord du pipeline des affaires —
+et pour enregistrer la démonstration.
 
-Прототип показывает не «генератор текста», а **рабочий M&A-конвейер**: цель → оценка →
-покупатель → комплаенс-шлюз → сопровождение → транзит-менеджмент, с человеком в контуре.
+Le prototype ne montre pas un « générateur de texte » mais une véritable **chaîne de
+traitement M&A** : cible → valorisation → repreneur → guichet de conformité →
+accompagnement → management de transition, avec l'humain dans la boucle.
 
 ---
 
-## 🅱️ Промпт для Base44 (по фреймворку BASE) — построить Deal Room
+## 🅱️ Prompt Base44 (cadre BASE) — construire la Deal Room
+
+*Les prompts sont rédigés en anglais : c'est la langue d'entrée la plus fiable pour ces
+outils. Le résultat produit, lui, est en français.*
 
 ```
 Build a professional B2B web app called "Pérennis Deal Room" for a cross-border M&A
@@ -54,9 +59,10 @@ average deal cycle time, deals volume (€), compliance incidents (target: 0).
 
 ---
 
-## 🧠 Системные промпты ключевых агентов (внутри n8n/Claude)
+## 🧠 Prompts système des agents clés (dans n8n / Claude)
 
-### Agent «Radar» (детекция целей)
+### Agent « Radar » — détection des cibles
+
 ```
 You are the sourcing analyst for "Pérennis", a cross-border M&A advisory focused on
 European SME succession. Goal: find profitable SMEs whose owner is likely to transmit
@@ -70,7 +76,8 @@ reputable press. Never invent facts. For each candidate output:
 Rank by Succession Score. Flag anything uncertain as "to verify by a human".
 ```
 
-### Agent «Matching» (сведение сторон)
+### Agent « Matching » — rapprochement des deux parties
+
 ```
 You match Pérennis targets with buyers. Inputs: a target card and a set of buyer profiles.
 Output the top buyer matches with a one-line rationale each, scoring on: sector fit,
@@ -79,7 +86,8 @@ status is "Blocked" or "Enhanced-pending". Confidentiality: refer to the target 
 anonymized codename, not its real name.
 ```
 
-### Agent «Outreach» (многоязычный контакт — «мост языков»)
+### Agent « Communication » — prise de contact multilingue, le pont des langues
+
 ```
 You draft first-contact messages for Pérennis. Two audiences:
 (1) SELLERS in FRENCH — respectful, discreet, never pushy; acknowledge that transmission
@@ -91,7 +99,8 @@ Pérennis voice (institutional, sincere, trustworthy). Output is a DRAFT for hum
 never sent automatically.
 ```
 
-### Agent «Compliance» (шлюз KYC/AML/санкции)
+### Agent « Conformité » — guichet KYC / LCB-FT / sanctions
+
 ```
 You are the compliance gate for Pérennis. For a given buyer, run a structured check:
 KYC (beneficial owners), source of funds plausibility, sanctions & PEP screening
@@ -102,26 +111,32 @@ reasons. If any sanctions/PEP hit or opaque ownership — do NOT clear; escalate
 
 ---
 
-## 🎬 Сценарий видео-демо (3–5 минут)
+## 🎬 Script de la vidéo de démonstration (3 à 5 minutes)
 
-1. **0:00–0:40 — Проблема.** «В Европе сотни тысяч рентабельных компаний рискуют
-   закрыться: владельцы стареют, преемника нет. А покупателей с капиталом — втрое меньше.
-   Знакомьтесь — Pérennis.»
-2. **0:40–1:10 — Идея «моста».** «Мы соединяем европейских продавцов с проверенными
-   покупателями из СНГ и с Ближнего Востока — на их языке, с полным сопровождением.»
-3. **1:10–3:00 — Демо Deal Room.** Показать: карточка цели с Succession Score и оценкой
-   (сорсит агент Radar) → Matching подбирает покупателя → **Compliance-шлюз** (KYC/санкции)
-   → конвейер сделки → назначение транзит-менеджера.
-4. **3:00–4:00 — Комплаенс и человек в контуре.** Подчеркнуть: сделка не проходит без
-   «Cleared»; ИИ готовит — человек решает.
-5. **4:00–4:40 — Итог.** «Быстрее, безопаснее, чище. Мы спасаем дело, рабочие места и
-   know-how — и даём капиталу легитимный вход в экономику ЕС.»
+1. **0:00–0:40 — Le problème.** « En Europe, des centaines de milliers d'entreprises
+   rentables risquent de fermer : leurs dirigeants vieillissent et n'ont pas de successeur.
+   Or les repreneurs disposant de capitaux sont trois fois moins nombreux. Voici Pérennis. »
+2. **0:40–1:10 — L'idée du pont.** « Nous relions les cédants européens à des repreneurs
+   vérifiés de la CEI et du Moyen-Orient — dans leur langue, avec un accompagnement complet. »
+3. **1:10–3:00 — Démonstration de la Deal Room.** Montrer : une fiche cible avec son score
+   de succession et sa valorisation (sourcée par l'agent Radar) → le Matching qui propose
+   un repreneur → le **guichet de conformité** (KYC et sanctions) → le pipeline de
+   l'affaire → l'affectation d'un manager de transition.
+4. **3:00–4:00 — Conformité et humain dans la boucle.** Souligner qu'aucune affaire ne
+   franchit l'étape sans un verdict « Cleared » : l'IA prépare, l'humain décide.
+5. **4:00–4:40 — Conclusion.** « Plus rapide, plus sûr, plus propre. Nous sauvons
+   l'entreprise, les emplois et le savoir-faire — et nous offrons aux capitaux une entrée
+   légitime dans l'économie européenne. »
 
 ---
 
-## ✅ Как собрать (пошагово)
-1. Base44 → создать app, вставить BASE-промпт (Deal Room).
-2. Подключить Claude, вставить системные промпты агентов (Radar/Matching/Outreach/Compliance).
-3. (Опц.) n8n: связать агентов + Pappers + OpenSanctions в конвейер.
-4. Наполнить 2–3 демо-целями и 2 покупателями, прогнать один кейс.
-5. Записать экран (QuickTime) по сценарию → видео-демо. Сделать 3–4 скриншота.
+## ✅ Marche à suivre pour assembler le prototype
+
+1. Base44 → créer l'application et coller le prompt BASE (Deal Room).
+2. Connecter Claude et installer les prompts système des agents (Radar, Matching,
+   Communication, Conformité).
+3. *(Facultatif)* n8n : relier les agents, Pappers et OpenSanctions en une chaîne.
+4. Alimenter avec deux ou trois cibles de démonstration et deux repreneurs, puis dérouler
+   un cas complet.
+5. Enregistrer l'écran (QuickTime) en suivant le script → la vidéo de démonstration.
+   Prendre trois ou quatre captures d'écran.

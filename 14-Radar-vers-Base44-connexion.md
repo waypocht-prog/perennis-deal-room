@@ -1,19 +1,19 @@
-# 🔗 Связка: агент Radar (n8n) → Deal Room (Base44)
+# 🔗 Chaînage : agent Radar (n8n) → Deal Room (Base44)
 
-Цель: компании, которые находит **Radar**, автоматически появляются в разделе **Cibles**
-приложения Deal Room.
+Objectif : les entreprises détectées par **Radar** apparaissent automatiquement dans la
+rubrique **Cibles** de l'application Deal Room.
 
-**Схема:** Radar (n8n) → Pappers → расчёт score → POST-запрос → **backend-функция Base44**
-→ создаёт карточку Cible.
+**Schéma :** Radar (n8n) → Pappers → calcul du score → requête POST → **fonction backend
+Base44** → création d'une fiche Cible.
 
-Файл workflow: `prototype/radar-vers-deal-room-n8n.json`.
+Fichier du workflow : `prototype/radar-vers-deal-room-n8n.json`.
 
 ---
 
-## ЭТАП 1 — создать точку приёма в Base44 (backend-функция)
+## ÉTAPE 1 — créer le point de réception dans Base44 (fonction backend)
 
-В приложении Deal Room, в поле чата слева («Que souhaitez-vous créer ?»), вставь этот
-промпт и нажми **Construire** :
+Dans l'application Deal Room, coller ce prompt dans le champ de chat de gauche
+(« Que souhaitez-vous créer ? ») puis cliquer sur **Construire** :
 
 ```
 Crée une fonction backend (endpoint HTTP public) nommée "cibleEntrante" qui reçoit une
@@ -35,56 +35,67 @@ Ensuite, DONNE-MOI :
 2) où définir le secret "x-webhook-secret".
 ```
 
-Base44 построит функцию и **выдаст тебе URL** (что-то вроде
-`https://ton-app.base44.app/functions/cibleEntrante`) и место, где задать **секрет**.
-Придумай секрет (например `perennis-radar-2026`) и сохрани его в Base44.
+Base44 construit la fonction et **fournit l'URL** de l'endpoint (de la forme
+`https://votre-app.base44.app/functions/cibleEntrante`) ainsi que l'emplacement où
+définir le **secret**. Choisir un secret et l'enregistrer dans Base44.
 
-> Запиши две вещи: **URL функции** и **секрет**.
-
----
-
-## ЭТАП 2 — настроить n8n
-
-1. **Импортируй** `radar-vers-deal-room-n8n.json` (⋯ → Import from File).
-2. Узел **«Pappers · Recherche»** → выбери credential с ключом Pappers (как раньше).
-3. Узел **«Envoyer à Deal Room»** :
-   - **URL** → вставь URL функции из Base44 (вместо `https://VOTRE-APP.base44.app/functions/cibleEntrante`).
-   - Заголовок **`x-webhook-secret`** → впиши свой секрет (тот же, что в Base44).
-4. Нажми **Execute Workflow**.
+> Conserver deux informations : l'**URL de la fonction** et le **secret**.
+> ⚠️ Le secret ne doit jamais être écrit dans un fichier versionné.
 
 ---
 
-## ЭТАП 3 — проверить
+## ÉTAPE 2 — configurer n8n
 
-- Открой Deal Room → раздел **Cibles**. Там должны появиться новые компании со значком
-  **«Sourcé par IA · Radar»**, статусом **Sourcé** и посчитанным **score de succession**.
-- Открой любую новую карточку — увидишь CA, EBITDA (≈ résultat), возраст руководителя,
-  диапазон оценки.
+1. **Importer** `radar-vers-deal-room-n8n.json` (⋯ → Import from File).
+2. Nœud **« Pappers · Recherche »** → sélectionner le credential contenant la clé Pappers.
+3. Nœud **« Envoyer à Deal Room »** :
+   - **URL** → coller l'URL de la fonction Base44 (à la place de
+     `https://VOTRE-APP.base44.app/functions/cibleEntrante`).
+   - En-tête **`x-webhook-secret`** → renseigner le secret défini dans Base44.
+4. Cliquer sur **Execute Workflow**.
 
 ---
 
-## 🧩 Как мапятся поля (Radar → Cible)
-| Cible (Base44) | Откуда (Radar/Pappers) |
+## ÉTAPE 3 — vérifier
+
+- Ouvrir la Deal Room → rubrique **Cibles**. De nouvelles entreprises doivent y apparaître,
+  portant le badge **« Sourcé par IA · Radar »**, le statut **Sourcé** et un
+  **score de succession** calculé.
+- Ouvrir l'une de ces fiches : elle affiche le chiffre d'affaires, l'EBITDA (approché par
+  le résultat), l'âge du dirigeant et la fourchette de valorisation.
+
+---
+
+## 🧩 Correspondance des champs (Radar → Cible)
+
+| Cible (Base44) | Origine (Radar / Pappers) |
 |---|---|
-| nom_code | автогенерация: «Projet Chêne/Sillon/…» (конфиденциальность) |
-| nom_reel | название компании из Pappers |
-| secteur | код/название NAF |
-| region | регион/город |
-| chiffre_affaires | CA |
-| ebitda | résultat (приближённо) |
-| age_dirigeant | возраст руководителя |
-| score_succession | расчёт Radar (0–100) |
-| valorisation_min/max | ≈ résultat × 4 и × 6 (грубая оценка EBITDA-мультипликатором) |
-| source | «IA · Radar» |
-| etape | «Sourcé» |
+| nom_code | généré automatiquement : « Projet Chêne », « Projet Sillon »… (confidentialité) |
+| nom_reel | raison sociale issue de Pappers |
+| secteur | code et libellé NAF |
+| region | région ou ville |
+| chiffre_affaires | chiffre d'affaires |
+| ebitda | résultat (approximation) |
+| age_dirigeant | âge du dirigeant |
+| score_succession | calcul du Radar (0 à 100) |
+| valorisation_min / max | environ résultat × 4 et × 6 (estimation grossière par multiple d'EBITDA) |
+| source | « IA · Radar » |
+| etape | « Sourcé » |
 
-## ⚠️ Заметки
-- **Секрет** защищает точку приёма — без него посторонние не смогут слать данные.
-- `ebitda` и `valorisation` — приближённые (у Pappers в поиске часто нет полного EBITDA);
-  для точных цифр позже добавим узел-обогащение `GET /v2/entreprise?siren=…`.
-- Узел «Envoyer» стоит с `continueOnFail` — если одна запись не прошла, остальные всё равно уйдут.
-- Это **эффектная демонстрация для жюри**: «агент Radar реально наполняет CRM Deal Room».
+## ⚠️ Remarques
 
-## ▶️ Дальше
-- Заменить триггер на **Schedule** → Radar пополняет Cibles каждый день сам.
-- Отправлять покупателям/целям в Slack-уведомление (Base44 предлагал «Ajouter alertes Slack»).
+- Le **secret** protège le point de réception : sans lui, aucun tiers ne peut y envoyer
+  de données.
+- L'`ebitda` et la `valorisation` restent approximatifs — la recherche Pappers ne renvoie
+  pas toujours l'EBITDA complet. Pour des chiffres exacts, un nœud d'enrichissement
+  `GET /v2/entreprise?siren=…` sera ajouté ultérieurement.
+- Le nœud « Envoyer » est configuré avec `continueOnFail` : si un enregistrement échoue,
+  les autres sont tout de même transmis.
+- C'est une **démonstration parlante devant le jury** : l'agent Radar alimente réellement
+  le CRM de la Deal Room.
+
+## ▶️ Évolutions
+
+- Remplacer le déclencheur par un **Schedule Trigger** → le Radar alimente les Cibles
+  chaque jour de façon autonome.
+- Envoyer une notification Slack à chaque nouvelle cible ou nouveau repreneur.

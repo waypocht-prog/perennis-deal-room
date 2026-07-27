@@ -1,9 +1,9 @@
 # 🎤 Préparation à la soutenance — Pérennis
 
-> Подготовка к защите. По-французски — что говорить (учи ключевые фразы наизусть),
-> *курсивом по-русски* — подсказка. Жюри любит конкретику, цифры и честность про риски.
-> Твой главный «экзамен на зрелость» — вопросы про **комплаенс и санкции**. Отвечай на них
-> уверенно — и защита выиграна.
+> Préparation à la soutenance. Le texte donne ce qu'il faut dire ; les lignes *en italique*
+> rappellent l'idée clé à retenir. Le jury attend du concret, des chiffres et de l'honnêteté
+> sur les risques. L'épreuve de maturité se joue sur les questions de **conformité et de
+> sanctions** : y répondre avec assurance, c'est emporter la soutenance.
 
 ---
 
@@ -47,14 +47,14 @@ vérification de l'exposition au **filtrage des IDE** de l'UE. Au moindre doute 
 correspondance, une structure opaque — le dossier est **bloqué** et escaladé à un humain.
 Ma position commerciale est claire : *« uniquement des fonds licites »*. La conformité est
 mon avantage, pas mon frein. »
-*(Ключ: строгий KYC/AML, санкционный скрининг, при сомнении — стоп. «Только чистые деньги».)*
+*(Idée clé : KYC et LCB-FT stricts, criblage des sanctions, arrêt au moindre doute. « Uniquement des fonds licites ».)*
 
 **Q : Et le nouveau règlement européen sur le filtrage des investissements étrangers ?**
 R : « Il est intégré à mon process. Pour chaque opération, un agent vérifie si la cible
 relève d'un secteur sensible ou d'un seuil déclenchant un contrôle. Si oui, nous préparons
 la notification au régulateur avec un avocat. Anticiper ce filtrage rassure aussi le
 vendeur. »
-*(EU FDI Screening, согласован в дек. 2025 — проверяем заранее, юрист сопровождает.)*
+*(Idée clé : le filtrage des IDE est vérifié en amont, avec l'accompagnement d'un avocat.)*
 
 **Q : Les vendeurs français accepteront-ils de l'argent « étranger » ?**
 R : « Oui, si trois conditions sont réunies : la **transparence** (dossier conforme,
@@ -62,7 +62,7 @@ origine des fonds documentée), la **continuité** (préservation des emplois et
 savoir-faire), et le **juste prix**. Beaucoup de cédants n'ont aujourd'hui *aucun*
 repreneur : un acheteur sérieux et vérifié est une bonne nouvelle. Mon rôle est de bâtir
 cette confiance. »
-*(Прозрачность + сохранение команды + честная цена = доверие. У многих продавцов вообще нет покупателя.)*
+*(Idée clé : transparence + continuité pour l'équipe + juste prix = confiance. Beaucoup de cédants n'ont aujourd'hui aucun repreneur.)*
 
 ### 🛠️ Technique, IA & outils
 
@@ -77,7 +77,7 @@ R : « Deux garde-fous. D'abord le **grounding** : les agents ne s'appuient que 
 registres officiels (Pappers, Infogreffe, INSEE), pas sur des suppositions. Ensuite
 l'**humain dans la boucle** : une valorisation IA est une *fourchette à valider*, jamais un
 prix ferme. Rien ne part au client sans relecture humaine. »
-*(Grounding на официальных реестрах + человек проверяет. Оценка ИИ — это диапазон, а не финальная цена.)*
+*(Idée clé : ancrage sur les registres officiels et relecture humaine. Une valorisation IA est une fourchette, jamais un prix ferme.)*
 
 **Q : Pourquoi ce stack (Base44, n8n, Claude) et le MCP ?**
 R : « No-code et modèles standard pour la rapidité et le coût. Le **MCP** relie les agents
@@ -91,7 +91,7 @@ R : « Ce sont des hypothèses prudentes, pour un **régime de maturité** (ann�
 transparent sur le décalage : les honoraires de succès se réalisent en 6-12 mois, donc
 l'année 1 est irrégulière. C'est pourquoi les **retainers** et le **management de
 transition** lissent la trésorerie. Tout sera validé au pilote via les KPI. »
-*(Осторожные оценки, режим зрелости. Год 1 неровный — сглаживают retainer и транзит. Проверим на пилоте.)*
+*(Idée clé : hypothèses prudentes, en régime de maturité. L'année 1 est irrégulière ; le retainer et la transition lissent la trésorerie. À valider au pilote.)*
 
 **Q : Comment gagnez-vous de l'argent, concrètement ?**
 R : « Trois sources : les **honoraires de succès** (~4 % du montant), un **retainer**
@@ -103,7 +103,7 @@ mensuel par mandat, et le **management de transition** (une ligne à part). »
 R : « C'est mon point de départ, pas mon plafond. Je l'**institutionnalise** : une équipe,
 des process, une marque, l'adhésion à la **CNCFA**, des cas concrets. Le réseau ouvre la
 porte ; la plateforme et la méthode font la durabilité. »
-*(Сеть — старт, не потолок. Институционализация: команда, процессы, бренд, CNCFA.)*
+*(Idée clé : le réseau est un point de départ, pas un plafond. L'institutionnalisation passe par l'équipe, les process, la marque et la CNCFA.)*
 
 **Q : Par où commencez-vous concrètement ?**
 R : « Par un **MVP buy-side** : 2-3 acheteurs de mon réseau, et l'agent Radar qui source des
@@ -115,7 +115,7 @@ R : « Le conseil en M&A n'est pas une profession réglementée, mais j'adhère 
 (charte déontologique), je souscris une **RC Pro**, et **je ne détiens jamais les fonds** de
 la transaction — ils passent par un séquestre (notaire ou avocat). Si une activité de
 détention de fonds apparaissait, je vérifierais les statuts AMF/CIF avec un juriste. »
-*(M&A-консалтинг не лицензируется, но: CNCFA + RC Pro + не держим деньги (эскроу у нотариуса).)*
+*(Idée clé : le conseil M&A n'est pas réglementé, mais adhésion CNCFA, RC Pro, et aucune détention de fonds — séquestre chez le notaire.)*
 
 **Q : Et le RGPD, puisque vous traitez des données personnelles ?**
 R : « Oui, contrairement à un simple générateur de contenu, je traite des données de
@@ -132,19 +132,19 @@ un hébergement dans l'UE, et le respect des droits des personnes. »
 - **Phrase de clôture :** « Pérennis, ce n'est pas vendre des entreprises — c'est **assurer
   leur avenir**. De façon rentable, et parfaitement conforme. Merci. »
 
-## 4. 🇷🇺 Mini-dictionnaire
-| Français | Русский |
-|---|---|
-| transmission / cession-reprise | передача / купля-продажа бизнеса |
-| cédant · repreneur | продавец · покупатель бизнеса |
-| conformité (LCB-FT) | комплаенс (против отмывания) |
-| origine des fonds | происхождение средств |
-| criblage sanctions & PEP | санкционный скрининг + политически значимые лица |
-| filtrage des IDE | контроль иностранных инвестиций |
-| management de transition | транзитный (interim) менеджмент |
-| honoraires de succès | комиссия за успех сделки |
-| séquestre | эскроу (хранение средств у третьего лица) |
-| humain dans la boucle | человек в контуре |
+## 4. 📖 Glossaire des termes à maîtriser
 
-> ✅ Хочешь — сыграю жюри: буду задавать эти вопросы по-французски по одному, ты отвечаешь.
-> Напиши «играем жюри».
+| Terme | Définition |
+|---|---|
+| transmission / cession-reprise | le transfert d'une entreprise de son dirigeant vers un repreneur |
+| cédant · repreneur | celui qui vend son entreprise · celui qui la reprend |
+| conformité (LCB-FT) | lutte contre le blanchiment de capitaux et le financement du terrorisme |
+| origine des fonds | la démonstration documentée de la provenance licite de l'argent investi |
+| criblage sanctions & PEP | vérification sur les listes de sanctions et de personnes politiquement exposées |
+| filtrage des IDE | contrôle par l'État des investissements directs étrangers dans les secteurs sensibles |
+| management de transition | mise à disposition d'un dirigeant expérimenté sur une période charnière |
+| honoraires de succès | rémunération versée au conseil une fois l'opération conclue |
+| séquestre | dépôt des fonds chez un tiers de confiance (notaire, avocat) jusqu'au closing |
+| humain dans la boucle | principe selon lequel l'IA prépare mais un humain valide chaque décision |
+| grounding | ancrage des réponses de l'IA sur des sources vérifiées, contre les hallucinations |
+| MCP (Model Context Protocol) | standard reliant les agents d'IA aux données, sans vendor lock-in |

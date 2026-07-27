@@ -1,15 +1,15 @@
 # 🗂️ Partie 5 — Plan de pilotage et gouvernance du projet (Pérennis)
 
-> 🇷🇺 Это **Часть 5 по официальному référentiel (BLOC 04)** — управление проектом:
-> метод Agile, команда и роли, спринты, бэклог, дашборд пилотирования, клоужер + REX.
-> Текст на французском (для досье), с русскими подсказками. Валидирует C4.1–C4.4.
+> Partie 5 du référentiel officiel (**BLOC 04**) — le pilotage du projet : méthode Agile,
+> équipe et rôles, sprints, backlog, tableau de bord de pilotage, clôture et retour
+> d'expérience. Cette partie valide les critères C4.1 à C4.4.
 
 ---
 
 ## 5.1 — Méthode de pilotage
 
 **Choix : Agile hybride — Scrum (produit) + Kanban (flux des affaires).**
-*(Scrum для разработки продукта + Kanban для потока сделок.)*
+*(Scrum pour la construction du produit, Kanban pour le flux des affaires.)*
 
 - **Scrum** pour la construction du produit (agents IA + Deal Room) : sprints de **2 semaines**,
   car l'incertitude est forte et il faut itérer avec les retours des utilisateurs (cédants,
@@ -30,7 +30,7 @@
 
 ## 5.2 — Organisation de l'équipe projet
 
-> *(Проект индивидуальный, но описываем идеальную команду для реального внедрения.)*
+> *(Le projet est individuel, mais on décrit ici l'équipe idéale pour un déploiement réel.)*
 
 | Rôle | Responsabilités |
 |---|---|
@@ -47,7 +47,7 @@
 - Canaux dédiés : `#produit`, `#deals`, `#conformité`, `#général`.
 - **Revue hebdomadaire** + revue de sprint toutes les 2 semaines.
 
-**Gestion des dépendances** *(кто от чего зависит и как этим управляем) :*
+**Gestion des dépendances** *(qui dépend de quoi, et comment cela se pilote) :*
 
 | Livrable | Dépend de | Pilotage |
 |---|---|---|
@@ -95,7 +95,7 @@ cédant test et un repreneur de mon réseau) ; les retours sont consignés dans 
 
 ## 5.4 — Tableau de bord de pilotage
 
-*(Макет дашборда пилотирования — можно показать полосу KPI из Deal Room.)*
+*(Maquette réalisée : `prototype/perennis-pilotage.html` — voir la capture en Annexe C.)*
 
 | Type | Indicateurs |
 |---|---|

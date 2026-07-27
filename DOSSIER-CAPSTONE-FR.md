@@ -419,7 +419,8 @@ Deal Room »** — maquette d'app no-code (pipeline kanban, fiche cible, guichet
 - **Outils & justification :** n8n (orchestration, UE), Pappers (données FR), Claude
   (rédaction/multilingue), OpenSanctions (conformité), Base44 (UI).
 - **Prompts clés documentés :** prompt de construction Base44 (cadre BASE) ; prompts système
-  des agents **Radar, Matching, Communication, Conformité** (fichier `07`). Le code de
+  des agents **Radar, Matching, Communication, Conformité** (fichier
+  `07-Prototype-prompts-et-demo.md`). Le code de
   scoring du Radar est dans `prototype/radar-pappers-n8n.json`.
 - **Captures d'écran du prototype en fonctionnement** *(dossier `captures/`, Annexe C)* :
   cockpit Deal Room (`02`), démo auto-jouée (`03`), tableau de bord de pilotage (`01`) et
@@ -432,7 +433,7 @@ Deal Room »** — maquette d'app no-code (pipeline kanban, fiche cible, guichet
 
 ## 6.3 Vidéo de démonstration (3–5 min)
 
-Script prêt à enregistrer (fichier `10`) : problème → pont → démo Deal Room (fiche cible →
+Script prêt à enregistrer (`10-Script-video-demo-FR.md`) : problème → pont → démo Deal Room (fiche cible →
 matching → **guichet de conformité** → pipeline) → conformité & humain dans la boucle →
 conclusion. Une **démo auto-jouée sous-titrée** existe (`prototype/perennis-demo.html`).
 
@@ -475,7 +476,7 @@ navigable au clavier existe également : `prototype/perennis-pitch.html`.*
   `04` à `07` — slides clés du pitch (titre, solution, sept agents IA, conformité).
 - **Annexe D — Prototype technique :** `prototype/radar-pappers-n8n.json` (agent Radar,
   workflow n8n exécutable) et `prototype/radar-vers-deal-room-n8n.json` (chaînage vers la
-  Deal Room) ; prompts des agents documentés dans le fichier `07`.
+  Deal Room) ; prompts des agents documentés dans `07-Prototype-prompts-et-demo.md`.
 - **Annexe E — Sources :** BPCE L'Observatoire · Bpifrance Le Lab · DGE · CRA · Banque de
   France · KfW · Institut Sapiens · EthosData/IMAA (IA en M&A) · Cyndx/Sourcescrub ·
   Freshfields (filtrage des IDE).

@@ -1,12 +1,13 @@
 # 🅱️ Base44 — construire la vraie app « Pérennis Deal Room »
 
-> 🇷🇺 Готовый промпт для сборки **настоящего приложения** (с базой данных) в Base44.
-> Вставляешь его целиком при создании нового приложения → Base44 строит app.
-> Потом дорабатываешь чатом («ajoute…», «change la couleur…»). UI — на французском.
+> Prompt prêt à l'emploi pour construire une **véritable application** (avec base de
+> données) dans Base44. Il se colle intégralement à la création d'un nouveau projet, et
+> Base44 génère l'application. L'affinage se fait ensuite par le chat (« ajoute… »,
+> « change la couleur… »). L'interface produite est en français.
 
 ---
 
-## 📋 Промпт для вставки в Base44 (копировать целиком)
+## 📋 Prompt à coller dans Base44 (à copier intégralement)
 
 ```
 Build a professional internal B2B web application called "Pérennis Deal Room" for a
@@ -92,21 +93,24 @@ KPI strip on the dashboard.
 
 ---
 
-## 🪜 Как использовать (по шагам)
+## 🪜 Mode d'emploi, étape par étape
 
-1. Зайди на **base44.com** → войди в свой (платный) аккаунт.
-2. **Create new app / Nouveau projet** → вставь весь промпт выше → запусти сборку.
-3. Подожди — Base44 построит приложение + базу данных + страницы + демо-данные.
-4. **Дорабатывай чатом** (по-французски или по-английски), например:
+1. Se rendre sur **base44.com** et se connecter à son compte.
+2. **Create new app / Nouveau projet** → coller l'intégralité du prompt ci-dessus et
+   lancer la génération.
+3. Patienter : Base44 construit l'application, la base de données, les pages et un jeu de
+   données de démonstration.
+4. **Affiner par le chat** (en français ou en anglais), par exemple :
    - « Rends la barre latérale bleu marine plus foncée et l'accent doré plus sobre. »
    - « Ajoute un filtre par secteur sur la page Cibles. »
    - « Sur le Pipeline, empêche de dépasser la colonne Conformité si le verdict n'est pas Cleared. »
-5. Проверь, что работают: **Pipeline (канбан)**, карточка **Cible** со score, **Conformité** с вердиктом.
+5. Vérifier le bon fonctionnement du **Pipeline** (kanban), de la fiche **Cible** avec son score, et de la page **Conformité** avec son verdict.
 
-## 📸 Для досье
-Сделай 3–4 скриншота готового приложения → в **Annexe C** (общий вид, карточка цели со score, guichet de conformité). Это твой прототип по **Части 6, вариант C**.
+## 📸 Pour le dossier
+Prendre trois ou quatre captures d'écran de l'application terminée et les verser en **Annexe C** (vue d'ensemble, fiche cible avec son score, guichet de conformité). C'est le prototype correspondant à la **Partie 6, option C**.
 
-## 🔌 Дальше (по желанию)
-Позже соединим **агент Radar (n8n)** с этим приложением: Radar находит компании в Pappers
-и **отправляет их как новые Cibles** в Base44 (через вебхук/интеграцию). Тогда получится
-живая связка «мотор + витрина».
+## 🔌 Étape suivante (facultative)
+L'**agent Radar (n8n)** peut ensuite être relié à cette application : Radar trouve les
+entreprises dans Pappers et **les envoie comme nouvelles Cibles** dans Base44, via un
+webhook. On obtient alors un ensemble vivant — le moteur et sa vitrine. La marche à suivre
+figure dans le fichier `14`.

@@ -2,7 +2,7 @@
 
 > Durée cible : **3 min 30 – 4 min**. Colonne gauche = **ce que tu DIS** (français, lis à
 > voix haute, calmement). Colonne droite = **ce que tu MONTRES à l'écran** (la maquette
-> « Pérennis Deal Room » ou la démo auto-jouée). *En italique — подсказки по-русски.*
+> « Pérennis Deal Room » ou la démo auto-jouée). *Les lignes en italique sont des indications de réalisation.*
 
 **Avant d'enregistrer :** ouvre la maquette Deal Room en plein écran dans Chrome, et garde
 ce script sur ton téléphone ou un 2ᵉ écran (téléprompteur).
@@ -18,7 +18,7 @@ transmettre**. En France, une entreprise sur deux ne trouve pas de repreneur. Et
 **trois fois plus de vendeurs que d'acheteurs**. Voici **Pérennis**. »
 
 **Tu montres :** slide-titre du pitch, ou la vue d'ensemble de la Deal Room.
-*(Проблема + инсайт «3×». Говори медленно.)*
+*(Le problème et l'insight « 3× ». Parler lentement.)*
 
 ---
 
@@ -31,7 +31,7 @@ des acheteurs vérifiés de la CEI et du Moyen-Orient, avec des capitaux, en qu�
 
 **Tu montres :** le bandeau de KPI en haut (cibles qualifiées, mandats, cycle, volume,
 **0 incident de conformité**).
-*(Мост Восток↔Запад + KPI сверху.)*
+*(Le pont Est ↔ Ouest, et le bandeau de KPI en haut de l'écran.)*
 
 ---
 
@@ -51,7 +51,7 @@ des fonds, criblage sanctions et PEP, filtrage des IDE. Verdict : **Cleared**. �
 
 **Tu montres :** clique sur la fiche cible (score, valorisation) → la suggestion de matching
 94 % → le **guichet de conformité** (coche les lignes, verdict vert « Cleared »).
-*(Fiche cible → Matching → Guichet de conformité. Это самый сильный момент — задержись на комплаенсе.)*
+*(Fiche cible → Matching → Guichet de conformité. C'est le moment le plus fort : s'attarder sur la conformité.)*
 
 ---
 
@@ -65,7 +65,7 @@ signe**. Notre promesse : uniquement des fonds licites. »
 
 **Tu montres :** le panneau de conformité en gros plan, puis le pipeline (l'affaire qui
 avance étape par étape jusqu'à “Transition”).
-*(Комплаенс = шлюз. Человек решает. «Только чистые деньги».)*
+*(La conformité est un guichet bloquant. C'est l'humain qui décide. « Uniquement des fonds licites ».)*
 
 ---
 
@@ -79,7 +79,7 @@ l'entreprise, les emplois et le savoir-faire — et nous offrons au capital une 
 ont fait l'Europe. Merci. »
 
 **Tu montres :** la colonne “Transition” de la maquette, puis le slide final du pitch.
-*(Транзит-менеджмент + видение + «Merci».)*
+*(Le management de transition, la vision, puis « Merci ».)*
 
 ---
 
