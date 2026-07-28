@@ -1,5 +1,9 @@
 # 🎬 Script de la vidéo-démo (prêt à enregistrer) — Pérennis
 
+> 🎬 **Pour enregistrer, utiliser plutôt `15-Script-video-prise-unique-FR.md`** — une
+> version découpée en phrases courtes, prête à lire à voix haute en une seule prise.
+> Le présent fichier reste la version de préparation, scène par scène.
+
 > Durée cible : **3 min 30 – 4 min**. Colonne gauche = **ce que tu DIS** (français, lis à
 > voix haute, calmement). Colonne droite = **ce que tu MONTRES à l'écran** (la maquette
 > « Pérennis Deal Room » ou la démo auto-jouée). *Les lignes en italique sont des indications de réalisation.*

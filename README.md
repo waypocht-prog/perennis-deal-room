@@ -25,8 +25,8 @@ Projet Capstone — AI for Business (PSTB). *Valide les blocs BC01 et BC04 du RN
 | `prototype/radar-pappers-n8n.json` | **Agent Radar** — workflow n8n (API Pappers) |
 | `prototype/radar-vers-deal-room-n8n.json` | Chaînage Radar → Deal Room (Base44) |
 
-> ⏳ **Reste à produire :** la vidéo de démonstration (3–5 min) — script prêt dans
-> `10-Script-video-demo-FR.md`, support visuel dans `prototype/perennis-demo.html`.
+> ⏳ **Reste à produire :** la vidéo de démonstration (3–5 min) — script de tournage prêt
+> dans `15-Script-video-prise-unique-FR.md`, support visuel dans `prototype/perennis-demo.html`.
 
 ### Notes de travail
 
@@ -46,6 +46,7 @@ Projet Capstone — AI for Business (PSTB). *Valide les blocs BC01 et BC04 du RN
 | `12-Partie5-Pilotage-projet-Agile-FR.md` | Partie 5 — pilotage de projet Agile |
 | `13-Base44-Deal-Room-prompt.md` | Prompt de génération de la Deal Room |
 | `14-Radar-vers-Base44-connexion.md` | Chaînage agent Radar → Base44 |
+| `15-Script-video-prise-unique-FR.md` | **Script de tournage** — version prête à lire, une seule prise |
 
 ### Référence
 
