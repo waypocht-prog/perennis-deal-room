@@ -40,6 +40,18 @@ Je leur parle leur langue.
 
 Et l'IA fait tout le travail de fond.
 
+   ( pause )
+
+Voici le cockpit.
+
+Douze cibles qualifiées ce mois. Neuf mandats actifs.
+
+Un cycle moyen de huit virgule quatre mois.
+
+Quarante-huit millions d'euros de volume sur douze mois.
+
+Et zéro incident de conformité.
+
 ——— 1:25  Sept agents, une chaîne ———
 
 Derrière l'écran, sept agents d'IA travaillent en chaîne.
@@ -56,41 +68,41 @@ Et Transition accompagne la reprise.
 
    ( pause )
 
-Le tout est orchestré par n8n, hébergé dans l'Union européenne.
+Orchestrés par n8n dans l'Union européenne, avec Claude comme moteur,
 
-Le moteur est Claude. Les données viennent de Pappers et d'OpenSanctions.
-
-Et tout est relié par le protocole MCP — donc rien ne nous enferme chez un fournisseur.
+et les données de Pappers et d'OpenSanctions — reliées par le protocole MCP.
 
 ——— 2:00  La cible détectée par l'IA ———
 
-Regardons une affaire.
+Voici les entreprises détectées.
 
-L'agent Radar a détecté cette PME.
+Neuf cibles, chacune à une étape différente du cycle.
 
-Projet Chêne — composants métalliques de précision.
+Prenons la première : Projet Chêne.
 
-Il calcule un score de succession : quatre-vingt-deux sur cent.
+Composants métalliques de précision, en Auvergne-Rhône-Alpes.
 
-Le dirigeant a soixante-quatre ans.
+Huit millions d'euros de chiffre d'affaires.
 
-Aucun successeur. Des finances saines.
+Un virgule deux million d'EBITDA.
 
-Et l'IA propose une valorisation : entre quatre virgule huit et six millions d'euros.
+C'est l'agent Radar qui l'a trouvée, dans les registres publics.
+
+Il la note selon l'âge du dirigeant, l'absence de successeur et la santé financière.
 
 ——— 2:30  L'appariement ———
 
 Ensuite, l'agent Matching entre en jeu.
 
-Il rapproche cette entreprise d'un repreneur.
+Il classe les rapprochements possibles.
 
-Acheteur K-quatorze, au Kazakhstan.
+En tête : Projet Chêne avec l'acheteur K-quatorze.
 
-Correspondance : quatre-vingt-quatorze pour cent.
+Quatre-vingt-quatorze pour cent.
 
-Le secteur, le ticket d'investissement, la géographie.
+Ticket compatible, intérêt sectoriel cohérent.
 
-Tout concorde.
+Et d'un clic, on prépare le teaser anonyme.
 
 ——— 2:55  Le guichet de conformité ———
 
@@ -98,7 +110,11 @@ Mais avant d'aller plus loin…
 
 …l'affaire doit passer le guichet de conformité.
 
-KYC des bénéficiaires effectifs.
+Acheteur K-quatorze, Kazakhstan.
+
+Le dossier de contrôle comporte quatre points.
+
+KYC des bénéficiaires.
 
 Origine des fonds.
 
@@ -108,7 +124,7 @@ Filtrage des investissements étrangers.
 
    ( pause )
 
-Verdict : Cleared.
+Les quatre sont validés. Verdict : Cleared.
 
 ——— 3:25  L'humain décide ———
 
@@ -138,17 +154,11 @@ Trois virgule sept fois plus.
 
 Et le coût par cible qualifiée baisse de soixante-cinq pour cent.
 
-   ( pause )
-
-Le cycle d'une transaction passe de plus de douze mois…
-
-…à moins de six.
+Et le cycle se réduit de moitié.
 
 ——— 4:20  La conclusion ———
 
 Après la vente, un manager de transition accompagne le repreneur.
-
-Il perçoit ses bénéfices dès le premier jour.
 
 Plus rapide. Plus sûr. Plus propre.
 

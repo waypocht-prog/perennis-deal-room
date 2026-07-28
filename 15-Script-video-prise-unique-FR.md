@@ -2,26 +2,28 @@
 
 > **À lire à voix haute pendant l'enregistrement.** Une ligne = une respiration.
 > Les blocs `[ ÉCRAN ]` ne se disent pas : ce sont les gestes à faire à la souris.
-> Durée visée : **4 min 40**. Les repères de temps servent à se recaler, pas à courir.
+> Durée visée : **4 min 15**. Les repères de temps servent à se recaler, pas à courir.
 
 ---
 
 ## ✅ Avant de lancer l'enregistrement
 
-1. Ouvrir la **Deal Room** en plein écran dans Chrome — l'application Base44, ou à défaut
-   `prototype/perennis-deal-room.html`.
-2. Fermer les autres onglets, couper les notifications *(Ne pas déranger sur Mac)*.
-3. Poser ce script sur le téléphone ou un second écran.
-4. Boire un verre d'eau, faire **une** lecture à blanc sans enregistrer.
-5. Sur **loom.com** : *New video* → **Screen + Cam** ou **Screen only** → micro activé.
+1. Ouvrir l'application publiée dans Chrome : **perennis-deal-core.base44.app**,
+   sur la page « Tableau de bord ».
+2. Ouvrir un second onglet avec le dernier slide du pitch (`prototype/perennis-pitch.html`).
+3. Masquer la barre de favoris (`⌘⇧B`) et le Dock (`⌘⌥D`), couper les notifications.
+4. Coller `TELEPROMPTEUR-video.txt` dans les Speaker notes de l'application Loom.
+5. Faire **une** lecture à blanc, chronomètre en main.
+6. Dans Loom : **Screen only**, source = **fenêtre Chrome** (pas un onglet), micro activé.
 
 > Si vous butez sur un mot : **ne vous arrêtez pas**. Marquez une pause d'une seconde et
 > reprenez la phrase depuis le début. Loom permet de couper le passage ensuite.
 
-> ⏱️ **Attention à la durée.** L'offre gratuite de Loom s'arrête à **5 minutes**, et le
-> cahier des charges en demande entre 3 et 5. Si à mi-parcours vous êtes en retard sur les
-> repères, **raccourcissez le bloc « Sept agents, une chaîne »** : citez seulement les
-> agents, sautez le paragraphe sur n8n, Claude et MCP. Tout le reste doit être dit.
+> ⏱️ **Attention à la durée.** L'offre gratuite de Loom s'arrête net à **5 minutes**, et le
+> cahier des charges en demande entre 3 et 5. Le texte fait environ 3 min 45 de parole ;
+> avec les pauses et les clics, comptez 4 min 15. Si au repère 2:55 vous avez déjà dépassé
+> 3 minutes, **sautez les deux dernières lignes du bloc « Sept agents »** (n8n, Claude, MCP)
+> et enchaînez. Tout le reste doit être dit.
 
 ---
 
@@ -75,8 +77,20 @@ Je leur parle leur langue.
 
 Et l'IA fait tout le travail de fond.
 
-`[ ÉCRAN ] Montrer le bandeau de KPI en haut : cibles qualifiées, mandats actifs,`
-`cycle moyen, volume, et « 0 incident de conformité ».`
+*(pause)*
+
+Voici le cockpit.
+
+Douze cibles qualifiées ce mois. Neuf mandats actifs.
+
+Un cycle moyen de huit virgule quatre mois.
+
+Quarante-huit millions d'euros de volume sur douze mois.
+
+Et zéro incident de conformité.
+
+`[ ÉCRAN ] Rester sur « Tableau de bord ». Suivre les tuiles de KPI avec la souris,`
+`de gauche à droite.`
 
 ---
 
@@ -96,11 +110,9 @@ Et Transition accompagne la reprise.
 
 *(pause)*
 
-Le tout est orchestré par **n8n**, hébergé dans l'Union européenne.
+Orchestrés par **n8n** dans l'Union européenne, avec **Claude** comme moteur,
 
-Le moteur est **Claude**. Les données viennent de **Pappers** et d'**OpenSanctions**.
-
-Et tout est relié par le protocole **MCP** — donc rien ne nous enferme chez un fournisseur.
+et les données de **Pappers** et d'**OpenSanctions** — reliées par le protocole **MCP**.
 
 `[ ÉCRAN ] Parcourir la barre latérale : Pipeline, Cibles, Acheteurs, Matching,`
 `Conformité, Transition.`
@@ -109,22 +121,24 @@ Et tout est relié par le protocole **MCP** — donc rien ne nous enferme chez u
 
 ## ▶️ 2:00 — La cible détectée par l'IA
 
-Regardons une affaire.
+Voici les entreprises détectées.
 
-L'agent **Radar** a détecté cette PME.
+Neuf cibles, chacune à une étape différente du cycle.
 
-Projet Chêne — composants métalliques de précision.
+Prenons la première : **Projet Chêne**.
 
-Il calcule un score de succession : **quatre-vingt-deux sur cent**.
+Composants métalliques de précision, en Auvergne-Rhône-Alpes.
 
-Le dirigeant a soixante-quatre ans.
+Huit millions d'euros de chiffre d'affaires.
 
-Aucun successeur. Des finances saines.
+Un virgule deux million d'EBITDA.
 
-Et l'IA propose une valorisation : entre quatre virgule huit et six millions d'euros.
+C'est l'agent **Radar** qui l'a trouvée, dans les registres publics.
 
-`[ ÉCRAN ] Cliquer sur la fiche « Projet Chêne ». Laisser le score bien visible`
-`deux secondes avant de continuer.`
+Il la note selon l'âge du dirigeant, l'absence de successeur et la santé financière.
+
+`[ ÉCRAN ] Cliquer sur « Cibles » dans le menu de gauche. Laisser le tableau visible,`
+`puis suivre la ligne « Projet Chêne » avec la souris jusqu'au statut « Matché ».`
 
 ---
 
@@ -132,17 +146,18 @@ Et l'IA propose une valorisation : entre quatre virgule huit et six millions d'e
 
 Ensuite, l'agent **Matching** entre en jeu.
 
-Il rapproche cette entreprise d'un repreneur.
+Il classe les rapprochements possibles.
 
-Acheteur K-quatorze, au Kazakhstan.
+En tête : Projet Chêne avec l'acheteur **K-quatorze**.
 
-Correspondance : **quatre-vingt-quatorze pour cent**.
+**Quatre-vingt-quatorze pour cent**.
 
-Le secteur, le ticket d'investissement, la géographie.
+Ticket compatible, intérêt sectoriel cohérent.
 
-Tout concorde.
+Et d'un clic, on prépare le **teaser anonyme**.
 
-`[ ÉCRAN ] Ouvrir la vue Matching. Montrer le pourcentage et la justification.`
+`[ ÉCRAN ] Cliquer sur « Matching ». Montrer la première ligne à 94 %,`
+`puis le bouton « Préparer le teaser anonyme ».`
 
 ---
 
@@ -152,7 +167,11 @@ Mais avant d'aller plus loin…
 
 …l'affaire doit passer le **guichet de conformité**.
 
-KYC des bénéficiaires effectifs.
+Acheteur K-quatorze, Kazakhstan.
+
+Le dossier de contrôle comporte quatre points.
+
+KYC des bénéficiaires.
 
 Origine des fonds.
 
@@ -162,10 +181,10 @@ Filtrage des investissements étrangers.
 
 *(pause)*
 
-Verdict : **Cleared**.
+Les quatre sont validés. Verdict : **Cleared**.
 
-`[ ÉCRAN ] Ouvrir le panneau Conformité. Parcourir la checklist lentement,`
-`ligne par ligne. S'arrêter sur le verdict vert.`
+`[ ÉCRAN ] Cliquer sur « Conformité ». Descendre la checklist lentement,`
+`point par point, puis s'arrêter sur le badge vert « Cleared ».`
 
 ---
 
@@ -202,21 +221,15 @@ Trois virgule sept fois plus.
 
 Et le coût par cible qualifiée baisse de soixante-cinq pour cent.
 
-*(pause)*
+Et le cycle se réduit de moitié.
 
-Le cycle d'une transaction passe de plus de douze mois…
-
-…à moins de six.
-
-`[ ÉCRAN ] Revenir sur le bandeau de KPI, s'arrêter sur le cycle moyen.`
+`[ ÉCRAN ] Revenir sur « Tableau de bord », s'arrêter sur la tuile « Cycle moyen ».`
 
 ---
 
 ## ▶️ 4:20 — La conclusion
 
 Après la vente, un **manager de transition** accompagne le repreneur.
-
-Il perçoit ses bénéfices dès le premier jour.
 
 Plus rapide. Plus sûr. Plus propre.
 
