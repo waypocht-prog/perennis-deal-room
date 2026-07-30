@@ -47,6 +47,7 @@ Projet Capstone — AI for Business (PSTB). *Valide les blocs BC01 et BC04 du RN
 | `13-Base44-Deal-Room-prompt.md` | Prompt de génération de la Deal Room |
 | `14-Radar-vers-Base44-connexion.md` | Chaînage agent Radar → Base44 |
 | `15-Script-video-prise-unique-FR.md` | **Script de tournage** — version prête à lire, une seule prise |
+| `16-Questions-reponses-soutenance.md` | **Questions du jury et réponses** — 14 questions préparées |
 
 ### Référence
 

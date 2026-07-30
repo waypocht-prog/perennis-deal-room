@@ -1,3 +1,7 @@
+=================================================
+  LIRE A VOIX HAUTE  —  les lignes  >>> <<<  
+  ne se disent PAS : ce sont les clics a faire
+=================================================
 ——— 0:00  Le problème ———
 
 En Europe, des entreprises rentables ferment chaque année.
@@ -25,6 +29,7 @@ Le facteur rare, ce n'est pas l'entreprise à vendre.
 C'est l'acheteur solvable et de confiance.
 
 ——— 1:00  La solution ———
+>>>  RESTE SUR  «  TABLEAU DE BORD  »  <<<
 
 Voici Pérennis.
 
@@ -53,6 +58,7 @@ Quarante-huit millions d'euros de volume sur douze mois.
 Et zéro incident de conformité.
 
 ——— 1:25  Sept agents, une chaîne ———
+>>>  SURVOLE LE MENU DE GAUCHE  <<<
 
 Derrière l'écran, sept agents d'IA travaillent en chaîne.
 
@@ -73,6 +79,7 @@ Orchestrés par n8n dans l'Union européenne, avec Claude comme moteur,
 et les données de Pappers et d'OpenSanctions — reliées par le protocole MCP.
 
 ——— 2:00  La cible détectée par l'IA ———
+>>>  CLIC  :  CIBLES  <<<
 
 Voici les entreprises détectées.
 
@@ -91,6 +98,7 @@ C'est l'agent Radar qui l'a trouvée, dans les registres publics.
 Il la note selon l'âge du dirigeant, l'absence de successeur et la santé financière.
 
 ——— 2:30  L'appariement ———
+>>>  CLIC  :  MATCHING  <<<
 
 Ensuite, l'agent Matching entre en jeu.
 
@@ -105,6 +113,7 @@ Ticket compatible, intérêt sectoriel cohérent.
 Et d'un clic, on prépare le teaser anonyme.
 
 ——— 2:55  Le guichet de conformité ———
+>>>  CLIC  :  CONFORMITE  <<<
 
 Mais avant d'aller plus loin…
 
@@ -127,6 +136,7 @@ Filtrage des investissements étrangers.
 Les quatre sont validés. Verdict : Cleared.
 
 ——— 3:25  L'humain décide ———
+>>>  CLIC  :  PIPELINE  <<<
 
 Et voici le point clé.
 
@@ -143,6 +153,7 @@ Mais c'est l'humain qui décide, et qui signe.
 Notre promesse tient en trois mots : uniquement des fonds licites.
 
 ——— 3:55  Ce que l'IA change concrètement ———
+>>>  CLIC  :  TABLEAU DE BORD  <<<
 
 Un chiffre pour finir.
 
@@ -157,6 +168,7 @@ Et le coût par cible qualifiée baisse de soixante-cinq pour cent.
 Et le cycle se réduit de moitié.
 
 ——— 4:20  La conclusion ———
+>>>  ONGLET  2  :  DERNIER SLIDE DU PITCH  <<<
 
 Après la vente, un manager de transition accompagne le repreneur.
 
